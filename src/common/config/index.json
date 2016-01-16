@@ -1,0 +1,62 @@
+{
+  "development": {
+    "scripts": [
+      {
+        "file": "./node_modules/react/dist/react.js",
+        "identifier": "React",
+        "import": "react"
+      },
+      {
+        "file": "./node_modules/react-dom/dist/react-dom.js",
+        "identifier": "ReactDOM",
+        "import": "react-dom"
+      },
+      {
+        "file": "./node_modules/redux/dist/redux.js",
+        "identifier": "Redux",
+        "import": "redux"
+      },
+      {
+        "file": "./node_modules/react-redux/dist/react-redux.js",
+        "identifier": "ReactRedux",
+        "import": "react-redux"
+      },
+      {
+        "file": "./node_modules/universal-redux-router/dist/universal-redux-router.js",
+        "identifier": "UniversalReduxRouter",
+        "import": "universal-redux-router"
+      },
+      {
+        "file": "./dist/client.js"
+      }
+    ]
+  },
+  "dir": {
+    "css": "css",
+    "dist": "dist",
+    "js": "js",
+    "images": "images",
+    "src": "src",
+    "static": "static"
+  },
+  "production": {
+    "scripts": [
+      {
+        "file": "./node_modules/react/dist/react.min.js",
+        "identifier": "React",
+        "import": "react"
+      },
+      {
+        "file": "./node_modules/react-dom/dist/react-dom.min.js",
+        "identifier": "ReactDOM",
+        "import": "react-dom"
+      },
+      {
+        "file": "./dist/client.min.js"
+      }
+    ]
+  },
+  "subDirectoryNodeModules": [
+    "react-dom-stream/server"
+  ]
+}
