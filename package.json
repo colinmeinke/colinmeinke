@@ -19,6 +19,7 @@
     "createStaticJs:dev": "mkdir -p ./static/js && cp ./dist/client.js.map ./static/js/ && cat ./src/common/config/index.json | json development.scripts | json -ga file | xargs -I % cp % ./static/js/",
     "createStaticJs:pro": "mkdir -p ./static/js && cat ./src/common/config/index.json | json production.scripts | json -ga file | xargs -I % cp % ./static/js/",
     "lint": "eslint src test",
+    "start": "npm run start:pro",
     "start:dev": "node ./dist/server.js",
     "start:pro": "node ./dist/server.min.js",
     "test": "mocha --compilers js:babel-core/register,css:test/compiler.js test/**/*.js"

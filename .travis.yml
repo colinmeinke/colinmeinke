@@ -1,6 +1,15 @@
 language: node_js
 node_js:
-  - "5.3"
+- '5.3'
 script:
-  - npm run lint
-  - npm test
+- npm run lint
+- npm test
+after_success:
+- npm run build:pro
+deploy:
+  provider: heroku
+  api_key:
+    secure: DC2qoYHexGmMPdoFvF+UZ9Xe+izvImsB7a19Hv0Ve5EaTUkNRVO2uiknm0w5Wy4VnnxzLYu0zefSk52Q0fIB2voxBruqHOpGU7XKt8zPkIkyVIVPDUHuKSaGFPU9U2iv+dNrWkW3scEBEd1vCgYj65wlSr23Zmx//foTMOHEmwYBLO+mwCb9RNyytLyZfQ+0YlTgpNeNg/A7XbC4G1Y/aTmpG5r3Th73AED68NbVyYEj4CAmVV+akNnw0rDdZ1jGADsU7Ulx4z4EDWJpwd84UXzGuy9kF39xoNxekIX3+ns6FB4rr/PAtdF8f631Oi6AOivECmmnShtb+hnO8fsegBbqsvUoX2zzlwdfyzITRnqASAjzQOIiBLOtB3A7R+RWMK20sl8Mabmkx9uhjVuwGlY/KGAdpPhxMbMP80qyZDv1B098446G8/1kGMIOAfvhpJ7KxCs3MnJK/30TzzP8uON6mo9ljAuJAA1rOdKCcDxJc7RJQbDVqb+weiBey++RrvVviwUBwvCV5++fdopajYyGjnDd1D4DH9ufCLDrCRKNaZrFadZEPA6ZYMg0gMKe1vWrAOHHVwIbD4/lglxkn6lCaeWgZ3whUIFENdTu8FgpVsE1xqCn6oAP2tvGdCSF1pll7s5s84rzb36aB+L8dbZua9prMHAEQe0mvwJOTJY=
+  app: colinmeinke
+  on:
+    repo: colinmeinke/colinmeinke
