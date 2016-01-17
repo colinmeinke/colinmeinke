@@ -2,7 +2,6 @@ import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import Header from '../../src/common/components/Header/index';
 import Projects from '../../src/common/components/Projects/index';
 
 describe( 'component', () => {
@@ -21,7 +20,8 @@ describe( 'component', () => {
 
     it( 'should render correct markup', () => {
       expect( projects.props.children.type ).toBe( 'section' );
-      expect( projects.props.children.props.children[ 0 ].type ).toBe( Header );
+      expect( projects.props.children.props.children[ 0 ].type.displayName )
+        .toBe( 'Connect(Header)' );
     });
   });
 });
