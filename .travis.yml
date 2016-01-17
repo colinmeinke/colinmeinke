@@ -4,8 +4,9 @@ node_js:
 script:
 - npm run lint
 - npm test
-after_success:
+after_deploy:
 - npm run build:pro
+- npm run clean:deploy
 deploy:
   provider: heroku
   api_key:
