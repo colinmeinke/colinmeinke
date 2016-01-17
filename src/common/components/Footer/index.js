@@ -10,8 +10,8 @@ const Footer = () => (
     </p>
 
     <Link
-       className={ coreStyles.button }
-       url="/work-with-me"
+      className={ coreStyles.button }
+      url="/work-with-me"
     >
       Discuss working with me remotely
     </Link>
