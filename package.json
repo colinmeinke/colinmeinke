@@ -1,8 +1,8 @@
 {
-  "name": "universal-js",
+  "name": "colinmeinke",
   "version": "0.0.0",
-  "description": "A universal Javascript starter kit inc. React, Redux, Redux Dev Tools, Universal Redux Router, CSS Modules, hot module reloading, Babel for ES2015+ and ESLint.",
-  "main": "./dist/server.js",
+  "description": "Personal website / playground",
+  "main": "./dist/server.min.js",
   "scripts": {
     "build:dev": "npm run clean && npm run build:dev:client && npm run build:dev:server && npm run createStatic:dev",
     "build:dev:client": "webpack --config ./webpack/dev/client.babel.js",
