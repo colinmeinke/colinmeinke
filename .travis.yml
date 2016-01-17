@@ -4,7 +4,7 @@ node_js:
 script:
 - npm run lint
 - npm test
-after_deploy:
+before_deploy:
 - npm run build:pro
 - npm run clean:deploy
 deploy:
