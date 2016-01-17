@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 
 import coreStyles from './core.css';
-import themeStyles from './oaxaca-theme.css';
 
 const defaultProps = {
   language: 'en',
@@ -21,10 +20,7 @@ const propTypes = {
 
 const Page = ({ app, description, initialState, language, scripts, styles, title }) => (
   <html
-    className={[
-      coreStyles.html,
-      themeStyles.html,
-    ].join( ' ' )}
+    className={ coreStyles.html }
     lang={ language }
   >
     <head>

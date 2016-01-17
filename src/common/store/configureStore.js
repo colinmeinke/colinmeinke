@@ -1,9 +1,7 @@
 import { combineReducers, createStore } from 'redux';
 import { updateUrl, urlReducer } from 'universal-redux-router';
 
-import * as reducers from '../reducers';
-
-const reducer = combineReducers({ ...reducers, url: urlReducer });
+const reducer = combineReducers({ url: urlReducer });
 
 const configureStore = ( initialState = {}, initialUrl = null ) => {
   if ( initialUrl ) {
@@ -14,7 +12,7 @@ const configureStore = ( initialState = {}, initialUrl = null ) => {
   }
 
   if ( __DEVELOPMENT__ ) {
-    const DevTools = require( '../DevTools' ).default;
+    const DevTools = require( '../components/DevTools' ).default;
     return DevTools.instrument()( createStore )( reducer, initialState );
   }
 

@@ -1,18 +1,25 @@
 import React from 'react';
 
-import Home from '../components/Home';
-import Edit from '../components/Edit';
+import About from '../components/About';
+import Blog from '../components/Blog';
+import Projects from '../components/Projects';
+import WorkWithMe from '../components/WorkWithMe';
+import NotFound from '../components/NotFound';
 
 const routes = url => {
   const path = url.split( '?' )[ 0 ];
 
   switch ( path ) {
-    case '/edit':
-      return <Edit />;
+    case '/about':
+      return <About />;
     case '/':
-      return <Home />;
+      return <Blog />;
+    case '/projects':
+      return <Projects />;
+    case '/work-with-me':
+      return <WorkWithMe />;
     default:
-      return <h1>Not found</h1>;
+      return <NotFound />;
   }
 };
 

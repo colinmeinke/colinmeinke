@@ -35,8 +35,7 @@ if ( __DEVELOPMENT__ ) {
 }
 
 const render = ( req, res ) => {
-  const name = req.query.name || '';
-  const store = configureStore({ name }, req.url );
+  const store = configureStore({}, req.url );
 
   res.write( '<!DOCTYPE html>' );
 
