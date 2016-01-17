@@ -1,0 +1,26 @@
+@import "../../config/styles/core.css";
+
+.footer {
+  border-top: 1px solid var( --color-border );
+  margin: var( --spacing-large ) auto;
+  max-width: var( --max-width );
+  padding: var( --spacing-large ) var( --spacing-small ) 0;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.button {
+  background-color: var( --color-font-link );
+  color: var( --color-background );
+  display: inline-block;
+  font-weight: bold;
+  padding: var( --spacing-small );
+  text-decoration: none;
+}
+
+.button:focus,
+.button:hover {
+  background-color: color( var( --color-font-link) saturation( +10% ));
+}

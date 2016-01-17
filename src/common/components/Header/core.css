@@ -51,6 +51,7 @@
 .button {
   background-color: var( --color-font-link );
   color: var( --color-background );
+  display: inline-block;
   font-weight: bold;
   padding: var( --spacing-small );
   text-decoration: none;
