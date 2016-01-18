@@ -47,12 +47,14 @@ const Header = ({ url }) => (
       ))}
     </ul>
 
-    <Link
-      className={ baseStyles.button }
-      url="/work-with-me"
-    >
-      Work with me
-    </Link>
+    { url === '/work-with-me' ? null : (
+      <Link
+        className={ baseStyles.button }
+        url="/work-with-me"
+      >
+        Work with me
+      </Link>
+    )}
   </header>
 );
 
