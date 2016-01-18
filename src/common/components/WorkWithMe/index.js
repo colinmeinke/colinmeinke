@@ -15,7 +15,18 @@ const WorkWithMe = () => (
 
         <p>I'm taking on new projects in 2016.</p>
 
-        <p>Drop me an email:</p>
+        <p>
+          If you need somebody to take your project from
+          start to finish, or anywhere in between, I've got
+          you covered.
+        </p>
+
+        <p>
+          <strong>
+            Drop me an email to discuss your project and
+            get things rolling.
+          </strong>
+        </p>
 
         <p>
           <a
