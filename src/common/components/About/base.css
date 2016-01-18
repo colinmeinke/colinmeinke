@@ -1,4 +1,4 @@
-.containter {
+.container {
   composes: container from '../../styles/base/compositions/content.css';
 }
 

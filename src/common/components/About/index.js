@@ -11,7 +11,7 @@ const About = () => (
     <section>
       <Header />
 
-      <section className={ baseStyles.containter }>
+      <section className={ baseStyles.container }>
         <h2 className={ baseStyles.title }>About</h2>
 
         <section className={ baseStyles.section }>

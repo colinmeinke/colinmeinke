@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 
-.button:focus,
-.button:hover {
+.regular:focus,
+.regular:hover {
   background-color: color( var( --color-font-link ) saturation( +10% ));
 }
