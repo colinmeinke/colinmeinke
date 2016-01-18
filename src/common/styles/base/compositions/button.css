@@ -1,0 +1,15 @@
+@import "../config.css";
+
+.regular {
+  background-color: var( --color-font-link );
+  color: var( --color-background );
+  display: inline-block;
+  font-weight: bold;
+  padding: var( --spacing-small );
+  text-decoration: none;
+}
+
+.button:focus,
+.button:hover {
+  background-color: color( var( --color-font-link ) saturation( +10% ));
+}

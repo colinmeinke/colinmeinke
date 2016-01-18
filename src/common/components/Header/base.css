@@ -1,0 +1,47 @@
+@import "../../styles/base/config.css";
+
+.header {
+  border-bottom: 1px solid var( --color-border );
+  margin: var( --spacing-large ) auto;
+  max-width: var( --max-width );
+  padding: 0 var( --spacing-small ) var( --spacing-large );
+}
+
+.title {
+  font-size: var( --font-size-medium );
+}
+
+.subTitle {
+  font-weight: bold;
+}
+
+.activityLocation {}
+.activity {}
+.location {}
+
+.nav {
+  composes: noStyle from '../../styles/base/compositions/list.css';
+}
+
+.navItem {
+  display: inline;
+}
+
+.navItem:not( :first-of-type ) {
+  margin-left: var( --spacing-small );
+}
+
+.navActive {}
+
+.navLink {
+  composes: regular from '../../styles/base/compositions/link.css';
+}
+
+.navActive .navLink {
+  color: var( --color-font );
+  text-decoration: none;
+}
+
+.button {
+  composes: regular from '../../styles/base/compositions/button.css';
+}

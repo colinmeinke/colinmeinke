@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'universal-redux-router';
 
-import coreStyles from './core.css';
+import baseStyles from './base.css';
 
 const navItems = [
   { name: 'Blog', url: '/' },
@@ -10,35 +10,35 @@ const navItems = [
 ];
 
 const Header = ({ url }) => (
-  <header className={ coreStyles.header }>
-    <h1 className={ coreStyles.title }>Colin Meinke</h1>
+  <header className={ baseStyles.header }>
+    <h1 className={ baseStyles.title }>Colin Meinke</h1>
 
-    <p className={ coreStyles.subTitle }>
+    <p className={ baseStyles.subTitle }>
       Making websites in far away places.
     </p>
 
-    <p className={ coreStyles.activityLocation }>
+    <p className={ baseStyles.activityLocation }>
       Currently { ' ' }
-      <strong className={ coreStyles.activity }>
+      <strong className={ baseStyles.activity }>
         learning Spanish
       </strong>
       { ' ' } in { ' ' }
-      <strong className={ coreStyles.location }>
+      <strong className={ baseStyles.location }>
         Oaxaca, Mexico
       </strong>.
     </p>
 
-    <ul className={ coreStyles.nav }>
+    <ul className={ baseStyles.nav }>
       { navItems.map(( item, i ) => (
         <li
           className={[
-            coreStyles.navItem,
-            ( url === item.url ? coreStyles.navActive : null ),
+            baseStyles.navItem,
+            ( url === item.url ? baseStyles.navActive : null ),
           ].join( ' ' )}
           key={ i }
         >
           <Link
-            className={ coreStyles.navLink }
+            className={ baseStyles.navLink }
             url={ item.url }
           >
             { item.name }
@@ -48,7 +48,7 @@ const Header = ({ url }) => (
     </ul>
 
     <Link
-      className={ coreStyles.button }
+      className={ baseStyles.button }
       url="/work-with-me"
     >
       Work with me

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'universal-redux-router';
 
-import coreStyles from './core.css';
+import baseStyles from './base.css';
 
 const Footer = () => (
-  <footer className={ coreStyles.footer }>
-    <p className={ coreStyles.title }>
+  <footer className={ baseStyles.footer }>
+    <p className={ baseStyles.title }>
       I'm taking on new projects in 2016.
     </p>
 
     <Link
-      className={ coreStyles.button }
+      className={ baseStyles.button }
       url="/work-with-me"
     >
       Discuss working with me remotely

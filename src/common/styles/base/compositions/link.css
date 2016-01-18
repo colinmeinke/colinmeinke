@@ -1,0 +1,11 @@
+@import "../config.css";
+
+.regular {
+  color: var( --color-font-link );
+  text-decoration: none;
+}
+
+.regular:focus,
+.regular:hover {
+  text-decoration: underline;
+}

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import coreStyles from './core.css';
+import baseStyles from './base.css';
 
 const defaultProps = {
   language: 'en',
@@ -20,7 +20,7 @@ const propTypes = {
 
 const Page = ({ app, description, initialState, language, scripts, styles, title }) => (
   <html
-    className={ coreStyles.html }
+    className={ baseStyles.html }
     lang={ language }
   >
     <head>
@@ -41,7 +41,7 @@ const Page = ({ app, description, initialState, language, scripts, styles, title
       { styles.map(( style, i ) => <link href={ style } key={ i } rel="stylesheet" /> )}
     </head>
     <body
-      className={ coreStyles.body }
+      className={ baseStyles.body }
     >
       <section
         className="app"
