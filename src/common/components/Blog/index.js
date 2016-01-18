@@ -4,11 +4,18 @@ import React from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
 
+import baseStyles from './base.css';
+
 const Blog = () => (
   <DocumentTitle title="Blog">
     <section>
       <Header />
-      <h2>Blog</h2>
+
+      <section className={ baseStyles.containter }>
+        <h2 className={ baseStyles.title }>Blog</h2>
+        <p>... soon.</p>
+      </section>
+
       <Footer />
     </section>
   </DocumentTitle>

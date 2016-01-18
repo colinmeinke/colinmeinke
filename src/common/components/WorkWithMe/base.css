@@ -1,0 +1,11 @@
+.containter {
+  composes: container from '../../styles/base/compositions/content.css';
+}
+
+.title {
+  composes: title from '../../styles/base/compositions/content.css';
+}
+
+.link {
+  composes: regular from '../../styles/base/compositions/link.css';
+}
