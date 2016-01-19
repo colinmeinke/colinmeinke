@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'universal-redux-router';
 
@@ -10,6 +10,10 @@ if ( __DEVELOPMENT__ ) {
   const DevTools = require( '../DevTools' ).default;
   devTools = <DevTools />;
 }
+
+const propTypes = {
+  store: PropTypes.object.isRequired,
+};
 
 class Root extends Component {
   render () {
@@ -23,5 +27,7 @@ class Root extends Component {
     );
   }
 }
+
+Root.propTypes = propTypes;
 
 export default Root;
