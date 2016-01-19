@@ -1,9 +1,17 @@
+.list {
+  composes: noStyle from '../../styles/base/compositions/list.css';
+}
+
 .containter {
   composes: container from '../../styles/base/compositions/content.css';
 }
 
 .title {
   composes: title from '../../styles/base/compositions/content.css';
+}
+
+.section {
+  composes: section from '../../styles/base/compositions/content.css';
 }
 
 .link {
