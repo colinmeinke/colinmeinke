@@ -23,12 +23,12 @@ const About = () => (
           </p>
 
           <p>
-            I now work from Airbnbs in mega-cities and
+            Now I work from Airbnbs in mega-cities and
             co-working spaces overlooking paddy fields.
           </p>
 
           <p>
-            I will use this space to share stories of what I'm
+            This is a space to share stories of what I'm
             making, where I've been and what my life is like
             working remotely.
           </p>
@@ -37,18 +37,34 @@ const About = () => (
         <section className={ baseStyles.section }>
           <p>
             I have over 10 years of experience building
-            full-stack websites.
+            full-stack websites, both working full-time
+            within start-ups, and freelance for
+            non-profits.
           </p>
 
           <p>
-            I love being a generalist and love being able to
-            take a project from start to finish.
+            I am a generalist and pride myself on being a mix
+            of both creative and technical. I love being able
+            to take a project from start to finish.
           </p>
 
           <p>
-            I enjoy both designing user experiences and
-            back-end architecture. My specialism can be found
-            somewhere between the two.
+            I enjoy designing experiences as much as I do
+            architecting maintainable code.
+          </p>
+
+          <p>
+            Design is about context. Who's using your website?
+            Where are they? What are they doing? Design isn't
+            just about a user's digital journey from A to B,
+            but about a person's ongoing experience with your
+            product in real, imperfect and changing environments.
+          </p>
+
+          <p>
+            I want the experiences I create to work well for
+            everyone, wherever they are, regardless of their
+            device or connection.
           </p>
 
           <p>I'm pretty obsessive about:</p>
