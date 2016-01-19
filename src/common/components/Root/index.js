@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'universal-redux-router';
 
@@ -11,13 +11,17 @@ if ( __DEVELOPMENT__ ) {
   devTools = <DevTools />;
 }
 
-const Root = ({ store }) => (
-  <Provider store={ store }>
-    <div>
-      <Router routes={ routes } />
-      { devTools }
-    </div>
-  </Provider>
-);
+class Root extends Component {
+  render () {
+    return (
+      <Provider store={ this.props.store }>
+        <div>
+          <Router routes={ routes } />
+          { devTools }
+        </div>
+      </Provider>
+    );
+  }
+}
 
 export default Root;
