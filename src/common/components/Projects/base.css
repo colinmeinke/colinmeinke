@@ -6,6 +6,23 @@
   composes: title from '../../styles/base/compositions/content.css';
 }
 
-.link {
+.projectList {
+  composes: noStyle from '../../styles/base/compositions/list.css';
+}
+
+.projectItem:not(:first-of-type) {
+  margin-top: var( --spacing-large );
+}
+
+.projectTitle {
+  font-size: var( --font-size-medium );
+  margin-bottom: 0;
+}
+
+.projectDescription {
+
+}
+
+.projectLink {
   composes: regular from '../../styles/base/compositions/link.css';
 }
