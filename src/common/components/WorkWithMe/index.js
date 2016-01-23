@@ -6,6 +6,39 @@ import Header from '../Header';
 
 import baseStyles from './base.css';
 
+const testimonials = [
+  {
+    company: 'Gignite',
+    name: 'Luke Morton',
+    quote: `Working with Colin is great. He’s full of ideas for
+            modern, client side heavy development. Can’t wait
+            to work with him again.`,
+    role: 'Lead Developer',
+  },
+  {
+    company: 'Democratic Voice of Burma',
+    name: 'Francis Wade',
+    quote: `Colin spent several months building a strong, stylish
+            and innovative website for DVB to map the 2010
+            elections in Burma that cleverly utilised user
+            interactivity during a period of tight media control
+            in Burma. The website received widespread acclaim and
+            was commended by various news outlets, including
+            Reuters.`,
+    role: 'Journalist',
+  },
+  {
+    company: 'Visiting Arts',
+    name: 'Andy Kyriakides',
+    quote: `Working with Colin on the Visiting Arts website was
+            a pleasure. His input was invaluable from
+            conception to delivery and helped shape a
+            technological paradigm shift for the whole
+            organisation.`,
+    role: 'Communications Manager',
+  },
+];
+
 const WorkWithMe = () => (
   <DocumentTitle title="Work with me">
     <section>
@@ -63,6 +96,30 @@ const WorkWithMe = () => (
               hello@colinmeinke.com
             </a>
           </p>
+        </section>
+
+        <section className={ baseStyles.section }>
+          <h3 className={ baseStyles.subTitle }>
+            Testimonials
+          </h3>
+
+          <p>
+            Here are some nice things people have to say about me:
+          </p>
+
+          { testimonials.map( testimonial => (
+            <blockquote className={ baseStyles.testimonial }>
+              <p className={ baseStyles.quote }>
+                { testimonial.quote }
+              </p>
+              <footer>
+                <cite className={ baseStyles.cite }>
+                  <strong>{ testimonial.name }</strong> – { ' ' }
+                  { testimonial.role } at { testimonial.company }
+                </cite>
+              </footer>
+            </blockquote>
+          ))}
         </section>
       </section>
     </section>

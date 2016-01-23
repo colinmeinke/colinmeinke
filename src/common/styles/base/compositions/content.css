@@ -15,3 +15,7 @@
 .section + .section {
   border-top: 1px solid var( --color-border );
 }
+
+.section:last-of-type {
+  margin-bottom: var( --spacing-large );
+}

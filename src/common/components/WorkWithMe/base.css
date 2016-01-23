@@ -1,3 +1,5 @@
+@import "../../styles/base/config.css";
+
 .list {
   composes: noStyle from '../../styles/base/compositions/list.css';
 }
@@ -10,10 +12,27 @@
   composes: title from '../../styles/base/compositions/content.css';
 }
 
+.subTitle {
+  font-size: var( --font-size-medium );
+  margin-bottom: 0;
+}
+
 .section {
   composes: section from '../../styles/base/compositions/content.css';
 }
 
 .link {
   composes: regular from '../../styles/base/compositions/link.css';
+}
+
+.testimonial {
+  margin: var( --spacing-large ) 0 0;
+}
+
+.quote {}
+
+.cite {
+  display: block;
+  font-style: normal;
+  margin-top: var( --spacing-small );
 }
