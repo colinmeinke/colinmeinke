@@ -1,7 +1,9 @@
 import { combineReducers, createStore } from 'redux';
 import { updateUrl, urlReducer } from 'universal-redux-router';
 
-const reducer = combineReducers({ url: urlReducer });
+import * as reducers from '../reducers';
+
+const reducer = combineReducers({ ...reducers, url: urlReducer });
 
 const configureStore = ( initialState = {}, initialUrl = null ) => {
   if ( initialUrl ) {

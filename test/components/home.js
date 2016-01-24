@@ -2,25 +2,25 @@ import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import NotFound from '../../src/common/components/NotFound/index';
+import Home from '../../src/common/components/Home/index';
 
 describe( 'component', () => {
-  describe( '<NotFound />', () => {
-    let notFound;
+  describe( '<Home />', () => {
+    let home;
 
     before(() => {
       const renderer = TestUtils.createRenderer();
 
       renderer.render(
-        <NotFound />
+        <Home />
       );
 
-      notFound = renderer.getRenderOutput();
+      home = renderer.getRenderOutput();
     });
 
     it( 'should render correct markup', () => {
-      expect( notFound.props.children.type ).toBe( 'section' );
-      expect( notFound.props.children.props.children[ 0 ].type.displayName )
+      expect( home.props.children.type ).toBe( 'section' );
+      expect( home.props.children.props.children[ 0 ].type.displayName )
         .toBe( 'Connect(Header)' );
     });
   });

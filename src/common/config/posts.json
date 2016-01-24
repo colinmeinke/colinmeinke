@@ -1,0 +1,24 @@
+{
+  "filters": [
+    {
+      "name": "All posts",
+      "tags": []
+    },
+    {
+      "name": "Coding",
+      "tags": [ "coding" ]
+    },
+    {
+      "name": "Making",
+      "tags": [ "making" ]
+    },
+    {
+      "name": "Travelling",
+      "tags": [ "travelling" ]
+    },
+    {
+      "name": "Working",
+      "tags": [ "working" ]
+    }
+  ]
+}

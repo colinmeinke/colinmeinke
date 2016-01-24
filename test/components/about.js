@@ -2,7 +2,7 @@ import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import About from '../../src/common/components/Blog/index';
+import About from '../../src/common/components/About/index';
 
 describe( 'component', () => {
   describe( '<About />', () => {

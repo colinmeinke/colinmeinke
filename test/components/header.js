@@ -12,10 +12,14 @@ describe( 'component', () => {
     let header;
 
     before(() => {
+      const props = {
+        url: '/',
+      };
+
       const renderer = TestUtils.createRenderer();
 
       renderer.render(
-        <Header />
+        <Header { ...props } />
       );
 
       header = renderer.getRenderOutput();

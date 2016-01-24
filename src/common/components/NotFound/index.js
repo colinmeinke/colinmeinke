@@ -1,10 +1,10 @@
 import DocumentTitle from 'react-document-title';
 import React from 'react';
 
+import baseStyles from './base.css';
+
 import Footer from '../Footer';
 import Header from '../Header';
-
-import baseStyles from './base.css';
 
 const NotFound = () => (
   <DocumentTitle title="Page not found">

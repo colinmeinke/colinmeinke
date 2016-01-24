@@ -19,29 +19,6 @@
 .activity {}
 .location {}
 
-.nav {
-  composes: noStyle from '../../styles/base/compositions/list.css';
-}
-
-.navItem {
-  display: inline;
-}
-
-.navItem:not( :first-of-type ) {
-  margin-left: var( --spacing-small );
-}
-
-.navActive {}
-
-.navLink {
-  composes: regular from '../../styles/base/compositions/link.css';
-}
-
-.navActive .navLink {
-  color: var( --color-font );
-  text-decoration: none;
-}
-
 .button {
   composes: regular from '../../styles/base/compositions/button.css';
 }

@@ -38,7 +38,8 @@ if ( __DEVELOPMENT__ ) {
 }
 
 const render = ( req, res ) => {
-  const store = configureStore({}, req.url );
+  const tags = req.query.tags ? req.query.tags.split( ' ' ) : [];
+  const store = configureStore({ tags }, req.url );
 
   res.write( '<!DOCTYPE html>' );
 

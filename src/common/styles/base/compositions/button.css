@@ -5,6 +5,7 @@
   color: var( --color-background );
   display: inline-block;
   font-weight: bold;
+  margin-top: var( --spacing-medium );
   padding: var( --spacing-small );
   text-decoration: none;
 }

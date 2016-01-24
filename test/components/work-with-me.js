@@ -2,7 +2,7 @@ import expect from 'expect';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 
-import WorkWithMe from '../../src/common/components/Blog/index';
+import WorkWithMe from '../../src/common/components/WorkWithMe/index';
 
 describe( 'component', () => {
   describe( '<WorkWithMe />', () => {

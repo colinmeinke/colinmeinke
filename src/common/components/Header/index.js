@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'universal-redux-router';
 
+import { navItems } from '../../config';
+
 import baseStyles from './base.css';
 
-const navItems = [
-  { name: 'Blog', url: '/' },
-  { name: 'About', url: '/about' },
-  { name: 'Projects', url: '/projects' },
-];
+import Nav from '../Nav';
+
+const items = navItems.map(({ name, url }) => ({
+  activeString: url,
+  name,
+  url,
+}));
 
 const Header = ({ url }) => (
   <header className={ baseStyles.header }>
@@ -28,24 +32,10 @@ const Header = ({ url }) => (
       </strong>.
     </p>
 
-    <ul className={ baseStyles.nav }>
-      { navItems.map(( item, i ) => (
-        <li
-          className={[
-            baseStyles.navItem,
-            ( url === item.url ? baseStyles.navActive : null ),
-          ].join( ' ' )}
-          key={ i }
-        >
-          <Link
-            className={ baseStyles.navLink }
-            url={ item.url }
-          >
-            { item.name }
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <Nav
+      activeString={ url.split( '?' )[ 0 ]}
+      items={ items }
+    />
 
     { url === '/work-with-me' ? null : (
       <Link

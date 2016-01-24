@@ -1,0 +1,18 @@
+.link {
+  composes: regular from './link.css';
+}
+
+.link:not( :first-of-type ) {
+  margin-left: var( --spacing-small );
+}
+
+.active {
+  color: var( --color-font );
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:focus,
+.active:hover {
+  text-decoration: none;
+}

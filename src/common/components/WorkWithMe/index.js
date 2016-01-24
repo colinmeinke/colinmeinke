@@ -2,9 +2,9 @@ import DocumentTitle from 'react-document-title';
 import React from 'react';
 import { Link } from 'universal-redux-router';
 
-import Header from '../Header';
-
 import baseStyles from './base.css';
+
+import Header from '../Header';
 
 const testimonials = [
   {
@@ -107,8 +107,11 @@ const WorkWithMe = () => (
             Here are some nice things people have to say about me:
           </p>
 
-          { testimonials.map( testimonial => (
-            <blockquote className={ baseStyles.testimonial }>
+          { testimonials.map(( testimonial, i ) => (
+            <blockquote
+              className={ baseStyles.testimonial }
+              key={ i }
+            >
               <p className={ baseStyles.quote }>
                 { testimonial.quote }
               </p>

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import About from '../components/About';
-import Blog from '../components/Blog';
+import Home from '../components/Home';
+import NotFound from '../components/NotFound';
 import Projects from '../components/Projects';
 import WorkWithMe from '../components/WorkWithMe';
-import NotFound from '../components/NotFound';
 
 const routes = url => {
   const path = url.split( '?' )[ 0 ];
@@ -13,7 +13,7 @@ const routes = url => {
     case '/about':
       return <About />;
     case '/':
-      return <Blog />;
+      return <Home />;
     case '/projects':
       return <Projects />;
     case '/work-with-me':

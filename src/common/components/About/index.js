@@ -1,10 +1,10 @@
 import DocumentTitle from 'react-document-title';
 import React from 'react';
 
+import baseStyles from './base.css';
+
 import Footer from '../Footer';
 import Header from '../Header';
-
-import baseStyles from './base.css';
 
 const About = () => (
   <DocumentTitle title="About">
@@ -25,12 +25,6 @@ const About = () => (
           <p>
             Now I work from Airbnbs in mega-cities and
             co-working spaces overlooking paddy fields.
-          </p>
-
-          <p>
-            This is a space to share stories of what I'm
-            making, where I've been and what my life is like
-            working remotely.
           </p>
         </section>
 

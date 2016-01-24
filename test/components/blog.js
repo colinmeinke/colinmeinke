@@ -19,9 +19,8 @@ describe( 'component', () => {
     });
 
     it( 'should render correct markup', () => {
-      expect( blog.props.children.type ).toBe( 'section' );
-      expect( blog.props.children.props.children[ 0 ].type.displayName )
-        .toBe( 'Connect(Header)' );
+      expect( blog.type ).toBe( 'section' );
+      expect( blog.props.children.type ).toBe( 'header' );
     });
   });
 });

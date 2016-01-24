@@ -1,24 +1,20 @@
-import DocumentTitle from 'react-document-title';
 import React from 'react';
-
-import Footer from '../Footer';
-import Header from '../Header';
 
 import baseStyles from './base.css';
 
+import PostsFilter from '../PostsFilter';
+
 const Blog = () => (
-  <DocumentTitle title="Blog">
-    <section>
-      <Header />
-
-      <section className={ baseStyles.containter }>
-        <h2 className={ baseStyles.title }>Blog</h2>
-        <p>... soon.</p>
-      </section>
-
-      <Footer />
-    </section>
-  </DocumentTitle>
+  <section className={ baseStyles.container }>
+    <header>
+      <p>
+        This is a space to share stories of what I'm
+        making, where I've been and what my life is like
+        working remotely.
+      </p>
+      <PostsFilter />
+    </header>
+  </section>
 );
 
 export default Blog;

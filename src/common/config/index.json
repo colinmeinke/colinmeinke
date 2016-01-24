@@ -42,6 +42,20 @@
     "src": "src",
     "static": "static"
   },
+  "navItems": [
+    {
+      "name": "Blog",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Projects",
+      "url": "/projects"
+    }
+  ],
   "production": {
     "scripts": [
       {
