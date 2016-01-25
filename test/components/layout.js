@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 
 import Layout from '../../src/common/components/Layout/index';
 
@@ -9,7 +9,7 @@ describe( 'component', () => {
     let layout;
 
     before(() => {
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <Layout />

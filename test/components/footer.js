@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 
 import Footer from '../../src/common/components/Footer/index';
 
@@ -9,7 +9,7 @@ describe( 'component', () => {
     let footer;
 
     before(() => {
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <Footer />

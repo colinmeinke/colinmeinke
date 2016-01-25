@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -16,7 +16,7 @@ describe( 'component', () => {
     let postsFilter;
 
     before(() => {
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <PostsFilter { ...props } />
@@ -36,7 +36,7 @@ describe( 'component', () => {
     before(() => {
       const store = createStore(() => props );
 
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <Provider store={ store }>

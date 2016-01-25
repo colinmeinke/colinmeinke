@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 
 import Projects from '../../src/common/components/Projects/index';
 
@@ -9,7 +9,7 @@ describe( 'component', () => {
     let projects;
 
     before(() => {
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <Projects />

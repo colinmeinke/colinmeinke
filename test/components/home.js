@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 
 import Blog from '../../src/common/components/Blog';
 import Home from '../../src/common/components/Home/index';
@@ -10,7 +10,7 @@ describe( 'component', () => {
     let home;
 
     before(() => {
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <Home />

@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 
 import NotFound from '../../src/common/components/NotFound/index';
 
@@ -9,7 +9,7 @@ describe( 'component', () => {
     let notFound;
 
     before(() => {
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <NotFound />

@@ -1,6 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-addons-test-utils';
 
 import Nav from '../../src/common/components/Nav/index';
 
@@ -16,7 +16,7 @@ describe( 'component', () => {
         ],
       };
 
-      const renderer = TestUtils.createRenderer();
+      const renderer = createRenderer();
 
       renderer.render(
         <Nav { ...props } />
