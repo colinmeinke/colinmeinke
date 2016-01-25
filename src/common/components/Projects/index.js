@@ -1,10 +1,8 @@
-import DocumentTitle from 'react-document-title';
 import React from 'react';
 
-import baseStyles from './base.css';
+import Layout from '../Layout';
 
-import Footer from '../Footer';
-import Header from '../Header';
+import baseStyles from './base.css';
 
 const projects = [
   {
@@ -43,41 +41,35 @@ const projects = [
 ];
 
 const Projects = () => (
-  <DocumentTitle title="Projects">
-    <section>
-      <Header />
+  <Layout title="Projects">
+    <section className={ baseStyles.containter }>
+      <h2 className={ baseStyles.title }>Projects</h2>
 
-      <section className={ baseStyles.containter }>
-        <h2 className={ baseStyles.title }>Projects</h2>
+      <ul className={ baseStyles.projectList }>
+        { projects.map(( project, i ) => (
+          <li
+            className={ baseStyles.projectItem }
+            key={ i }
+          >
+            <h3 className={ baseStyles.projectTitle }>
+              { project.name }
+            </h3>
 
-        <ul className={ baseStyles.projectList }>
-          { projects.map(( project, i ) => (
-            <li
-              className={ baseStyles.projectItem }
-              key={ i }
+            <p className={ baseStyles.projectDescription }>
+              { project.description }
+            </p>
+
+            <a
+              className={ baseStyles.projectLink }
+              href={ project.url }
             >
-              <h3 className={ baseStyles.projectTitle }>
-                { project.name }
-              </h3>
-
-              <p className={ baseStyles.projectDescription }>
-                { project.description }
-              </p>
-
-              <a
-                className={ baseStyles.projectLink }
-                href={ project.url }
-              >
-                View on github
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <Footer />
+              View on github
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
-  </DocumentTitle>
+  </Layout>
 );
 
 export default Projects;

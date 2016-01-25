@@ -1,23 +1,17 @@
-import DocumentTitle from 'react-document-title';
 import React from 'react';
+
+import Layout from '../Layout';
 
 import baseStyles from './base.css';
 
-import Footer from '../Footer';
-import Header from '../Header';
-
 const NotFound = () => (
-  <DocumentTitle title="Page not found">
-    <section>
-      <Header />
-
-      <section className={ baseStyles.containter }>
-        <h2>Page not found</h2>
-      </section>
-
-      <Footer />
+  <Layout title="Page not found">
+    <section className={ baseStyles.containter }>
+      <h2 className={ baseStyles.title }>
+        Page not found
+      </h2>
     </section>
-  </DocumentTitle>
+  </Layout>
 );
 
 export default NotFound;

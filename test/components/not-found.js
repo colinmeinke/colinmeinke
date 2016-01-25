@@ -20,8 +20,7 @@ describe( 'component', () => {
 
     it( 'should render correct markup', () => {
       expect( notFound.props.children.type ).toBe( 'section' );
-      expect( notFound.props.children.props.children[ 0 ].type.displayName )
-        .toBe( 'Connect(Header)' );
+      expect( notFound.props.children.props.children.type ).toBe( 'h2' );
     });
   });
 });

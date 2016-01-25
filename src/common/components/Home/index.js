@@ -1,18 +1,12 @@
-import DocumentTitle from 'react-document-title';
 import React from 'react';
 
 import Blog from '../Blog';
-import Footer from '../Footer';
-import Header from '../Header';
+import Layout from '../Layout';
 
 const Home = () => (
-  <DocumentTitle title="Blog">
-    <section>
-      <Header />
-      <Blog />
-      <Footer />
-    </section>
-  </DocumentTitle>
+  <Layout title="Blog">
+    <Blog />
+  </Layout>
 );
 
 export default Home;
