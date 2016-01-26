@@ -7,6 +7,18 @@ import baseStyles from './base.css';
 
 const testimonials = [
   {
+    company: 'irokotv',
+    name: 'Matteo Cuellar',
+    quote: `I have worked together with Colin on multiple
+            projects for almost 2 years and it’s always been
+            a great experience. Keeping up to date with
+            current web technologies, he always found clever
+            ways of realising and sometimes even enhancing
+            the designs while maintaining app and front-end
+            performance.`,
+    role: 'Director of Product Design and UX',
+  },
+  {
     company: 'Gignite',
     name: 'Luke Morton',
     quote: `Working with Colin is great. He’s full of ideas for
