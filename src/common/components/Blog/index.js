@@ -1,10 +1,20 @@
 import React from 'react';
 
-import baseStyles from './base.css';
+import { posts } from '../../config/posts';
+
+import { tagMatch } from '../../helpers';
 
 import PostsFilter from '../PostsFilter';
+import PostsList from '../PostsList';
 
-const Blog = () => (
+import baseStyles from './base.css';
+
+const getPosts = tags => posts.filter( post => (
+  post.published &&
+  ( !tags.length || tagMatch( tags, post.tags ))
+));
+
+const Blog = ({ tags }) => (
   <section className={ baseStyles.container }>
     <header>
       <p>
@@ -13,6 +23,7 @@ const Blog = () => (
         working remotely.
       </p>
       <PostsFilter />
+      <PostsList posts={ getPosts( tags )} />
     </header>
   </section>
 );

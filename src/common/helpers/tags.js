@@ -7,4 +7,14 @@ const getTagsFromUrl = ( url = '' ) => {
   return matches ? matches[ 0 ].substr( 5 ).split( /[ \+%20]+/ ) : [];
 };
 
-export { createUrlFromTags, getTagsFromUrl };
+const tagMatch = ( tags = [], postTags = []) => {
+  for ( const tag of tags ) {
+    if ( postTags.indexOf( tag ) !== -1 ) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+export { createUrlFromTags, getTagsFromUrl, tagMatch };
