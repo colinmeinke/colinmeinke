@@ -38,6 +38,12 @@ const projects = [
     name: 'PostCSS calc function',
     url: 'https://github.com/colinmeinke/postcss-calc-function',
   },
+  {
+    description: 'An extensible shared config for ESLint.',
+    name: 'Spaced',
+    url: 'https://github.com/colinmeinke/eslint-config-spaced',
+  },
+
 ];
 
 const Projects = () => (
