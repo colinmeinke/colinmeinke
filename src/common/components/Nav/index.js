@@ -18,7 +18,7 @@ const Nav = ({ activeString, items, linkProps }) => (
           ( activeString === item.activeString ? baseStyles.active : null ),
         ].join( ' ' )}
         key={ i }
-        url={ item.url }
+        to={ item.to }
         { ...linkProps }
       >
         { item.name }

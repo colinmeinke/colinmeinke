@@ -1,3 +1,5 @@
-export const UPDATE_TAGS = 'UPDATE_TAGS';
+const UPDATE_TAGS = 'UPDATE_TAGS';
 
-export const updateTags = ( tags = []) => ({ type: UPDATE_TAGS, tags });
+const updateTags = ( tags = []) => ({ type: UPDATE_TAGS, tags });
+
+export { UPDATE_TAGS, updateTags };

@@ -10,7 +10,7 @@ import Nav from '../Nav';
 const items = navItems.map(({ name, url }) => ({
   activeString: url,
   name,
-  url,
+  to: url,
 }));
 
 const Header = ({ url }) => (
@@ -40,7 +40,7 @@ const Header = ({ url }) => (
     { url === '/work-with-me' ? null : (
       <Link
         className={ baseStyles.button }
-        url="/work-with-me"
+        to="/work-with-me"
       >
         Work with me
       </Link>

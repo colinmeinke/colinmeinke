@@ -1,3 +1,3 @@
-import { createUrlFromTags, getTagsFromUrl, tagMatch } from './tags';
+import { tagMatch } from './tags';
 
-export { createUrlFromTags, getTagsFromUrl, tagMatch };
+export { tagMatch };

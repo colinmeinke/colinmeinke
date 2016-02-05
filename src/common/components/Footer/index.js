@@ -11,7 +11,7 @@ const Footer = () => (
 
     <Link
       className={ baseStyles.button }
-      url="/work-with-me"
+      to="/work-with-me"
     >
       Discuss working with me remotely
     </Link>

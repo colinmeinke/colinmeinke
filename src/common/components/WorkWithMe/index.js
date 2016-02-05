@@ -68,7 +68,7 @@ const WorkWithMe = () => (
         <p>
           <Link
             className={ baseStyles.link }
-            url="/about"
+            to="/about"
           >
             Read more about me
           </Link>

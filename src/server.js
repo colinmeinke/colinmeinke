@@ -37,16 +37,14 @@ if ( __DEVELOPMENT__ ) {
   app.use( require( 'webpack-hot-middleware' )( compiler ));
 }
 
-const render = ( req, res ) => {
-  const tags = req.query.tags ? req.query.tags.split( ' ' ) : [];
-  const store = configureStore({ tags }, req.url );
+const render = ({ url }, res ) => {
+  const store = configureStore({ isServer: true, url });
 
   res.write( '<!DOCTYPE html>' );
 
   renderToStaticMarkup(
     <Page
       app={ renderToString( <Root store={ store } /> )}
-      initialState={ store.getState() }
       scripts={ scripts }
       styles={ styles }
       title={ DocumentTitle.rewind() }
