@@ -1,3 +1,4 @@
+import page from './page';
 import tags from './tags';
 
-export { tags };
+export { page, tags };

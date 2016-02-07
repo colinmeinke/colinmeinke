@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { updateTags } from '../actions';
+import { updatePage, updateTags } from '../actions';
 
 import About from '../components/About';
 import Home from '../components/Home';
@@ -10,7 +10,7 @@ import WorkWithMe from '../components/WorkWithMe';
 
 const routes = [
   [ '/about', <About /> ],
-  [ '/', { tags: updateTags }, <Home /> ],
+  [ '/', { page: updatePage, tags: updateTags }, <Home /> ],
   [ '/projects', <Projects /> ],
   [ '/work-with-me', <WorkWithMe /> ],
   [ '*', <NotFound /> ],
