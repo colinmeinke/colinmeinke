@@ -24,11 +24,11 @@ const Header = ({ url }) => (
     <p className={ baseStyles.activityLocation }>
       Currently { ' ' }
       <strong className={ baseStyles.activity }>
-        learning Spanish
+        eating gorditas
       </strong>
       { ' ' } in { ' ' }
       <strong className={ baseStyles.location }>
-        Oaxaca, Mexico
+        Guanajuato, Mexico
       </strong>.
     </p>
 
