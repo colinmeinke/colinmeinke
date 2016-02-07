@@ -13,8 +13,8 @@ describe( 'reducer', () => {
       const tags = [ 'hello', 'world' ];
 
       expect( reducer( '', {
-        type: UPDATE_TAGS,
         tags,
+        type: UPDATE_TAGS,
       })).toEqual( tags );
     });
   });

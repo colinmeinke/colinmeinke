@@ -9,8 +9,8 @@ describe( 'action creator', () => {
         const tags = [ 'hello', 'world' ];
 
         const expectedAction = {
-          type: UPDATE_TAGS,
           tags,
+          type: UPDATE_TAGS,
         };
 
         expect( updateTags( tags )).toEqual( expectedAction );
