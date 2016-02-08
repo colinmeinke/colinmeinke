@@ -4,6 +4,7 @@ import { posts } from '../../config/posts';
 
 import { tagMatch } from '../../helpers';
 
+import LoadMorePosts from '../LoadMorePosts';
 import PostsFilter from '../PostsFilter';
 import PostsList from '../PostsList';
 
@@ -24,6 +25,7 @@ const Blog = ({ tags }) => (
       </p>
       <PostsFilter />
       <PostsList posts={ getPosts( tags )} />
+      <LoadMorePosts />
     </header>
   </section>
 );
