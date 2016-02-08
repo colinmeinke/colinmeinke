@@ -6,8 +6,8 @@ import baseStyles from './base.css';
 const LoadMorePosts = ({ page, tags }) => (
   <Link
     className={ baseStyles.link }
-    to={[ '/', { page: page + 1, tags }]}
     shouldScrollToTop={ false }
+    to={[ '/', { page: page + 1, tags }]}
   >
     Load more post
   </Link>
