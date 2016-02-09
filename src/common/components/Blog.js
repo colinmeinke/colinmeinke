@@ -2,6 +2,6 @@ import { connect } from 'react-redux';
 
 import Blog from './Blog/index';
 
-const mapStateToProps = ({ tags }) => ({ tags });
+const mapStateToProps = ({ page, tags }) => ({ page, tags });
 
 export default connect( mapStateToProps )( Blog );

@@ -1,8 +1,14 @@
 import React from 'react';
 
-const Post = () => (
+const Post = ({ tags, title }) => (
   <article>
-    <h2></h2>
+    <h2>{ title }</h2>
+    <p>
+      posted in { ' ' }
+      <strong>
+        { tags.join( ', ' )}
+      </strong>
+    </p>
   </article>
 );
 

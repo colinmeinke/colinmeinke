@@ -10,12 +10,14 @@ import PostsList from '../PostsList';
 
 import baseStyles from './base.css';
 
-const getPosts = tags => posts.filter( post => (
+const postsPerPage = 3;
+
+const getPosts = ( page, tags ) => posts.filter( post => (
   post.published &&
   ( !tags.length || tagMatch( tags, post.tags ))
-));
+)).slice( 0, page * postsPerPage );
 
-const Blog = ({ tags }) => (
+const Blog = ({ page, tags }) => (
   <section className={ baseStyles.container }>
     <header>
       <p>
@@ -24,7 +26,7 @@ const Blog = ({ tags }) => (
         working remotely.
       </p>
       <PostsFilter />
-      <PostsList posts={ getPosts( tags )} />
+      <PostsList posts={ getPosts( page, tags )} />
       <LoadMorePosts />
     </header>
   </section>
