@@ -9,7 +9,7 @@ const LoadMorePosts = ({ page, tags }) => (
     shouldScrollToTop={ false }
     to={[ '/', { page: page + 1, tags }]}
   >
-    Load more post
+    Load more posts
   </Link>
 );
 
