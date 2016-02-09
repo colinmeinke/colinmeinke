@@ -29,7 +29,7 @@ const getPosts = ( page, tags ) => {
   }
 
   return filteredPosts.slice( 0, postsToDisplay );
-}
+};
 
 const Blog = ({ page, tags }) => (
   <section className={ baseStyles.container }>
