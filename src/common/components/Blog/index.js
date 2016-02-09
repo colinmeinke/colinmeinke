@@ -10,12 +10,26 @@ import PostsList from '../PostsList';
 
 import baseStyles from './base.css';
 
+let morePosts = false;
+
 const postsPerPage = 3;
 
-const getPosts = ( page, tags ) => posts.filter( post => (
-  post.published &&
-  ( !tags.length || tagMatch( tags, post.tags ))
-)).slice( 0, page * postsPerPage );
+const getPosts = ( page, tags ) => {
+  const postsToDisplay = page * postsPerPage;
+
+  const filteredPosts = posts.filter( post => (
+    post.published &&
+    ( !tags.length || tagMatch( tags, post.tags ))
+  ));
+
+  if ( filteredPosts.length > postsToDisplay ) {
+    morePosts = true;
+  } else {
+    morePosts = false;
+  }
+
+  return filteredPosts.slice( 0, postsToDisplay );
+}
 
 const Blog = ({ page, tags }) => (
   <section className={ baseStyles.container }>
@@ -27,7 +41,7 @@ const Blog = ({ page, tags }) => (
       </p>
       <PostsFilter />
       <PostsList posts={ getPosts( page, tags )} />
-      <LoadMorePosts />
+      { morePosts ? <LoadMorePosts /> : null }
     </header>
   </section>
 );
