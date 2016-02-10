@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { posts } from '../../config/posts';
-
-import { tagMatch } from '../../helpers';
+import { postsPerPage } from '../../config/posts';
 
 import LoadMorePosts from '../LoadMorePosts';
 import PostsFilter from '../PostsFilter';
@@ -10,28 +8,7 @@ import PostsList from '../PostsList';
 
 import baseStyles from './base.css';
 
-let morePosts = false;
-
-const postsPerPage = 3;
-
-const getPosts = ( page, tags ) => {
-  const postsToDisplay = page * postsPerPage;
-
-  const filteredPosts = posts.filter( post => (
-    post.published &&
-    ( !tags.length || tagMatch( tags, post.tags ))
-  ));
-
-  if ( filteredPosts.length > postsToDisplay ) {
-    morePosts = true;
-  } else {
-    morePosts = false;
-  }
-
-  return filteredPosts.slice( 0, postsToDisplay );
-};
-
-const Blog = ({ page, tags }) => (
+const Blog = ({ morePosts, page, posts }) => (
   <section className={ baseStyles.container }>
     <header>
       <p>
@@ -40,7 +17,7 @@ const Blog = ({ page, tags }) => (
         working remotely.
       </p>
       <PostsFilter />
-      <PostsList posts={ getPosts( page, tags )} />
+      <PostsList posts={ posts.slice( 0, page * postsPerPage ) } />
       { morePosts ? <LoadMorePosts /> : null }
     </header>
   </section>

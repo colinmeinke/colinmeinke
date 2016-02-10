@@ -8,18 +8,23 @@ describe( 'component', () => {
   describe( '<Post />', () => {
     let post;
 
+    const props = {
+      tags: [ 'coding' ],
+      title: 'Hello world',
+    };
+
     before(() => {
       const renderer = createRenderer();
 
       renderer.render(
-        <Post />
+        <Post { ...props } />
       );
 
       post = renderer.getRenderOutput();
     });
 
     it( 'should render correct markup', () => {
-      expect( post.props.children.type ).toBe( 'h2' );
+      expect( post.props.children[ 0 ].type ).toBe( 'h2' );
     });
   });
 });

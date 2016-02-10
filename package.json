@@ -21,7 +21,7 @@
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
     "serve-favicon": "^2.3.0",
-    "universal-redux-router": "^1.1.1"
+    "universal-redux-router": "^1.2.0"
   },
   "description": "Personal website / playground",
   "devDependencies": {

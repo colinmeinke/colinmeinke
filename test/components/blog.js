@@ -9,7 +9,9 @@ import BlogContainer from '../../src/common/components/Blog';
 
 describe( 'component', () => {
   const props = {
-    tags: [ 'hello', 'world' ],
+    morePosts: false,
+    page: 1,
+    posts: [],
   };
 
   describe( '<Blog />', () => {

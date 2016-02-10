@@ -142,5 +142,6 @@
       "tags": [ "working" ],
       "title": "post 24"
     }
-  ]
+  ],
+  "postsPerPage": 3
 }
