@@ -1,0 +1,5 @@
+@import "../../styles/base/config.css";
+
+.title {
+  font-size: var( --font-size-medium );
+}

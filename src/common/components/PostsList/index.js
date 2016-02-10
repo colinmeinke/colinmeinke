@@ -2,6 +2,8 @@ import React from 'react';
 
 import Post from '../Post';
 
+import baseStyles from './base.css';
+
 const PostsList = ({ posts }) => (
   <section>
     {
@@ -9,9 +11,9 @@ const PostsList = ({ posts }) => (
       posts.map(( post, i ) => (
         <Post key={ i } { ...post } />
       )) :
-      <p>
+      <h2 className={ baseStyles.title }>
         No posts here yet : /
-      </p>
+      </h2>
     }
   </section>
 );
