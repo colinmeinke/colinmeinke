@@ -6,14 +6,14 @@ import routes from '../config/routes';
 
 const reducer = routerReducer( reducers );
 
-const configureStore = ({ isServer = false, url = '/' } = {}) => (
-  new Promise(( resolve, reject ) => {
-    const middleware = applyMiddleware( routerMiddleware( routes, { isServer }));
+const configureStore = ({ isServer = false, url = '/' } = {}) => {
+  const middleware = applyMiddleware( routerMiddleware( routes, { isServer }));
 
-    const enhancer = __DEVELOPMENT__ ? compose(
-      middleware, require( '../components/DevTools' ).default.instrument()
-    ) : middleware;
+  const enhancer = __DEVELOPMENT__ ? compose(
+    middleware, require( '../components/DevTools' ).default.instrument()
+  ) : middleware;
 
+  return new Promise(( resolve, reject ) => {
     getState( url, routes, reducer ).then( state => {
       const store = createStore( reducer, state, enhancer );
 
@@ -26,7 +26,7 @@ const configureStore = ({ isServer = false, url = '/' } = {}) => (
 
       resolve( store );
     }).catch( reject );
-  })
-);
+  });
+};
 
 export default configureStore;
