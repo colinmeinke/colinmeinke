@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { getPosts, updateMorePosts, updatePage, updateTags } from '../actions';
+import {
+  getPosts,
+  postsLoading,
+  postsLoaded,
+  updateMorePosts,
+  updatePage,
+  updateTags,
+} from '../actions';
 
 import About from '../components/About';
 import Home from '../components/Home';
@@ -14,7 +21,12 @@ const routes = [
   [ '/', {
     page: updatePage,
     tags: updateTags,
-    after: [ getPosts, updateMorePosts ],
+    after: [
+      postsLoading,
+      getPosts,
+      updateMorePosts,
+      postsLoaded,
+    ],
   }, <Home /> ],
 
   [ '/projects', <Projects /> ],
