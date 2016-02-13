@@ -24,7 +24,7 @@ const Header = ({ url }) => (
     <p className={ baseStyles.activityLocation }>
       Currently { ' ' }
       <strong className={ baseStyles.activity }>
-        eating guacamole
+        market dwelling
       </strong>
       { ' ' } in { ' ' }
       <strong className={ baseStyles.location }>
