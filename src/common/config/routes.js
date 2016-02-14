@@ -6,7 +6,6 @@ import {
   postsLoaded,
   updateMorePosts,
   updatePage,
-  updatePost,
   updateTags,
 } from '../actions';
 
@@ -36,7 +35,7 @@ const createRoutes = () => ([
 
 let routes = createRoutes();
 
-if ( module.hot ) {
+if ( __DEVELOPMENT__ && module.hot ) {
   module.hot.accept();
   routes = createRoutes();
 }
