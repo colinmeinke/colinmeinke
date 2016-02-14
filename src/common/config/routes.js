@@ -6,6 +6,7 @@ import {
   postsLoaded,
   updateMorePosts,
   updatePage,
+  updatePost,
   updateTags,
 } from '../actions';
 
@@ -15,9 +16,7 @@ import NotFound from '../components/NotFound';
 import Projects from '../components/Projects';
 import WorkWithMe from '../components/WorkWithMe';
 
-const routes = [
-  [ '/about', <About /> ],
-
+const createRoutes = () => ([
   [ '/', {
     page: updatePage,
     tags: updateTags,
@@ -29,9 +28,17 @@ const routes = [
     ],
   }, <Home /> ],
 
+  [ '/about', <About /> ],
   [ '/projects', <Projects /> ],
   [ '/work-with-me', <WorkWithMe /> ],
   [ '*', <NotFound /> ],
-];
+]);
+
+let routes = createRoutes();
+
+if ( module.hot ) {
+  module.hot.accept();
+  routes = createRoutes();
+}
 
 export default routes;
