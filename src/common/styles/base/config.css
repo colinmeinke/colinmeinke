@@ -5,12 +5,14 @@
   --color-block-border: hsla( 0, 0%, 10%, 1 );
   --color-border: hsla( 0, 0%, 70%, 1 );
   --color-font: hsla( 0, 0%, 20%, 1 );
+  --color-font-faint: hsla( 0, 0%, 45%, 1 );
   --color-font-link: hsla( 220, 50%, 50%, 1 );
   --font-family-regular: "Droid", "San Francisco", "Helvetica", "Arial", sans-serif;
   --font-line-height: 1.5;
   --font-size-large: 50px;
   --font-size-medium: 30px;
-  --font-size-small: 20px;
+  --font-size-regular: 20px;
+  --font-size-small: 18px;
   --max-width: 1000px;
   --spacing-large: 40px;
   --spacing-medium: 20px;

@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Blog from '../Blog';
 import Layout from '../Layout';
 
-const Home = () => (
-  <Layout title="Blog">
-    <Blog />
-  </Layout>
-);
+class Home extends Component {
+  render () {
+    return (
+      <Layout title="Blog">
+        <Blog />
+      </Layout>
+    );
+  }
+}
 
 export default Home;

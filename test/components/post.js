@@ -9,6 +9,10 @@ describe( 'component', () => {
     let post;
 
     const props = {
+      datePublished: '13 February 2017',
+      description: '',
+      locationPublished: 'Hanoi, Vietnam',
+      slug: 'hello-world',
       tags: [ 'coding' ],
       title: 'Hello world',
     };

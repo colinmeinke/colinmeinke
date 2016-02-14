@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Layout from '../Layout';
 
@@ -46,36 +46,40 @@ const projects = [
 
 ];
 
-const Projects = () => (
-  <Layout title="Projects">
-    <section className={ baseStyles.containter }>
-      <h2 className={ baseStyles.title }>Projects</h2>
+class Projects extends Component {
+  render () {
+    return (
+      <Layout title="Projects">
+        <section className={ baseStyles.containter }>
+          <h2 className={ baseStyles.title }>Projects</h2>
 
-      <ul className={ baseStyles.projectList }>
-        { projects.map(( project, i ) => (
-          <li
-            className={ baseStyles.projectItem }
-            key={ i }
-          >
-            <h3 className={ baseStyles.projectTitle }>
-              { project.name }
-            </h3>
+          <ul className={ baseStyles.projectList }>
+            { projects.map(( project, i ) => (
+              <li
+                className={ baseStyles.projectItem }
+                key={ i }
+              >
+                <h3 className={ baseStyles.projectTitle }>
+                  { project.name }
+                </h3>
 
-            <p className={ baseStyles.projectDescription }>
-              { project.description }
-            </p>
+                <p className={ baseStyles.projectDescription }>
+                  { project.description }
+                </p>
 
-            <a
-              className={ baseStyles.projectLink }
-              href={ project.url }
-            >
-              View on github
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  </Layout>
-);
+                <a
+                  className={ baseStyles.projectLink }
+                  href={ project.url }
+                >
+                  View on github
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </Layout>
+    );
+  }
+}
 
 export default Projects;

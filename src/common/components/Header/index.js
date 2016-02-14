@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'universal-redux-router';
 
 import { navItems } from '../../config';
@@ -13,39 +13,49 @@ const items = navItems.map(({ name, url }) => ({
   to: url,
 }));
 
-const Header = ({ url }) => (
-  <header className={ baseStyles.header }>
-    <h1 className={ baseStyles.title }>Colin Meinke</h1>
+const propTypes = {
+  url: PropTypes.string.isRequired,
+};
 
-    <p className={ baseStyles.subTitle }>
-      Making websites in far away places.
-    </p>
+class Header extends Component {
+  render () {
+    return (
+      <header className={ baseStyles.header }>
+        <h1 className={ baseStyles.title }>Colin Meinke</h1>
 
-    <p className={ baseStyles.activityLocation }>
-      Currently { ' ' }
-      <strong className={ baseStyles.activity }>
-        market dwelling
-      </strong>
-      { ' ' } in { ' ' }
-      <strong className={ baseStyles.location }>
-        Querétaro, Mexico
-      </strong>.
-    </p>
+        <p className={ baseStyles.subTitle }>
+          Making websites in far away places.
+        </p>
 
-    <Nav
-      activeString={ url.split( '?' )[ 0 ]}
-      items={ items }
-    />
+        <p className={ baseStyles.activityLocation }>
+          Currently { ' ' }
+          <strong className={ baseStyles.activity }>
+            market dwelling
+          </strong>
+          { ' ' } in { ' ' }
+          <strong className={ baseStyles.location }>
+            Querétaro, Mexico
+          </strong>.
+        </p>
 
-    { url === '/work-with-me' ? null : (
-      <Link
-        className={ baseStyles.button }
-        to="/work-with-me"
-      >
-        Work with me
-      </Link>
-    )}
-  </header>
-);
+        <Nav
+          activeString={ this.props.url.split( '?' )[ 0 ]}
+          items={ items }
+        />
+
+        { this.props.url === '/work-with-me' ? null : (
+          <Link
+            className={ baseStyles.button }
+            to="/work-with-me"
+          >
+            Work with me
+          </Link>
+        )}
+      </header>
+    );
+  }
+}
+
+Header.propTypes = propTypes;
 
 export default Header;

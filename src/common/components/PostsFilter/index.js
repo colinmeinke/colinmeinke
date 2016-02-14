@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { filters } from '../../config/posts';
 
@@ -20,15 +20,19 @@ const propTypes = {
   tags: PropTypes.array,
 };
 
-const PostsFilter = ({ tags }) => (
-  <section>
-    <Nav
-      activeString={ createActiveString( tags )}
-      items={ items }
-      linkProps={ linkProps }
-    />
-  </section>
-);
+class PostsFilter extends Component {
+  render () {
+    return (
+      <section>
+        <Nav
+          activeString={ createActiveString( this.props.tags )}
+          items={ items }
+          linkProps={ linkProps }
+        />
+      </section>
+    );
+  }
+}
 
 PostsFilter.propTypes = propTypes;
 

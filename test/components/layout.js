@@ -12,7 +12,9 @@ describe( 'component', () => {
       const renderer = createRenderer();
 
       renderer.render(
-        <Layout />
+        <Layout>
+          <p>Hello world</p>
+        </Layout>
       );
 
       layout = renderer.getRenderOutput();

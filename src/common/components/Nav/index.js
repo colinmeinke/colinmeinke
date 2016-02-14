@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'universal-redux-router';
 
 import baseStyles from './base.css';
@@ -9,23 +9,27 @@ const propTypes = {
   linkProps: PropTypes.object,
 };
 
-const Nav = ({ activeString, items, linkProps }) => (
-  <nav>
-    { items.map(( item, i ) => (
-      <Link
-        className={[
-          baseStyles.link,
-          ( activeString === item.activeString ? baseStyles.active : null ),
-        ].join( ' ' )}
-        key={ i }
-        to={ item.to }
-        { ...linkProps }
-      >
-        { item.name }
-      </Link>
-    ))}
-  </nav>
-);
+class Nav extends Component {
+  render () {
+    return (
+      <nav>
+        { this.props.items.map(( item, i ) => (
+          <Link
+            className={[
+              baseStyles.link,
+              ( this.props.activeString === item.activeString ? baseStyles.active : null ),
+            ].join( ' ' )}
+            key={ i }
+            to={ item.to }
+            { ...this.props.linkProps }
+          >
+            { item.name }
+          </Link>
+        ))}
+      </nav>
+    );
+  }
+}
 
 Nav.propTypes = propTypes;
 

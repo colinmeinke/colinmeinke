@@ -12,8 +12,14 @@ describe( 'component', () => {
     before(() => {
       const props = {
         posts: [{
+          datePublished: '13 February 2017',
+          description: '',
+          locationPublished: 'Hanoi, Vietnam',
+          slug: 'hello-world',
+          tags: [ 'coding' ],
           title: 'Hello world',
         }],
+        tags: [],
       };
 
       const renderer = createRenderer();
