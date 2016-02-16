@@ -93,7 +93,7 @@
     "lint": "eslint src test",
     "start": "node ./dist/server.min.js",
     "start:dev": "NODE_ENV=development node ./dist/server.js",
-    "start:pro": "NODE_ENV=production node ./dist/server.min.js",
+    "start:pro": "NODE_ENV=development node ./dist/server.min.js",
     "test": "mocha --compilers js:babel-core/register,css:test/compiler.js test/**/*.js"
   },
   "version": "0.0.0"
