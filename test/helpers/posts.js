@@ -6,11 +6,11 @@ describe( 'helper', () => {
   describe( 'posts', () => {
     describe( 'formatPosts()', () => {
       it( 'should correctly format posts', () => {
-        const date = 'Sat Feb 16 2016 09:18:00 GMT-0600';
+        const date = 'Tue Feb 16 2016 09:18:00 GMT-0600';
         const formattedDate = formatDate( date );
 
         const postList = [{
-          datePublished: 'Sat Feb 16 2016 09:18:00 GMT-0600',
+          datePublished: 'Tue Feb 16 2016 09:18:00 GMT-0600',
           description: '',
           locationPublished: 'Hanoi, Vietnam',
           slug: 'hello-world',
