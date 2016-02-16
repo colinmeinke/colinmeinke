@@ -21,6 +21,16 @@
       "tags": [ "working" ]
     }
   ],
-  "posts": [],
+  "postList": [
+    {
+      "datePublished": "Tue Feb 16 2016 10:00:00 GMT-0600",
+      "description": "This is just a test post to make sure everything's working.",
+      "locationPublished": "Querétaro, México",
+      "published": true,
+      "slug": "hello-world",
+      "tags": [ "coding" ],
+      "title": "Hello world"
+    }
+  ],
   "postsPerPage": 3
 }
