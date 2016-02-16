@@ -1,4 +1,4 @@
-import { UPDATE_TAGS } from '../actions/tags';
+import { UPDATE_TAGS } from '../actions';
 
 const tags = ( state = [], action ) => {
   switch ( action.type ) {

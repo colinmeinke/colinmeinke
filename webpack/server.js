@@ -1,4 +1,5 @@
 import fs from 'fs';
+import webpack from 'webpack';
 
 import config from '../src/common/config';
 
@@ -14,5 +15,10 @@ export default {
   node: {
     __dirname: true,
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      fetch: 'node-fetch',
+    }),
+  ],
   target: 'node',
 };

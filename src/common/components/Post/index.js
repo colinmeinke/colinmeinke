@@ -8,6 +8,7 @@ const defaultProps = {
 };
 
 const propTypes = {
+  content: PropTypes.string,
   datePublished: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   isPreview: PropTypes.bool.isRequired,
@@ -22,12 +23,14 @@ class Post extends Component {
     return (
       <article className={ baseStyles.post }>
         <h2 className={ baseStyles.title }>
-          <Link
-            className={ baseStyles.link }
-            to={[ 'post', this.props.slug ]}
-          >
-            { this.props.title }
-          </Link>
+          { this.props.isPreview ? (
+            <Link
+              className={ baseStyles.link }
+              to={[ 'post', this.props.slug ]}
+            >
+              { this.props.title }
+            </Link>
+          ) : this.props.title }
         </h2>
 
         <p className={ baseStyles.meta }>
@@ -37,10 +40,15 @@ class Post extends Component {
         </p>
 
         { this.props.isPreview ? (
-          <p className={ baseStyles.content }>
+          <p className={ baseStyles.description }>
             { this.props.description }
           </p>
-        ) : null }
+        ) : (
+          <div
+            className={ baseStyles.content }
+            dangerouslySetInnerHTML={{ __html: this.props.content }}
+          />
+        )}
       </article>
     );
   }

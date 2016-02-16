@@ -1,4 +1,4 @@
-import { UPDATE_MORE_POSTS } from '../actions/morePosts';
+import { UPDATE_MORE_POSTS } from '../actions';
 
 const morePosts = ( state = false, action ) => {
   switch ( action.type ) {

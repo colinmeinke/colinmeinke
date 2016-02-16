@@ -15,7 +15,7 @@
 }
 
 .link {
-  composes: link from '../../styles/base/compositions/nav.css';
+  composes: regular from '../../styles/base/compositions/link.css';
 }
 
 .meta {
@@ -25,7 +25,26 @@
   margin-top: var( --spacing-small );
 }
 
-.content {
+.description {
   margin-bottom: 0;
   margin-top: var( --spacing-medium );
+}
+
+.content {
+  margin-top: var( --spacing-large );
+}
+
+.content a {
+  color: var( --color-font-link );
+  text-decoration: none;
+}
+
+.content a:focus,
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content img {
+  max-width: var( --max-content-width );
+  width: 100%;
 }

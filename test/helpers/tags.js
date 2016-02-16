@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-import { tagMatch } from '../../src/common/helpers/tags';
+import { tagMatch } from '../../src/common/helpers';
 
 describe( 'helper', () => {
   describe( 'tags', () => {

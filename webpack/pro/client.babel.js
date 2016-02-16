@@ -8,6 +8,10 @@ import proConfig from '../pro';
 const baseConfig = {
   ...clientConfig,
   ...proConfig,
+  plugins: [
+    ...clientConfig.plugins,
+    ...proConfig.plugins,
+  ],
 };
 
 const externals = config.production.scripts

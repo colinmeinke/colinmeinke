@@ -1,7 +1,19 @@
-import arePostsLoading from './arePostsLoading';
 import morePosts from './morePosts';
 import page from './page';
-import posts from './posts';
+import post from './post';
+import postList from './postList';
+import postListLoading from './postListLoading';
+import postLoading from './postLoading';
+import postSlug from './postSlug';
 import tags from './tags';
 
-export { arePostsLoading, morePosts, page, posts, tags };
+export {
+  morePosts,
+  page,
+  post,
+  postList,
+  postListLoading,
+  postLoading,
+  postSlug,
+  tags,
+};

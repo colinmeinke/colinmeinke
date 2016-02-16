@@ -1,0 +1,11 @@
+@import "../../styles/base/config.css";
+
+.container {
+  composes: container from '../../styles/base/compositions/content.css';
+}
+
+.link {
+  composes: regular from '../../styles/base/compositions/link.css';
+  display: block;
+  margin-top: var( --spacing-large );
+}

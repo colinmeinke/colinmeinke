@@ -1,31 +1,45 @@
 import React from 'react';
 
 import {
-  getPosts,
-  postsLoading,
-  postsLoaded,
+  getPost,
+  getPostList,
+  postListLoading,
+  postListLoaded,
+  postLoading,
+  postLoaded,
   updateMorePosts,
   updatePage,
+  updatePostSlug,
   updateTags,
 } from '../actions';
 
-import About from '../components/About';
-import Home from '../components/Home';
-import NotFound from '../components/NotFound';
-import Projects from '../components/Projects';
-import WorkWithMe from '../components/WorkWithMe';
+import About from '../components/AboutPage';
+import Home from '../components/HomePage';
+import NotFound from '../components/NotFoundPage';
+import Post from '../components/PostPage';
+import Projects from '../components/ProjectsPage';
+import WorkWithMe from '../components/WorkWithMePage';
 
 const createRoutes = () => ([
   [ '/', {
     page: updatePage,
     tags: updateTags,
     after: [
-      postsLoading,
-      getPosts,
+      postListLoading,
+      getPostList,
+      postListLoaded,
       updateMorePosts,
-      postsLoaded,
     ],
   }, <Home /> ],
+
+  [ 'post/:postSlug', {
+    postSlug: updatePostSlug,
+    after: [
+      postLoading,
+      getPost,
+      postLoaded,
+    ],
+  }, <Post /> ],
 
   [ '/about', <About /> ],
   [ '/projects', <Projects /> ],

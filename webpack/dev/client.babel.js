@@ -8,6 +8,10 @@ import devConfig from '../dev';
 const baseConfig = {
   ...clientConfig,
   ...devConfig,
+  plugins: [
+    ...clientConfig.plugins,
+    ...devConfig.plugins,
+  ],
 };
 
 const externals = config.development.scripts

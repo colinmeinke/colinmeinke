@@ -1,4 +1,4 @@
-import { UPDATE_PAGE } from '../actions/page';
+import { UPDATE_PAGE } from '../actions';
 
 const page = ( state = 1, action ) => {
   switch ( action.type ) {

@@ -37,6 +37,28 @@ if ( __DEVELOPMENT__ ) {
   app.use( require( 'webpack-hot-middleware' )( compiler ));
 }
 
+const api = ({ url, ...req }, res, next ) => {
+  if ( url.includes( '/api/' )) {
+    const [ , pathName ] = url.split( '/api/' );
+    const [ type, file ] = pathName.split( '/' );
+
+    switch ( type ) {
+      case 'post':
+        res.sendFile(
+          path.resolve( __dirname, '..', config.dir.posts, `${ file }.md` ),
+          error => error ? res.status( error.status ).end() : null
+        );
+
+        break;
+      default:
+        res.status( 404 ).end();
+        break;
+    }
+  } else {
+    next();
+  }
+};
+
 const render = ({ url }, res ) => {
   configureStore({ isServer: true, url }).then( store => {
     res.write( '<!DOCTYPE html>' );
@@ -52,6 +74,7 @@ const render = ({ url }, res ) => {
   }).catch( console.error.bind( console ));
 };
 
+app.use( api );
 app.use( render );
 
-app.listen( process.env.PORT || 3000 );
+app.listen( process.env.PORT || config.development.location.port );

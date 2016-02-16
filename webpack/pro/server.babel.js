@@ -6,6 +6,10 @@ import serverConfig from '../server';
 const baseConfig = {
   ...serverConfig,
   ...proConfig,
+  plugins: [
+    ...serverConfig.plugins,
+    ...proConfig.plugins,
+  ],
 };
 
 export default {
