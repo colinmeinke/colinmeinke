@@ -8,6 +8,8 @@ const UPDATE_POST = 'UPDATE_POST';
 const getPost = ({ postSlug = '' }) => new Promise(( resolve, reject ) => {
   const rootUrl = getRootUrl();
 
+  console.log( 'GET POST URL', `${ rootUrl }/api/post/${ postSlug }` );
+
   fetch( `${ rootUrl }/api/post/${ postSlug }` )
     .then( response => {
       if ( response.status !== 200 ) {
