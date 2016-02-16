@@ -23,13 +23,13 @@
   ],
   "postList": [
     {
-      "datePublished": "Tue Feb 16 2016 10:00:00 GMT-0600",
-      "description": "This is just a test post to make sure everything's working.",
+      "datePublished": "Tue Feb 16 2016 19:00:00 GMT-0600",
+      "description": "In Cuba and offline for a month the pain of tracking my travel costs is real.",
       "locationPublished": "Querétaro, México",
       "published": true,
-      "slug": "hello-world",
-      "tags": [ "coding" ],
-      "title": "Hello world"
+      "slug": "tracking-travel-costs-offline",
+      "tags": [ "making", "travelling" ],
+      "title": "Tracking travel costs offline"
     }
   ],
   "postsPerPage": 3
