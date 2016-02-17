@@ -1,13 +1,13 @@
-When we set off almost 2 years ago we didn't know if
+When we set off almost 2 years ago, we didn't know if
 our new lifestyle was going to be financially
-sustainable. For that reason I wanted to keep track of
+sustainable. For that reason, I wanted to keep track of
 what we spent along the way.
 
 Over the last 657 days I have recorded every single cost of
-our trip in what I like to refer to as the [greatest
+our trip, in what I like to refer to as the [greatest
 spreadsheet of all time](https://docs.google.com/spreadsheets/d/105Gj-PjuYujC-jr11yRII3QBdbLDnr1y3x_pZ4NwhiQ/edit?usp=sharing).
 
-Okay – I know what you're thinking... that's pretty cool
+Okay – I know what you're thinking ... that's pretty cool
 Colin. But with every row I add it becomes a little less
 maintainable, and takes a little longer to load.
 
@@ -37,7 +37,7 @@ travel costs*.
 
 ### This is my pain point
 
-And if it's my pain point, then it's other peoples too. People
+And if it's my pain point, then it's other people's too. People
 travel with budgets and need to stick to those budgets.
 Digital nomads need to weigh up how cost effective a location
 is to live and work. And I'm not the only person crazy enough
@@ -55,7 +55,7 @@ the constraints of software.
 ### Announcing unnamed idea #1
 
 The following is a glimpse into my design process for
-a cost tracking app that would make my daily life easier...
+a cost-tracking app that would make my daily life easier ...
 and prettier.
 
 ![A double page spread from my sketchbook – left: trying out
@@ -71,7 +71,7 @@ viewing the dashboard](/images/post/track-your-travel-costs-workflow.jpg)
 
 I love it when I don't have to sign up to a product to try
 it out. Here you are prompted to add your first cost as soon
-as you arrive on the site. When you're done playing you can
+as you arrive on the site. When you're done playing, you can
 then sign up to save your progress.
 
 ![A page from my sketchbook – the dashboard view](/images/post/track-your-travel-costs-dashboard.jpg)
