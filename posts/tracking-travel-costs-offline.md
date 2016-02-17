@@ -71,8 +71,8 @@ viewing the dashboard](/images/post/track-your-travel-costs-workflow.jpg)
 
 I love it when I don't have to sign up to a product to try
 it out. Here you are prompted to add your first cost as soon
-as you arrive on the site. When you're done playing, you can
-then sign up to save your progress.
+as you arrive. When you're done playing, you can then sign
+up to save your progress.
 
 ![A page from my sketchbook – the dashboard view](/images/post/track-your-travel-costs-dashboard.jpg)
 
