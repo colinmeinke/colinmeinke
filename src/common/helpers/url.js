@@ -3,9 +3,6 @@ import { getEnv } from '.';
 
 const getRootUrl = () => {
   const env = getEnv();
-
-  console.log( 'ENV', env );
-
   const { hostName, protocol, port } = config[ env ].location;
   return `${ protocol }//${ hostName }${ port ? `:${ port }` : '' }`;
 };
