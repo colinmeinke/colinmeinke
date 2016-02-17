@@ -27,7 +27,7 @@ So this wasn't the first time we've been offline on the trip.
 But we've never been offline for this long. Normally only ever
 for up to a week.
 
-I've experimented with various offline cost tracking
+I've experimented with various offline cost-tracking
 techniques, including scraps of paper, but settled on Google's
 note-keeping app Keep. I then wait until I'm online again to
 transfer these notes from Keep to my spreadsheet.
