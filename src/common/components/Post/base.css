@@ -44,7 +44,17 @@
   text-decoration: underline;
 }
 
+.content p,
 .content img {
   max-width: var( --max-content-width );
+}
+
+.content img {
+  margin-top: var( --spacing-medium );
   width: 100%;
+}
+
+.content h3 {
+  font-size: var( --font-size-medium );
+  margin-top: var( --spacing-large );
 }
