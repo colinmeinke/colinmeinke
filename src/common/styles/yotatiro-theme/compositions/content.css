@@ -1,0 +1,5 @@
+@import "../../config.css";
+
+.section + .section {
+  border-top: var( --width-border ) solid var( --color-border );
+}

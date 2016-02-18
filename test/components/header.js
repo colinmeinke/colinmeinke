@@ -27,7 +27,7 @@ describe( 'component', () => {
 
     it( 'should render correct markup', () => {
       expect( header.type ).toBe( 'header' );
-      expect( header.props.children[ 0 ].type ).toBe( 'h1' );
+      expect( header.props.children.type ).toBe( 'div' );
     });
   });
 

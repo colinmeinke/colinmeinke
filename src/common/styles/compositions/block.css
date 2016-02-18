@@ -1,0 +1,11 @@
+.primaryBackground {
+  composes: primaryBackground from "../yotatiro-theme/compositions/block.css";
+}
+
+.primaryText {
+  composes: primaryText from "../yotatiro-theme/compositions/block.css";
+}
+
+.secondaryBackground {
+  composes: secondaryBackground from "../yotatiro-theme/compositions/block.css";
+}

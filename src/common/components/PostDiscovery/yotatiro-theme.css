@@ -1,0 +1,16 @@
+@import "../../styles/config.css";
+
+.header {
+  composes: secondaryBackground from "../../styles/compositions/block.css";
+  border-bottom: var( --width-border ) solid var( --color-secondary-block-border );
+  padding-bottom: var( --spacing-small );
+  padding-top: var( --spacing-small );
+}
+
+.title {
+  color: var( --color-secondary-block-font );
+  font-size: var( --font-size-small );
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: var( --max-content-width );
+}

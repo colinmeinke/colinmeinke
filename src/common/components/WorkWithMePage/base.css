@@ -1,15 +1,15 @@
-@import "../../styles/base/config.css";
+@import "../../styles/config.css";
 
 .list {
-  composes: noStyle from '../../styles/base/compositions/list.css';
+  composes: noStyle from "../../styles/compositions/list.css";
 }
 
-.containter {
-  composes: container from '../../styles/base/compositions/content.css';
+.container {
+  composes: container from "../../styles/compositions/content.css";
 }
 
 .title {
-  composes: title from '../../styles/base/compositions/content.css';
+  composes: title from "../../styles/compositions/content.css";
 }
 
 .subTitle {
@@ -18,18 +18,16 @@
 }
 
 .section {
-  composes: section from '../../styles/base/compositions/content.css';
+  composes: section from "../../styles/compositions/content.css";
 }
 
 .link {
-  composes: regular from '../../styles/base/compositions/link.css';
+  composes: regular from '../../styles/compositions/link.css';
 }
 
 .testimonial {
   margin: var( --spacing-large ) 0 0;
 }
-
-.quote {}
 
 .cite {
   display: block;

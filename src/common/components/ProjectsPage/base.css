@@ -1,28 +1,19 @@
-.containter {
-  composes: container from '../../styles/base/compositions/content.css';
+.container {
+  composes: container from "../../styles/compositions/content.css";
 }
 
 .title {
-  composes: title from '../../styles/base/compositions/content.css';
+  composes: title from "../../styles/compositions/content.css";
 }
 
 .projectList {
-  composes: noStyle from '../../styles/base/compositions/list.css';
+  composes: noStyle from "../../styles/compositions/list.css";
 }
 
-.projectItem:not(:first-of-type) {
-  margin-top: var( --spacing-large );
+.section {
+  composes: section from "../../styles/compositions/content.css";
 }
 
-.projectTitle {
-  font-size: var( --font-size-medium );
-  margin-bottom: 0;
-}
-
-.projectDescription {
-
-}
-
-.projectLink {
-  composes: regular from '../../styles/base/compositions/link.css';
+.description {
+  margin-top: 0 !important;
 }

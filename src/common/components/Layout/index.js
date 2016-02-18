@@ -1,16 +1,17 @@
 import DocumentTitle from 'react-document-title';
 import React, { Component, PropTypes } from 'react';
 
+import CallToAction from '../CallToAction';
 import Footer from '../Footer';
 import Header from '../Header';
 
 const defaultProps = {
-  showFooter: true,
+  showCallToAction: true,
 };
 
 const propTypes = {
   children: PropTypes.object.isRequired,
-  showFooter: PropTypes.bool,
+  showCallToAction: PropTypes.bool,
   title: PropTypes.string,
 };
 
@@ -21,7 +22,8 @@ class Layout extends Component {
         <section>
           <Header />
           { this.props.children }
-          { this.props.showFooter ? <Footer /> : null }
+          { this.props.showCallToAction ? <CallToAction /> : null }
+          <Footer />
         </section>
       </DocumentTitle>
     );

@@ -1,7 +1,0 @@
-.link {
-  composes: link from '../../styles/base/compositions/nav.css';
-}
-
-.active {
-  composes: active from '../../styles/base/compositions/nav.css';
-}

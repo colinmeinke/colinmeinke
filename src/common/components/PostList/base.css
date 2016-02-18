@@ -1,4 +1,8 @@
-@import "../../styles/base/config.css";
+@import "../../styles/config.css";
+
+.container {
+  composes: container from "../../styles/compositions/content.css";
+}
 
 .title {
   font-size: var( --font-size-medium );

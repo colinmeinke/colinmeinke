@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 
 import Layout from '../Layout';
 
-import baseStyles from './base.css';
+import {
+  container,
+  description,
+  projectList,
+  section,
+  title,
+} from './styles.css';
 
 const projects = [
   {
@@ -50,29 +56,26 @@ class ProjectsPage extends Component {
   render () {
     return (
       <Layout title="Projects">
-        <section className={ baseStyles.containter }>
-          <h2 className={ baseStyles.title }>Projects</h2>
+        <section className={ container }>
+          <h2 className={ title }>Projects</h2>
 
-          <ul className={ baseStyles.projectList }>
+          <ul className={ projectList }>
             { projects.map(( project, i ) => (
               <li
-                className={ baseStyles.projectItem }
+                className={ section }
                 key={ i }
               >
-                <h3 className={ baseStyles.projectTitle }>
-                  { project.name }
-                </h3>
+                <h3>{ project.name }</h3>
 
-                <p className={ baseStyles.projectDescription }>
+                <p className={ description }>
                   { project.description }
                 </p>
 
-                <a
-                  className={ baseStyles.projectLink }
-                  href={ project.url }
-                >
-                  View on github
-                </a>
+                <p>
+                  <a href={ project.url }>
+                    View on github
+                  </a>
+                </p>
               </li>
             ))}
           </ul>

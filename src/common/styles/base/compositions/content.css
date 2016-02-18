@@ -1,4 +1,4 @@
-@import "../config.css";
+@import "../../config.css";
 
 .container {
   margin-left: auto;
@@ -10,6 +10,12 @@
 
 .title {
   font-size: var( --font-size-large );
+  margin-bottom: var( --spacing-large );
+  margin-top: var( --spacing-large );
+}
+
+.section {
+  margin-top: var( --spacing-medium );
 }
 
 .section + .section {
@@ -18,4 +24,37 @@
 
 .section:last-of-type {
   margin-bottom: var( --spacing-large );
+}
+
+.section p {
+  margin-bottom: 0;
+  margin-top: var( --spacing-medium );
+}
+
+
+
+
+.section a {
+  color: var( --color-font-link );
+  text-decoration: none;
+}
+
+.section a:focus,
+.section a:hover {
+  text-decoration: underline;
+}
+
+.section p,
+.section img {
+  max-width: var( --max-content-width );
+}
+
+.section img {
+  width: 100%;
+}
+
+.section h3 {
+  font-size: var( --font-size-medium );
+  margin-bottom: 0;
+  margin-top: var( --spacing-large );
 }

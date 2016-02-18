@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Post from '../Post';
 
-import baseStyles from './base.css';
+import { container, title } from './styles.css';
 
 const propTypes = {
   posts: PropTypes.array.isRequired,
@@ -11,13 +11,13 @@ const propTypes = {
 class PostList extends Component {
   render () {
     return (
-      <section>
+      <section className={ container }>
         {
           this.props.posts.length ?
           this.props.posts.map(( post, i ) => (
             <Post isPreview key={ i } { ...post } />
           )) :
-          <h2 className={ baseStyles.title }>
+          <h2 className={ title }>
             No posts here yet : /
           </h2>
         }

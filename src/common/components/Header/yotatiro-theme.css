@@ -1,0 +1,60 @@
+@import "../../styles/config.css";
+
+.header {
+  composes: primaryBackground from "../../styles/compositions/block.css";
+  border-bottom: var( --width-border ) solid var( --color-primary-block-border );
+  margin: 0;
+  max-width: 100%;
+  padding: var( --spacing-medium ) 0;
+}
+
+.container {
+  composes: container from "../../styles/compositions/content.css";
+}
+
+.logo {
+  fill: var( --color-primary-block-font );
+}
+
+.menu {
+  float: right;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.item {
+  color: var( --color-primary-block-font );
+  font-size: var( --font-size-small );
+}
+
+.navItem {
+  color: var( --color-primary-block-font );
+}
+
+.subTitle,
+.activityLocation {
+  composes: primaryText from "../../styles/compositions/block.css";
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.subTitle {
+  margin-top: var( --spacing-large );
+}
+
+.activityLocation {
+  font-size: var( --font-size-small );
+  margin-top: var( --spacing-tiny );
+}
+
+.activity,
+.location {
+  font-weight: normal;
+}
+
+.button {
+  display: inline-block;
+  margin-left: var( --spacing-small );
+}

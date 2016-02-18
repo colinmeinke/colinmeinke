@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 import Layout from '../Layout';
 
-import baseStyles from './base.css';
+import { container, title, section } from './styles.css';
 
 class AboutPage extends Component {
   render () {
     return (
       <Layout title="About">
-        <section className={ baseStyles.container }>
-          <h2 className={ baseStyles.title }>About</h2>
+        <section className={ container }>
+          <h2 className={ title }>About</h2>
 
-          <section className={ baseStyles.section }>
+          <section className={ section }>
             <p>
               Two years ago I left my job in London as a Senior
               Front-end Developer at irokotv (Africa's Netflix).
@@ -25,7 +25,7 @@ class AboutPage extends Component {
             </p>
           </section>
 
-          <section className={ baseStyles.section }>
+          <section className={ section }>
             <p>
               I have over 10 years of experience building
               full-stack websites, both working full-time

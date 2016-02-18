@@ -1,7 +1,7 @@
-.containter {
-  composes: container from '../../styles/base/compositions/content.css';
+.container {
+  composes: container from "../../styles/compositions/content.css";
 }
 
 .title {
-  composes: title from '../../styles/base/compositions/content.css';
+  composes: title from "../../styles/compositions/content.css";
 }

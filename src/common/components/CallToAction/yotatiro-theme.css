@@ -1,0 +1,25 @@
+@import "../../styles/config.css";
+
+.container {
+  border-top: none;
+  margin-bottom: 0;
+  margin-top: var( --spacing-huge );
+  padding-top: 0;
+}
+
+.callToAction {
+  composes: primaryBackground from "../../styles/compositions/block.css";
+  border-radius: 1px;
+  max-width: var( --max-width );
+  padding: var( --spacing-medium ) var( --spacing-small );
+}
+
+.title {
+  composes: primaryText from "../../styles/compositions/block.css";
+  font-size: var( --font-size-regular );
+}
+
+.button {
+  composes: large from '../../styles/compositions/button.css';
+  margin-top: var( --spacing-small );
+}

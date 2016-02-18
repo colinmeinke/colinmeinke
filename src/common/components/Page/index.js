@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import baseStyles from './base.css';
+import { body, html } from './styles.css';
 
 const defaultProps = {
   language: 'en',
@@ -21,7 +21,7 @@ class Page extends Component {
   render () {
     return (
       <html
-        className={ baseStyles.html }
+        className={ html }
         lang={ this.props.language }
       >
         <head>
@@ -43,9 +43,7 @@ class Page extends Component {
             <link href={ style } key={ i } rel="stylesheet" />
           ))}
         </head>
-        <body
-          className={ baseStyles.body }
-        >
+        <body className={ body }>
           <section
             className="app"
             dangerouslySetInnerHTML={{ __html: this.props.app }}

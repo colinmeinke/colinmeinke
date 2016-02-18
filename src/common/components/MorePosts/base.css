@@ -1,7 +1,7 @@
-@import "../../styles/base/config.css";
+@import "../../styles/config.css";
 
 .link {
-  composes: link from '../../styles/base/compositions/nav.css';
+  composes: regular from "../../styles/compositions/link.css";
   display: block;
   line-height: var( --font-line-height );
   margin-bottom: 0;

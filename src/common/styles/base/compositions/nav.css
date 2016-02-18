@@ -1,9 +1,11 @@
-.link {
-  composes: regular from './link.css';
+@import "../../config.css";
+
+.item {
+  display: inline-block;
 }
 
-.link:not( :first-of-type ) {
-  margin-left: var( --spacing-small );
+.item:not( :last-of-type ) {
+  margin-right: var( --spacing-small );
 }
 
 .active {

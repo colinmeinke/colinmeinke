@@ -1,3 +1,3 @@
-.container {
-  composes: container from '../../styles/base/compositions/content.css';
+.headerContainer {
+  composes: container from "../../styles/compositions/content.css";
 }

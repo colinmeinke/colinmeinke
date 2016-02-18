@@ -1,0 +1,20 @@
+@import "../../config.css";
+
+.regular {
+  background-color: var( --color-secondary-block-background-top );
+  border-radius: 1px;
+  color: var( --color-primary-block-background-top );
+  font-size: var( --font-size-small );
+  padding: calc( var( --spacing-tiny ) * 0.75 ) var( --spacing-tiny );
+}
+
+.regular:focus,
+.regular:hover {
+  background-color: var( --color-primary-block-font );
+  color: var( --color-primary-block-background-top );
+}
+
+.large {
+  font-size: var( --font-size-regular );
+  padding: var( --spacing-tiny ) calc( var( --spacing-tiny ) * 1.5 );
+}

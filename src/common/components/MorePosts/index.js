@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'universal-redux-router';
 
-import baseStyles from './base.css';
+import { link } from './styles.css';
 
 const propTypes = {
   page: PropTypes.number.isRequired,
@@ -12,7 +12,7 @@ class MorePosts extends Component {
   render () {
     return (
       <Link
-        className={ baseStyles.link }
+        className={ link }
         shouldScrollToTop={ false }
         to={[ '/', { page: this.props.page + 1, tags: this.props.tags }]}
       >

@@ -1,4 +1,4 @@
-@import "../../styles/base/config.css";
+@import "../../styles/config.css";
 
 .header {
   border-bottom: 1px solid var( --color-border );
@@ -7,18 +7,19 @@
   padding: 0 var( --spacing-small ) var( --spacing-large );
 }
 
-.title {
-  font-size: var( --font-size-medium );
+.item {
+  composes: regular from "../../styles/compositions/link.css";
+  composes: item from "../../styles/compositions/nav.css";
+}
+
+.active {
+  composes: active from "../../styles/compositions/nav.css";
 }
 
 .subTitle {
   font-weight: bold;
 }
 
-.activityLocation {}
-.activity {}
-.location {}
-
 .button {
-  composes: regular from '../../styles/base/compositions/button.css';
+  composes: regular from "../../styles/compositions/button.css";
 }

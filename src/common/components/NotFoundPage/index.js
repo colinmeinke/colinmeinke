@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import Layout from '../Layout';
 
-import baseStyles from './base.css';
+import { container, title } from './styles.css';
 
 class NotFoundPage extends Component {
   render () {
     return (
       <Layout title="Page not found">
-        <section className={ baseStyles.containter }>
-          <h2 className={ baseStyles.title }>
+        <section className={ container }>
+          <h2 className={ title }>
             Page not found
           </h2>
         </section>

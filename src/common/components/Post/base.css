@@ -1,4 +1,4 @@
-@import "../../styles/base/config.css";
+@import "../../styles/config.css";
 
 .post {
   margin-top: calc( var( --spacing-large ) * 2 );
@@ -9,13 +9,12 @@
 }
 
 .title {
-  composes: title from '../../styles/base/compositions/content.css';
+  composes: title from "../../styles/compositions/content.css";
   margin-bottom: 0;
-  margin-top: 0;
 }
 
 .link {
-  composes: regular from '../../styles/base/compositions/link.css';
+  composes: regular from "../../styles/compositions/link.css";
 }
 
 .meta {
@@ -28,33 +27,9 @@
 .description {
   margin-bottom: 0;
   margin-top: var( --spacing-medium );
-}
-
-.content {
-  margin-top: var( --spacing-large );
-}
-
-.content a {
-  color: var( --color-font-link );
-  text-decoration: none;
-}
-
-.content a:focus,
-.content a:hover {
-  text-decoration: underline;
-}
-
-.content p,
-.content img {
   max-width: var( --max-content-width );
 }
 
-.content img {
-  margin-top: var( --spacing-medium );
-  width: 100%;
-}
-
-.content h3 {
-  font-size: var( --font-size-medium );
-  margin-top: var( --spacing-large );
+.content {
+  composes: section from "../../styles/compositions/content.css";
 }

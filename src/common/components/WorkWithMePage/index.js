@@ -3,7 +3,16 @@ import { Link } from 'universal-redux-router';
 
 import Layout from '../Layout';
 
-import baseStyles from './base.css';
+import {
+  cite,
+  container,
+  link,
+  quote,
+  section,
+  subTitle,
+  testimonial,
+  title,
+} from './styles.css';
 
 const testimonials = [
   {
@@ -54,13 +63,13 @@ class WorkWithMePage extends Component {
   render () {
     return (
       <Layout
-        showFooter={ false }
+        showCallToAction={ false }
         title="Work with me"
       >
-        <section className={ baseStyles.containter }>
-          <h2 className={ baseStyles.title }>Work with me</h2>
+        <section className={ container }>
+          <h2 className={ title }>Work with me</h2>
 
-          <section className={ baseStyles.section }>
+          <section className={ section }>
             <p>
               I have over 10 years of experience building
               full-stack websites, both working full-time within
@@ -69,14 +78,14 @@ class WorkWithMePage extends Component {
 
             <p>
               <Link
-                className={ baseStyles.link }
+                className={ link }
                 to="/about"
               >
                 Read more about me
               </Link>
               { ' ' } or { ' ' }
               <a
-                className={ baseStyles.link }
+                className={ link }
                 href="https://uk.linkedin.com/in/colinmeinke"
               >
                 take a look at my work experience
@@ -85,7 +94,7 @@ class WorkWithMePage extends Component {
             </p>
           </section>
 
-          <section className={ baseStyles.section }>
+          <section className={ section }>
             <p>I'm taking on new projects in 2016.</p>
 
             <p>
@@ -103,7 +112,7 @@ class WorkWithMePage extends Component {
 
             <p>
               <a
-                className={ baseStyles.link }
+                className={ link }
                 href="mailto:hello@colinmeinke.com"
               >
                 hello@colinmeinke.com
@@ -111,8 +120,8 @@ class WorkWithMePage extends Component {
             </p>
           </section>
 
-          <section className={ baseStyles.section }>
-            <h3 className={ baseStyles.subTitle }>
+          <section className={ section }>
+            <h3 className={ subTitle }>
               Testimonials
             </h3>
 
@@ -120,18 +129,18 @@ class WorkWithMePage extends Component {
               Here are some nice things people have to say about me:
             </p>
 
-            { testimonials.map(( testimonial, i ) => (
+            { testimonials.map(( t, i ) => (
               <blockquote
-                className={ baseStyles.testimonial }
+                className={ testimonial }
                 key={ i }
               >
-                <p className={ baseStyles.quote }>
-                  { testimonial.quote }
+                <p className={ quote }>
+                  { t.quote }
                 </p>
                 <footer>
-                  <cite className={ baseStyles.cite }>
-                    <strong>{ testimonial.name }</strong> – { ' ' }
-                    { testimonial.role } at { testimonial.company }
+                  <cite className={ cite }>
+                    <strong>{ t.name }</strong> – { ' ' }
+                    { t.role } at { t.company }
                   </cite>
                 </footer>
               </blockquote>
