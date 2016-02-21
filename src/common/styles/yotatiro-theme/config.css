@@ -3,24 +3,38 @@
   --color-border: hsla( 357.5, 20%, 90%, 1 );
   --color-font: hsla( 357.5, 10%, 25%, 1 );
   --color-font-faint: hsla( 357.5, 5%, 35%, 1 );
-  --color-font-link: hsla( 195, 90%, 35%, 1 );
+  --color-font-link: hsla( 198, 100%, 37%, 1 );
   --color-primary-block-background-bottom: hsla( 357.5, 85%, 62%, 1 );
   --color-primary-block-background-top: hsla( 357.5, 80%, 60%, 1 );
   --color-primary-block-border: hsla( 357.5, 50%, 50%, 1 );
   --color-primary-block-font: hsla( 0, 0%, 100%, 1 );
-  --color-secondary-block-background-bottom: hsla( 357.5, 22%, 95%, 1 );
-  --color-secondary-block-background-top: hsla( 357.5, 20%, 98%, 1 );
+  --color-secondary-block-background-bottom: hsla( 357.5, 22%, 97%, 1 );
+  --color-secondary-block-background-top: hsla( 357.5, 20%, 99%, 1 );
   --color-secondary-block-border: var( --color-border );
   --color-secondary-block-font: var( --color-font-faint );
-  --font-line-height: 1.6;
-  --font-size-large: 44px;
-  --font-size-medium: 30px;
-  --font-size-regular: 22px;
-  --font-size-small: 18px;
-  --spacing-huge: 100px;
-  --spacing-large: 60px;
-  --spacing-medium: 40px;
-  --spacing-small: 20px;
-  --spacing-tiny: 10px;
+
+  --ratio: 1.618;
+
+  --scale-primary: 20px;
+  --scale-secondary: 70px;
+
+  --font-line-height: var( --ratio );
+  --font-line-height-small: 1.3;
+
+  --font-size-regular: var( --scale-primary );
+  --font-size-medium: calc( var( --scale-primary ) * var( --ratio ));
+  --font-size-large: calc( var( --scale-primary ) * var( --ratio )^2 );
+  --font-size-small: calc( var( --scale-secondary ) / var( --ratio )^3 );
+
+  --spacing-regular: var( --scale-primary );
+  --spacing-medium: calc( var( --scale-primary ) * var( --ratio ));
+  --spacing-large: calc( var( --scale-primary ) * var( --ratio )^2 );
+  --spacing-huge: calc( var( --scale-primary ) * var( --ratio )^3 );
+  --spacing-small: calc( var( --scale-secondary ) / var( --ratio )^4 );
+
+  --max-width: calc( var( --scale-secondary ) * var( --ratio )^5 );
+  --max-content-width: var( --max-width );
+
   --width-border: 4px;
+  --border-radius: 2px;
 }

@@ -1,9 +1,9 @@
 @import "../../styles/config.css";
 
 .meta {
-  margin-top: var( --spacing-tiny );
+  margin-top: var( --spacing-small );
 }
 
 .description {
-  margin-top: var( --spacing-small );
+  margin-top: var( --spacing-regular );
 }

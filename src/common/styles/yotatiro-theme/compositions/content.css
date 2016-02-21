@@ -1,5 +1,10 @@
 @import "../../config.css";
 
+.title {
+  line-height: var( --font-line-height-small );
+  margin-top: var( --spacing-huge );
+}
+
 .section + .section {
   border-top: var( --width-border ) solid var( --color-border );
 }

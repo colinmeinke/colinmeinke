@@ -2,10 +2,10 @@
 
 .regular {
   background-color: var( --color-secondary-block-background-top );
-  border-radius: 1px;
+  border-radius: var( --border-radius );
   color: var( --color-primary-block-background-top );
   font-size: var( --font-size-small );
-  padding: calc( var( --spacing-tiny ) * 0.75 ) var( --spacing-tiny );
+  padding: var( --spacing-small );
 }
 
 .regular:focus,
@@ -16,5 +16,5 @@
 
 .large {
   font-size: var( --font-size-regular );
-  padding: var( --spacing-tiny ) calc( var( --spacing-tiny ) * 1.5 );
+  padding: var( --spacing-regular );
 }

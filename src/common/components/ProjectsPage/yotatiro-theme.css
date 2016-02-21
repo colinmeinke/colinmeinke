@@ -1,0 +1,5 @@
+@import "../../styles/config.css";
+
+.description {
+  margin-top: var( --spacing-small ) !important;
+}

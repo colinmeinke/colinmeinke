@@ -5,7 +5,7 @@
 }
 
 .item:not( :last-of-type ) {
-  margin-right: var( --spacing-small );
+  margin-right: var( --spacing-regular );
 }
 
 .active {

@@ -3,8 +3,8 @@
 .header {
   composes: secondaryBackground from "../../styles/compositions/block.css";
   border-bottom: var( --width-border ) solid var( --color-secondary-block-border );
-  padding-bottom: var( --spacing-small );
-  padding-top: var( --spacing-small );
+  padding-bottom: var( --spacing-medium );
+  padding-top: var( --spacing-medium );
 }
 
 .title {

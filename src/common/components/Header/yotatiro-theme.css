@@ -5,7 +5,7 @@
   border-bottom: var( --width-border ) solid var( --color-primary-block-border );
   margin: 0;
   max-width: 100%;
-  padding: var( --spacing-medium ) 0;
+  padding: var( --spacing-huge ) 0;
 }
 
 .container {
@@ -46,7 +46,7 @@
 
 .activityLocation {
   font-size: var( --font-size-small );
-  margin-top: var( --spacing-tiny );
+  margin-top: var( --spacing-small );
 }
 
 .activity,
@@ -56,5 +56,5 @@
 
 .button {
   display: inline-block;
-  margin-left: var( --spacing-small );
+  margin-left: var( --spacing-regular );
 }

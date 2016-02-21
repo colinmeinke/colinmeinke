@@ -4,8 +4,8 @@
   margin-left: auto;
   margin-right: auto;
   max-width: var( --max-width );
-  padding-left: var( --spacing-small );
-  padding-right: var( --spacing-small );
+  padding-left: var( --spacing-regular );
+  padding-right: var( --spacing-regular );
 }
 
 .title {
