@@ -4,6 +4,12 @@
   composes: container from '../../styles/compositions/content.css';
 }
 
+.title {
+  font-size: var( --font-size-medium );
+  margin-bottom: 0;
+  margin-top: var( --spacing-large );
+}
+
 .link {
   composes: regular from '../../styles/compositions/link.css';
   display: block;
