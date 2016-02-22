@@ -22,7 +22,14 @@ class Layout extends Component {
         <section>
           <Header />
           { this.props.children }
-          { this.props.showCallToAction ? <CallToAction /> : null }
+          { this.props.showCallToAction ?
+            <CallToAction
+              linkText="Discuss working with me remotely"
+              linkTo="/work-with-me"
+              title="I'm taking on new projects in 2016."
+            /> :
+            null
+          }
           <Footer />
         </section>
       </DocumentTitle>

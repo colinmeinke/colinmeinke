@@ -9,10 +9,16 @@ describe( 'component', () => {
     let callToAction;
 
     before(() => {
+      const props = {
+        linkText: 'Do it',
+        linkTo: '/',
+        title: 'Hello world',
+      };
+
       const renderer = createRenderer();
 
       renderer.render(
-        <CallToAction />
+        <CallToAction { ...props } />
       );
 
       callToAction = renderer.getRenderOutput();

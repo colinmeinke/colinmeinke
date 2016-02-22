@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'universal-redux-router';
 
+import CallToAction from '../CallToAction';
 import Layout from '../Layout';
 
 import {
+  callToAction,
   cite,
   container,
   link,
@@ -94,9 +96,13 @@ class WorkWithMePage extends Component {
             </p>
           </section>
 
-          <section className={ section }>
-            <p>I'm taking on new projects in 2016.</p>
-
+          <CallToAction
+            className={ callToAction }
+            linkIsExternal
+            linkText="hello@colinmeinke.com"
+            linkTo="mailto:hello@colinmeinke.com"
+            title="I'm taking on new projects in 2016."
+          >
             <p>
               If you need somebody to take your project from
               start to finish, or anywhere in between, I've got
@@ -109,16 +115,7 @@ class WorkWithMePage extends Component {
                 get things rolling.
               </strong>
             </p>
-
-            <p>
-              <a
-                className={ link }
-                href="mailto:hello@colinmeinke.com"
-              >
-                hello@colinmeinke.com
-              </a>
-            </p>
-          </section>
+          </CallToAction>
 
           <section className={ section }>
             <h3 className={ subTitle }>

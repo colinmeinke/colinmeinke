@@ -1,0 +1,10 @@
+@import "../../styles/config.css";
+
+.callToAction {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.testimonial {
+  composes: section from "../../styles/compositions/content.css";
+}

@@ -29,6 +29,10 @@
   margin: var( --spacing-large ) 0 0;
 }
 
+.testimonial p {
+  font-style: italic;
+}
+
 .cite {
   display: block;
   font-style: normal;

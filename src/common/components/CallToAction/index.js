@@ -1,26 +1,51 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'universal-redux-router';
 
 import { button, callToAction, container, title } from './styles.css';
 
+const defaultProps = {
+  className: '',
+  linkIsExternal: false,
+};
+
+const propTypes = {
+  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.string ]),
+  className: PropTypes.string,
+  linkIsExternal: PropTypes.bool,
+  linkText: PropTypes.string.isRequired,
+  linkTo: PropTypes.oneOfType([ PropTypes.array, PropTypes.string ]).isRequired,
+  title: PropTypes.string.isRequired,
+};
+
 class CallToAction extends Component {
   render () {
     return (
-      <section className={ container }>
+      <section className={[ container, this.props.className ].join( ' ' )}>
         <div className={ callToAction }>
-          <h3 className={ title }>
-            I'm taking on new projects in 2016.
-          </h3>
-          <Link
-            className={ button }
-            to="/work-with-me"
-          >
-            Discuss working with me remotely
-          </Link>
+          <h3 className={ title }>{ this.props.title }</h3>
+          { this.props.children }
+
+          { this.props.linkIsExternal ?
+            <a
+              className={ button }
+              href={ this.props.linkTo }
+            >
+              { this.props.linkText }
+            </a> :
+            <Link
+              className={ button }
+              to={ this.props.linkTo }
+            >
+              { this.props.linkText }
+            </Link>
+          }
         </div>
       </section>
     );
   }
 }
+
+CallToAction.defaultProps = defaultProps;
+CallToAction.propTypes = propTypes;
 
 export default CallToAction;

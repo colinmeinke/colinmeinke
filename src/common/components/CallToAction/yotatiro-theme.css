@@ -14,6 +14,10 @@
   padding: var( --spacing-large ) var( --spacing-medium );
 }
 
+.callToAction p {
+  color: var( --color-primary-block-font );
+}
+
 .title {
   composes: primaryText from "../../styles/compositions/block.css";
   font-size: var( --font-size-regular );
