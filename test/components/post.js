@@ -28,7 +28,7 @@ describe( 'component', () => {
     });
 
     it( 'should render correct markup', () => {
-      expect( post.props.children[ 0 ].type ).toBe( 'h2' );
+      expect( post.props.children[ 0 ].type ).toBe( 'h1' );
     });
   });
 });
