@@ -57,7 +57,7 @@ class ProjectsPage extends Component {
     return (
       <Layout title="Projects">
         <section className={ container }>
-          <h2 className={ title }>Projects</h2>
+          <h1 className={ title }>Projects</h1>
 
           <ul className={ projectList }>
             { projects.map(( project, i ) => (
@@ -65,7 +65,7 @@ class ProjectsPage extends Component {
                 className={ section }
                 key={ i }
               >
-                <h3>{ project.name }</h3>
+                <h2>{ project.name }</h2>
 
                 <p className={ description }>
                   { project.description }

@@ -19,7 +19,7 @@ class PostPage extends Component {
       <Layout title={ this.props.post.title || '...loading post' }>
         <div className={ container }>
           { this.props.postLoading ?
-            <h2 className={ title }>...loading post</h2> :
+            <h1 className={ title }>...loading post</h1> :
             <Post { ...this.props.post } />
           }
           <Link

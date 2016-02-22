@@ -13,7 +13,7 @@ maintainable, and takes a little longer to load.
 
 And then there's offline...
 
-### We spent November in Cuba
+## We spent November in Cuba
 
 Cuba is beautiful – *but there ain't no internet*.
 
@@ -35,7 +35,7 @@ transfer these notes from Keep to my spreadsheet.
 All this to say – *this isn't a great way to be tracking
 travel costs*.
 
-### This is my pain point
+## This is my pain point
 
 And if it's my pain point, then it's other people's too. People
 travel with budgets and need to stick to those budgets.
@@ -52,7 +52,7 @@ Actually, it was so nice to have some time away from the
 screen. I think I forgot how much more creative I am without
 the constraints of software.
 
-### Announcing unnamed idea #1
+## Announcing unnamed idea #1
 
 The following is a glimpse into my design process for
 a cost-tracking app that would make my daily life easier ...
@@ -86,7 +86,7 @@ There are options to filter by location, date range,
 total/average or category (transport, coffee, noodles – all
 the important ones).
 
-### That's all you're getting for now
+## That's all you're getting for now
 
 Mainly because that's pretty much all I've got. I'll keep
 posting about each stage of unnamed idea #1's development.

@@ -22,7 +22,7 @@ class Post extends Component {
   render () {
     return (
       <article className={ post }>
-        <h2 className={ title }>
+        <h1 className={ title }>
           { this.props.isPreview ? (
             <Link
               className={ link }
@@ -31,7 +31,7 @@ class Post extends Component {
               { this.props.title }
             </Link>
           ) : this.props.title }
-        </h2>
+        </h1>
 
         <p className={ meta }>
           <strong>{ this.props.datePublished }</strong> – { ' ' }

@@ -9,9 +9,9 @@ class NotFoundPage extends Component {
     return (
       <Layout title="Page not found">
         <section className={ container }>
-          <h2 className={ title }>
+          <h1 className={ title }>
             Page not found
-          </h2>
+          </h1>
         </section>
       </Layout>
     );

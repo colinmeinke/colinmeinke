@@ -69,9 +69,9 @@ class Header extends Component {
             </Link>
           </div>
 
-          <p className={ subTitle }>
+          <h2 className={ subTitle }>
             Making websites in far away places.
-          </p>
+          </h2>
 
           <p className={ activityLocation }>
             Currently { ' ' }

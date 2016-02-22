@@ -69,7 +69,7 @@ class WorkWithMePage extends Component {
         title="Work with me"
       >
         <section className={ container }>
-          <h2 className={ title }>Work with me</h2>
+          <h1 className={ title }>Work with me</h1>
 
           <section className={ section }>
             <p>
@@ -118,9 +118,9 @@ class WorkWithMePage extends Component {
           </CallToAction>
 
           <section className={ section }>
-            <h3 className={ subTitle }>
+            <h2 className={ subTitle }>
               Testimonials
-            </h3>
+            </h2>
 
             <p>
               Here are some nice things people have to say about me:

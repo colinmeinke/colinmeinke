@@ -17,9 +17,9 @@ class PostList extends Component {
           this.props.posts.map(( post, i ) => (
             <Post isPreview key={ i } { ...post } />
           )) :
-          <h2 className={ title }>
+          <h1 className={ title }>
             No posts here yet : /
-          </h2>
+          </h1>
         }
       </section>
     );

@@ -9,7 +9,7 @@ class AboutPage extends Component {
     return (
       <Layout title="About">
         <section className={ container }>
-          <h2 className={ title }>About</h2>
+          <h1 className={ title }>About</h1>
 
           <section className={ section }>
             <p>

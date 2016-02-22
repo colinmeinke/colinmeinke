@@ -16,3 +16,12 @@
   font-size: var( --font-size );
   line-height: var( --font-line-height );
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var( --font-size-regular );
+}

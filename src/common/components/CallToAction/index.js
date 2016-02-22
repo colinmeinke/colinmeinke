@@ -22,7 +22,7 @@ class CallToAction extends Component {
     return (
       <section className={[ container, this.props.className ].join( ' ' )}>
         <div className={ callToAction }>
-          <h3 className={ title }>{ this.props.title }</h3>
+          <h2 className={ title }>{ this.props.title }</h2>
           { this.props.children }
 
           { this.props.linkIsExternal ?
