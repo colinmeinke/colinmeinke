@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url( /fonts/lato-regular.ttf ) format( "truetype" );
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url( /fonts/lato-italic.ttf ) format( "truetype" );
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: bold;
+  font-weight: 700;
+  src: url( /fonts/lato-bold.ttf ) format( "truetype" );
+}
+
+.html {
+  font-family: var( --font-family-fallback );
+}
+
+.html:global(.fonts-loaded) {
+  font-family: var( --font-family-regular );
+}

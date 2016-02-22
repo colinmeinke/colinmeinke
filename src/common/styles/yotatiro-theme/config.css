@@ -18,6 +18,9 @@
   --scale-primary: 20px;
   --scale-secondary: 70px;
 
+  --font-family-fallback: "Droid", "San Francisco", "Helvetica", "Arial", sans-serif;
+  --font-family-regular: "Lato", "Droid", "San Francisco", "Helvetica", "Arial", sans-serif;
+
   --font-line-height: var( --ratio );
   --font-line-height-small: 1.3;
 

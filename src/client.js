@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import configureStore from './common/store/configureStore';
+import { loadFonts } from './common/helpers/fonts';
 
 import Root from './common/components/Root';
 
@@ -14,3 +15,5 @@ configureStore({ url }).then( store => {
     document.querySelector( '.app' )
   );
 }).catch( console.error.bind( console ));
+
+loadFonts();
