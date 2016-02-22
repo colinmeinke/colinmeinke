@@ -1,8 +1,9 @@
 @import "../../config.css";
 
 .regular {
-  background-color: var( --color-secondary-block-background-top );
+  background-color: var( --color-secondary-block-background-bottom );
   border-radius: var( --border-radius );
+  box-shadow: 0 2px var( --color-primary-block-border );
   color: var( --color-primary-block-background-top );
   font-size: var( --font-size-small );
   padding: var( --spacing-small );
@@ -11,7 +12,8 @@
 .regular:focus,
 .regular:hover {
   background-color: var( --color-primary-block-font );
-  color: var( --color-primary-block-background-top );
+  box-shadow: 0 -1px var( --color-primary-block-border );
+  color: var( --color-primary-block-background-bottom );
 }
 
 .large {
