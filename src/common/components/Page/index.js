@@ -4,17 +4,17 @@ import { body, html } from './styles.css';
 
 const defaultProps = {
   language: 'en',
+  meta: [],
   scripts: [],
   styles: [],
 };
 
 const propTypes = {
-  app: PropTypes.object,
-  description: PropTypes.string,
+  app: PropTypes.string,
   language: PropTypes.string,
+  meta: PropTypes.array,
   scripts: PropTypes.array,
   styles: PropTypes.array,
-  title: PropTypes.string,
 };
 
 class Page extends Component {
@@ -25,20 +25,7 @@ class Page extends Component {
         lang={ this.props.language }
       >
         <head>
-          <meta charSet="utf-8" />
-          <meta
-            content="ie=edge"
-            httpEquiv="x-ua-compatible"
-          />
-          <title>{ this.props.title }</title>
-          <meta
-            content={ this.props.description }
-            name="description"
-          />
-          <meta
-            content="width=device-width, initial-scale=1"
-            name="viewport"
-          />
+          { this.props.meta }
           { this.props.styles.map(( style, i ) => (
             <link href={ style } key={ i } rel="stylesheet" />
           ))}

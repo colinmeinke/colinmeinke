@@ -55,8 +55,14 @@ const projects = [
 class ProjectsPage extends Component {
   render () {
     return (
-      <Layout title="Projects">
-        <section className={ container }>
+      <Layout
+        description="Projects page"
+        title="Projects"
+      >
+        <main
+          className={ container }
+          role="main"
+        >
           <h1 className={ title }>Projects</h1>
 
           <ul className={ projectList }>
@@ -79,7 +85,7 @@ class ProjectsPage extends Component {
               </li>
             ))}
           </ul>
-        </section>
+        </main>
       </Layout>
     );
   }

@@ -1,3 +1,4 @@
+import DocumentMeta from 'react-document-meta';
 import expect from 'expect';
 import React from 'react';
 import { createRenderer } from 'react-addons-test-utils';
@@ -21,7 +22,7 @@ describe( 'component', () => {
     });
 
     it( 'should render correct markup', () => {
-      expect( layout.props.children.type ).toBe( 'section' );
+      expect( layout.props.children.type ).toBe( DocumentMeta );
       expect( layout.props.children.props.children[ 0 ].type.displayName )
         .toBe( 'Connect(Header)' );
     });

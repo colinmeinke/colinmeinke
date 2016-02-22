@@ -6,7 +6,10 @@ import PostDiscovery from '../PostDiscovery';
 class HomePage extends Component {
   render () {
     return (
-      <Layout title="Blog">
+      <Layout
+        description="Home page"
+        title="Home"
+      >
         <PostDiscovery />
       </Layout>
     );

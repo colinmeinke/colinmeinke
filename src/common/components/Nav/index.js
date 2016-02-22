@@ -20,7 +20,10 @@ const propTypes = {
 class Nav extends Component {
   render () {
     return (
-      <nav className={ this.props.navClassName }>
+      <nav
+        className={ this.props.navClassName }
+        role="navigation"
+      >
         { this.props.items.map(( item, i ) => (
           <Link
             className={[

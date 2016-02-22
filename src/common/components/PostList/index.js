@@ -11,7 +11,10 @@ const propTypes = {
 class PostList extends Component {
   render () {
     return (
-      <section className={ container }>
+      <main
+        className={ container }
+        role="main"
+      >
         {
           this.props.posts.length ?
           this.props.posts.map(( post, i ) => (
@@ -21,7 +24,7 @@ class PostList extends Component {
             No posts here yet : /
           </h1>
         }
-      </section>
+      </main>
     );
   }
 }

@@ -1,9 +1,9 @@
-import DocumentTitle from 'react-document-title';
+import DocumentMeta from 'react-document-meta';
 import express from 'express';
 import favicon from 'serve-favicon';
 import path from 'path';
 import React from 'react';
-import { renderToStaticMarkup, renderToString } from 'react-dom-stream/server';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 
 import config from './common/config';
 import configureStore from './common/store/configureStore';
@@ -61,16 +61,16 @@ const api = ({ url, ...req }, res, next ) => {
 
 const render = ({ url }, res ) => {
   configureStore({ isServer: true, url }).then( store => {
-    res.write( '<!DOCTYPE html>' );
-
-    renderToStaticMarkup(
-      <Page
-        app={ renderToString( <Root store={ store } /> )}
-        scripts={ scripts }
-        styles={ styles }
-        title={ DocumentTitle.rewind() }
-      />
-    ).pipe( res );
+    res.send( `<!DOCTYPE html>${
+      renderToStaticMarkup(
+        <Page
+          app={ renderToString( <Root store={ store } /> )}
+          meta={ DocumentMeta.renderAsReact()}
+          scripts={ scripts }
+          styles={ styles }
+        />
+      )
+    }` );
   }).catch( console.error.bind( console ));
 };
 

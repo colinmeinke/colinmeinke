@@ -16,8 +16,21 @@ const propTypes = {
 class PostPage extends Component {
   render () {
     return (
-      <Layout title={ this.props.post.title || '...loading post' }>
-        <div className={ container }>
+      <Layout
+        description={ this.props.post.description }
+        meta={{
+          'article:published_time': this.props.post.datePublished,
+          'article:tag': this.props.post.tags.join( ' ' ),
+          'og:type': 'article',
+        }}
+        title={ this.props.post.title }
+      >
+        <main
+          className={ container }
+          itemScope
+          itemType="http://schema.org/Blog"
+          role="main"
+        >
           { this.props.postLoading ?
             <h1 className={ title }>...loading post</h1> :
             <Post { ...this.props.post } />
@@ -29,7 +42,7 @@ class PostPage extends Component {
           >
             Back to post list
           </Link>
-        </div>
+        </main>
 
       </Layout>
     );

@@ -7,8 +7,14 @@ import { container, title, section } from './styles.css';
 class AboutPage extends Component {
   render () {
     return (
-      <Layout title="About">
-        <section className={ container }>
+      <Layout
+        description="About page"
+        title="About"
+      >
+        <main
+          className={ container }
+          role="main"
+        >
           <h1 className={ title }>About</h1>
 
           <section className={ section }>
@@ -85,7 +91,7 @@ class AboutPage extends Component {
               It's an amazing time to be a web developer!
             </p>
           </section>
-        </section>
+        </main>
       </Layout>
     );
   }

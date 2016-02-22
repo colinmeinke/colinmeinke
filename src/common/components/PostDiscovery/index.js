@@ -17,7 +17,11 @@ const propTypes = {
 class PostDiscovery extends Component {
   render () {
     return (
-      <section className={ container }>
+      <section
+        className={ container }
+        itemScope
+        itemType="http://schema.org/Blog"
+      >
         <header className={ header }>
           <div className={ headerContainer }>
             <p className={ title }>

@@ -19,7 +19,7 @@ describe( 'component', () => {
     });
 
     it( 'should render correct markup', () => {
-      expect( notFound.props.children.type ).toBe( 'section' );
+      expect( notFound.props.children.type ).toBe( 'main' );
       expect( notFound.props.children.props.children.type ).toBe( 'h1' );
     });
   });

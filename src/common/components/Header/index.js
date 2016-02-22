@@ -33,7 +33,10 @@ const propTypes = {
 class Header extends Component {
   render () {
     return (
-      <header className={ header }>
+      <header
+        className={ header }
+        role="banner"
+      >
         <div className={ container }>
           <svg
             className={ logo }

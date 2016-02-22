@@ -1,5 +1,5 @@
 import config from '../config';
-import { getEnv } from '.';
+import { getEnv } from './env';
 
 const getRootUrl = () => {
   const env = getEnv();

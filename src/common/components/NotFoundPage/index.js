@@ -7,12 +7,18 @@ import { container, title } from './styles.css';
 class NotFoundPage extends Component {
   render () {
     return (
-      <Layout title="Page not found">
-        <section className={ container }>
+      <Layout
+        description="Page not found page"
+        title="Page not found"
+      >
+        <main
+          className={ container }
+          role="main"
+        >
           <h1 className={ title }>
             Page not found
           </h1>
-        </section>
+        </main>
       </Layout>
     );
   }

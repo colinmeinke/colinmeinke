@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'universal-redux-router';
 
-import { content, description, link, meta, post, title } from './styles.css';
+import { content, description, link, meta, metaItem, post, title } from './styles.css';
 
 const defaultProps = {
   isPreview: false,
@@ -21,11 +21,21 @@ const propTypes = {
 class Post extends Component {
   render () {
     return (
-      <article className={ post }>
-        <h1 className={ title }>
+      <article
+        className={ post }
+        itemProp="blogPost"
+        itemScope
+        itemType="http://schema.org/BlogPosting"
+        role="article"
+      >
+        <h1
+          className={ title }
+          itemProp="name"
+        >
           { this.props.isPreview ? (
             <Link
               className={ link }
+              itemProp="url"
               to={[ 'post', this.props.slug ]}
             >
               { this.props.title }
@@ -34,21 +44,30 @@ class Post extends Component {
         </h1>
 
         <p className={ meta }>
-          <strong>{ this.props.datePublished }</strong> – { ' ' }
-          <strong>{ this.props.locationPublished }</strong>. { ' ' }
-          Posted in <strong>{ this.props.tags.join( ', ' )}</strong>.
+          <date
+            className={ metaItem }
+            itemProp="datePublished"
+          >
+            { this.props.datePublished }
+          </date> – { ' ' }
+          <strong className={ metaItem }>
+            { this.props.locationPublished }
+          </strong>. { ' ' }
+          Posted in { ' ' }
+          <strong className={ metaItem }>
+            { this.props.tags.join( ', ' )}
+          </strong>.
         </p>
 
         { this.props.isPreview ? (
-          <p
-            className={ description }
-          >
+          <p className={ description }>
             { this.props.description }
           </p>
         ) : (
           <div
             className={ content }
             dangerouslySetInnerHTML={{ __html: this.props.content }}
+            itemProp="articleBody"
           />
         )}
       </article>

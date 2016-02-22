@@ -65,10 +65,14 @@ class WorkWithMePage extends Component {
   render () {
     return (
       <Layout
+        description="Work with me page"
         showCallToAction={ false }
         title="Work with me"
       >
-        <section className={ container }>
+        <main
+          className={ container }
+          role="main"
+        >
           <h1 className={ title }>Work with me</h1>
 
           <section className={ section }>
@@ -143,7 +147,7 @@ class WorkWithMePage extends Component {
               </blockquote>
             ))}
           </section>
-        </section>
+        </main>
       </Layout>
     );
   }
