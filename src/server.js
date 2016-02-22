@@ -1,3 +1,4 @@
+import compression from 'compression';
 import DocumentMeta from 'react-document-meta';
 import express from 'express';
 import favicon from 'serve-favicon';
@@ -18,6 +19,8 @@ const styles = config[ __DEVELOPMENT__ ? 'development' : 'production' ].styles
   .map( style => `/${ config.dir.css }/${ style.split( '/' ).pop() }` );
 
 const app = express();
+
+app.use( compression());
 
 app.use( favicon( path.join(
   __dirname, '..', config.dir.static, config.dir.images, 'favicon.ico'
