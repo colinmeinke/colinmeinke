@@ -15,16 +15,20 @@ const propTypes = {
 
 class PostPage extends Component {
   render () {
+    const layoutProps = {};
+
+    if ( !this.props.postLoading ) {
+      layoutProps.description = this.props.post.description;
+      layoutProps.title = this.props.post.title;
+      layoutProps.meta = {
+        'og:type': 'article',
+        'article:published_time': this.props.post.datePublished,
+        'article:tag': this.props.post.tags.join( ' ' ),
+      };
+    }
+
     return (
-      <Layout
-        description={ this.props.post.description }
-        meta={{
-          'article:published_time': this.props.post.datePublished,
-          'article:tag': this.props.post.tags.join( ' ' ),
-          'og:type': 'article',
-        }}
-        title={ this.props.post.title }
-      >
+      <Layout { ...layoutProps }>
         <main
           className={ container }
           itemScope
