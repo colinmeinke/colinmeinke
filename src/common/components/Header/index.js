@@ -13,7 +13,6 @@ import {
   item,
   location,
   logo,
-  menu,
   nav,
   subTitle,
 } from './styles.css';
@@ -56,21 +55,20 @@ class Header extends Component {
             />
           </svg>
 
-          <div className={ menu }>
-            <Nav
-              activeClassName={ active }
-              activeString={ this.props.url.split( '?' )[ 0 ]}
-              itemClassName={ item }
-              items={ items }
-              navClassName={ nav }
-            />
-            <Link
-              className={ button }
-              to="/work-with-me"
-            >
-              Work with me
-            </Link>
-          </div>
+          <Link
+            className={ button }
+            to="/work-with-me"
+          >
+            Work with me
+          </Link>
+
+          <Nav
+            activeClassName={ active }
+            activeString={ this.props.url.split( '?' )[ 0 ]}
+            itemClassName={ item }
+            items={ items }
+            navClassName={ nav }
+          />
 
           <h2 className={ subTitle }>
             Making websites in far away places.

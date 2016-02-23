@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'universal-redux-router';
 
-import { content, description, link, meta, metaItem, post, title } from './styles.css';
+import { content, description, link, meta, metaItem, title } from './styles.css';
 
 const defaultProps = {
   isPreview: false,
@@ -22,7 +22,6 @@ class Post extends Component {
   render () {
     return (
       <article
-        className={ post }
         itemProp="blogPost"
         itemScope
         itemType="http://schema.org/BlogPosting"

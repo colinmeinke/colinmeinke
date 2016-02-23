@@ -5,7 +5,7 @@
   border-bottom: var( --width-border ) solid var( --color-primary-block-border );
   margin: 0;
   max-width: 100%;
-  padding: var( --spacing-huge ) 0;
+  padding: var( --spacing-medium ) 0;
 }
 
 .container {
@@ -16,12 +16,15 @@
   fill: var( --color-primary-block-font );
 }
 
-.menu {
+.button {
   float: right;
+  margin-left: var( --spacing-regular );
+  position: relative;
+  top: calc(( 40px - ( var( --font-size-small ) * var( --font-line-height ) + var( --spacing-small ) * 2 )) / 2 );
 }
 
 .nav {
-  display: inline-block;
+  margin-top: var( --spacing-regular );
 }
 
 .item {
@@ -54,7 +57,15 @@
   font-weight: normal;
 }
 
-.button {
-  display: inline-block;
-  margin-left: var( --spacing-regular );
+@media ( min-width: 450px ) {
+  .header {
+    padding-bottom: var( --spacing-huge );
+    padding-top: var( --spacing-huge );
+  }
+
+  .nav {
+    float: right;
+    margin-left: var( --spacing-regular );
+    margin-top: 0;
+  }
 }

@@ -1,10 +1,28 @@
 @import "../../config.css";
 
 .title {
+  font-size: var( --font-size-medium );
   line-height: var( --font-line-height-small );
-  margin-top: var( --spacing-huge );
+  margin-top: var( --spacing-large );
+}
+
+.section h2 {
+  font-size: var( --font-size-regular );
+  margin-top: var( --spacing-medium );
 }
 
 .section + .section {
   border-top: var( --width-border ) solid var( --color-border );
+}
+
+@media ( min-width: 450px ) {
+  .title {
+    font-size: var( --font-size-large );
+    margin-top: var( --spacing-huge );
+  }
+
+  .section h2 {
+    font-size: var( --font-size-medium );
+    margin-top: var( --spacing-large );
+  }
 }

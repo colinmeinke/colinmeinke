@@ -1,16 +1,7 @@
 @import "../../styles/config.css";
 
-.post {
-  margin-top: calc( var( --spacing-large ) * 2 );
-}
-
-.post:first-of-type {
-  margin-top: var( --spacing-large );
-}
-
 .title {
   composes: title from "../../styles/compositions/content.css";
-  margin-bottom: 0;
 }
 
 .link {

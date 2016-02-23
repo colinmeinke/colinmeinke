@@ -3,7 +3,7 @@
 .container {
   border-top: none;
   margin-bottom: 0;
-  margin-top: var( --spacing-huge );
+  margin-top: var( --spacing-large );
   padding-top: 0;
 }
 
@@ -11,7 +11,7 @@
   composes: primaryBackground from "../../styles/compositions/block.css";
   border-radius: var( --border-radius );
   max-width: var( --max-width );
-  padding: var( --spacing-large ) var( --spacing-medium );
+  padding: var( --spacing-medium ) var( --spacing-regular );
 }
 
 .callToAction p {
@@ -26,4 +26,14 @@
 .button {
   composes: large from '../../styles/compositions/button.css';
   margin-top: var( --spacing-regular );
+}
+
+@media ( min-width: 450px ) {
+  .container {
+    margin-top: var( --spacing-huge );
+  }
+
+  .callToAction {
+    padding: var( --spacing-large ) var( --spacing-medium );
+  }
 }

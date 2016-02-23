@@ -35,7 +35,6 @@ export default {
       colorFunction(),
       autoprefixer({ browsers: [ 'last 2 versions' ]}),
       pxToRem({
-        mediaQuery: true,
         propWhiteList: [],
         replace: false,
         rootValue: 20,
