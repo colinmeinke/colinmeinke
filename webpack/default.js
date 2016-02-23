@@ -4,6 +4,7 @@ import calcFunction from 'postcss-calc-function';
 import colorFunction from 'postcss-color-function';
 import customProps from 'postcss-custom-props';
 import path from 'path';
+import pxToRem from 'postcss-pxtorem';
 
 import config from '../src/common/config';
 
@@ -33,6 +34,13 @@ export default {
       calcFunction(),
       colorFunction(),
       autoprefixer({ browsers: [ 'last 2 versions' ]}),
+      pxToRem({
+        mediaQuery: true,
+        propWhiteList: [],
+        replace: false,
+        rootValue: 20,
+        selectorBlackList: [ /^.html$/ ],
+      }),
     ];
   },
 };
