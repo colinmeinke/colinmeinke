@@ -11,6 +11,36 @@
   margin-top: var( --spacing-medium );
 }
 
+.section h3 {
+  margin-top: var( --spacing-medium );
+}
+
+.section code {
+  font-size: var( --font-size-small );
+}
+
+.section pre,
+.section p code {
+  background-color: var( --color-secondary-block-background-bottom );
+  background-image: linear-gradient(
+    var( --color-secondary-block-background-top ),
+    var( --color-secondary-block-background-bottom )
+  );
+  border: 1px solid var( --color-secondary-block-border );
+  border-radius: var( --border-radius );
+}
+
+.section pre {
+  margin-bottom: 0;
+  margin-top: var( --spacing-medium );
+  overflow-x: scroll;
+  padding: var( --spacing-small );
+}
+
+.section p code {
+  padding: calc(( var( --font-size-regular ) * var( --font-line-height ) - var( --font-size-small ) * var( --font-line-height )) / 2 )
+}
+
 .section + .section {
   border-top: var( --width-border ) solid var( --color-border );
 }
@@ -23,6 +53,10 @@
 
   .section h2 {
     font-size: var( --font-size-medium );
+    margin-top: var( --spacing-large );
+  }
+
+  .section h3 {
     margin-top: var( --spacing-large );
   }
 }
