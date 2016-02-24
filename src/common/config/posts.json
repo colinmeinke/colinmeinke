@@ -30,6 +30,15 @@
       "slug": "tracking-travel-costs-offline",
       "tags": [ "making", "travelling" ],
       "title": "Tracking travel costs offline"
+    },
+    {
+      "datePublished": "Wed Feb 24 2016 15:30:00 GMT-0600",
+      "description": "A look at my current CSS workflow using CSS modules, PostCSS and Webpack.",
+      "locationPublished": "Querétaro, México",
+      "published": true,
+      "slug": "designing-css",
+      "tags": [ "coding" ],
+      "title": "Designing CSS"
     }
   ],
   "postsPerPage": 3
