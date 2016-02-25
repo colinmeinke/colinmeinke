@@ -1,16 +1,26 @@
 import FontFaceObserver from 'fontfaceobserver';
 
 const loadFonts = () => {
-  const fontBold = new FontFaceObserver( 'Lato', { style: 'bold' });
-  const fontItalic = new FontFaceObserver( 'Lato', { style: 'italic' });
-  const fontRegular = new FontFaceObserver( 'Lato', { style: 'normal' });
+  const defaultBold = new FontFaceObserver( 'Lato', { style: 'bold' });
+  const defaultItalic = new FontFaceObserver( 'Lato', { style: 'italic' });
+  const defaultRegular = new FontFaceObserver( 'Lato', { style: 'normal' });
+
+  const monoBold = new FontFaceObserver( 'Source Code Pro', { style: 'bold' });
+  const monoRegular = new FontFaceObserver( 'Source Code Pro', { style: 'normal' });
 
   Promise.all([
-    fontBold.check(),
-    fontItalic.check(),
-    fontRegular.check(),
+    defaultBold.check(),
+    defaultItalic.check(),
+    defaultRegular.check(),
   ]).then(() => {
-    document.documentElement.className += ' fonts-loaded';
+    document.documentElement.className += ' default-fonts-loaded';
+  });
+
+  Promise.all([
+    monoBold.check(),
+    monoRegular.check(),
+  ]).then(() => {
+    document.documentElement.className += ' mono-fonts-loaded';
   });
 };
 

@@ -19,10 +19,24 @@
   src: url( /fonts/lato-bold.ttf ) format( "truetype" );
 }
 
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url( /fonts/source-code-pro-regular.ttf ) format( "truetype" );
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: bold;
+  font-weight: 600;
+  src: url( /fonts/source-code-pro-bold.ttf ) format( "truetype" );
+}
+
 .html {
   font-family: var( --font-family-fallback );
 }
 
-.html:global(.fonts-loaded) {
+.html:global(.default-fonts-loaded) {
   font-family: var( --font-family-regular );
 }
