@@ -25,7 +25,7 @@ next to the React component that it relates to.
 
 Take a blog post component as an example.
 
-```
+```txt
 |–– components
 |   |–– Post
 |   |   |–– index.js
@@ -130,7 +130,7 @@ code that is repeated in multiple components.
 
 ### Shared configuration
 
-```
+```txt
 |–– components
 |   |–– Post
 |   |   |–– index.js
@@ -172,7 +172,7 @@ same rules.
 
 I abstract these rule-sets into shared *compositions*.
 
-```
+```txt
 |–– components
 |   |–– Post
 |   |   |–– index.js

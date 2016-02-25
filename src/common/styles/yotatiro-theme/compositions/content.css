@@ -15,10 +15,6 @@
   margin-top: var( --spacing-medium );
 }
 
-.section code {
-  font-size: var( --font-size-small );
-}
-
 .section pre,
 .section p code {
   background-color: var( --color-secondary-block-background-bottom );
@@ -28,6 +24,7 @@
   );
   border: 1px solid var( --color-secondary-block-border );
   border-radius: var( --border-radius );
+  font-size: var( --font-size-small );
 }
 
 .section pre {
@@ -39,6 +36,45 @@
 
 .section p code {
   padding: calc(( var( --font-size-regular ) * var( --font-line-height ) - var( --font-size-small ) * var( --font-line-height )) / 2 )
+}
+
+.section :global(.css) :global(.property-name),
+.section :global(.jsx) :global(.tag):global(.name),
+.section :global(.html) :global(.tag):global(.name) {
+  color: var( --color-primary-block-background-top );
+}
+
+.section :global(.jsx) :global(.tag):global(.punctuation),
+.section :global(.html) :global(.tag):global(.punctuation) {
+  color: var( --color-primary-block-border );
+}
+
+.section :global(.comment) {
+  color: var( --color-font-faint );
+}
+
+.section :global(.css) :global(.support):global(.function):not(:global(.punctuation)),
+.section :global(.js) :global(.support):global(.function) {
+  color: hsla( 90, 100%, 35%, 1 );
+  font-weight: bold;
+}
+
+.section :global(.css) :global(.variable),
+.section :global(.js) :global(.variable),
+.section :global(.js) :global(.object),
+.section :global(.js) :global(.function):not(:global(.support)) {
+  font-weight: bold;
+}
+
+.section :global(.js) :global(.function) :global(.variable),
+.section :global(.js) :global(.function) :global(.operator),
+.section :global(.js) :global(.function) :global(.arrow) {
+  color: var( --color-font );
+}
+
+.section :global(.js) :global(.function) :global(.operator),
+.section :global(.js) :global(.function) :global(.arrow) {
+  font-weight: normal;
 }
 
 .section + .section {

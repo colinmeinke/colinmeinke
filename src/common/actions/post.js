@@ -1,5 +1,3 @@
-import marked from 'marked';
-
 import { formatPosts, getRootUrl } from '../helpers';
 import { postList } from '../config/posts';
 
@@ -28,7 +26,7 @@ const getPost = ({ postSlug = '' }) => new Promise(( resolve, reject ) => {
       resolve({
         post: {
           ...matchingPosts[ 0 ],
-          content: marked( content ),
+          content,
         },
         type: UPDATE_POST,
       });

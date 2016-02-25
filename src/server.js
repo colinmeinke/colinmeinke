@@ -2,12 +2,14 @@ import compression from 'compression';
 import DocumentMeta from 'react-document-meta';
 import express from 'express';
 import favicon from 'serve-favicon';
+import fs from 'fs';
 import path from 'path';
 import React from 'react';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 
 import config from './common/config';
 import configureStore from './common/store/configureStore';
+import { parseMarkdown } from './common/helpers/markdown';
 
 import Root from './common/components/Root';
 import Page from './common/components/Page';
@@ -47,9 +49,15 @@ const api = ({ url, ...req }, res, next ) => {
 
     switch ( type ) {
       case 'post':
-        res.sendFile(
+        fs.readFile(
           path.resolve( __dirname, '..', config.dir.posts, `${ file }.md` ),
-          error => error ? res.status( error.status ).end() : null
+          ( error, content ) => {
+            if ( error ) {
+              res.status( error.status ).end();
+            }
+
+            res.send( parseMarkdown( content.toString()));
+          }
         );
 
         break;
