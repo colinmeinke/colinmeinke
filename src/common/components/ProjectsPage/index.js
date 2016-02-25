@@ -30,6 +30,11 @@ const projects = [
     url: 'https://github.com/colinmeinke/kampot',
   },
   {
+    description: 'Travel blog.',
+    name: 'Peeking Duck',
+    url: 'http://peekingduck.co',
+  },
+  {
     description: 'A minimal syntax theme for Atom.',
     name: 'Oaxaca syntax theme',
     url: 'https://github.com/colinmeinke/oaxaca-syntax-theme',
@@ -79,7 +84,7 @@ class ProjectsPage extends Component {
 
                 <p>
                   <a href={ project.url }>
-                    View on github
+                    { project.url.includes( 'github' ) ? 'View on github' : 'View website' }
                   </a>
                 </p>
               </li>
