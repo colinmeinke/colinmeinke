@@ -25,6 +25,10 @@ class Page extends Component {
         lang={ this.props.language }
       >
         <head>
+          <link href="/images/icons/32x32.png" rel="icon" sizes="32x32" type="image/png" />
+          <link href="/images/icons/194x194.png" rel="icon" sizes="194x194" type="image/png" />
+          <link href="/images/icons/96x96.png" rel="icon" sizes="96x96" type="image/png" />
+          <link href="/images/icons/16x16.png" rel="icon" sizes="16x16" type="image/png" />
           { this.props.meta }
           { this.props.styles.map(( style, i ) => (
             <link href={ style } key={ i } rel="stylesheet" />
