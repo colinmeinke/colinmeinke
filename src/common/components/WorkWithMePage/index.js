@@ -19,6 +19,15 @@ import {
 const testimonials = [
   {
     company: 'irokotv',
+    name: 'Bastian Gotter',
+    quote: `Colin worked with us full-time for over a year,
+            before working a further 18 months remotely.
+            Throughout he has always been reliable, easy to
+            communicate with and produced top work.`,
+    role: 'Founder and COO',
+  },
+  {
+    company: 'irokotv',
     name: 'Matteo Cuellar',
     quote: `I have worked together with Colin on multiple
             projects for almost 3 years and it’s always been
