@@ -58,8 +58,11 @@
   color: var( --color-font-faint );
 }
 
-.section :global(.css) :global(.support):global(.function):not(:global(.punctuation)),
-.section :global(.js) :global(.support):global(.function) {
+.section :global(.css) :global(.function):not(:global(.punctuation)):not(:global(.at-rule)),
+.section :global(.css) :global(.separator) ~ :global(.property-name),
+.section :global(.js) :global(.function):global(.console),
+.section :global(.js) :global(.function):global(.mutator),
+.section :global(.js) :global(.function-call) > :global(.function):global(.name) {
   color: hsla( 90, 100%, 35%, 1 );
   font-weight: bold;
 }
@@ -67,18 +70,24 @@
 .section :global(.css) :global(.variable),
 .section :global(.js) :global(.variable),
 .section :global(.js) :global(.object),
+.section :global(.js) :global(.module):global(.node),
 .section :global(.js) :global(.function):not(:global(.support)) {
   font-weight: bold;
 }
 
-.section :global(.js) :global(.function) :global(.variable),
-.section :global(.js) :global(.function) :global(.operator),
-.section :global(.js) :global(.function) :global(.arrow) {
+.section :global(.css) :global(.at-rule):global(.function) :global(.function):global(.support),
+.section :global(.css) :global(.mixin) :global(.entity):global(.function),
+.section :global(.css) :global(.attribute-name):global(.placeholder),
+.section :global(.js) :global(.function-call) > :global(.parameters):global(.begin) + :global(.parameters):global(.begin),
+.section :global(.js) :global(.function-call) > :global(.parameters):global(.begin) + :global(.parameters):global(.begin) + :global(.parameters):global(.end) {
   color: var( --color-font );
 }
 
 .section :global(.js) :global(.function) :global(.operator),
-.section :global(.js) :global(.function) :global(.arrow) {
+.section :global(.js) :global(.function) :global(.arrow),
+.section :global(.js) :global(.function) :global(.comma),
+.section :global(.js) :global(.function) :global(.punctuation),
+.section :global(.js) :global(.object) :global(.separator) {
   font-weight: normal;
 }
 
