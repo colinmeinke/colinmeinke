@@ -39,6 +39,15 @@
       "slug": "designing-css",
       "tags": [ "coding" ],
       "title": "Designing CSS"
+    },
+    {
+      "datePublished": "Thu Feb 25 2016 18:30:00 GMT-0600",
+      "description": "How to roll your own syntax highlighting.",
+      "locationPublished": "Querétaro, México",
+      "published": true,
+      "slug": "markdown-syntax-highlighting",
+      "tags": [ "coding" ],
+      "title": "Markdown syntax highlighting"
     }
   ],
   "postsPerPage": 3
