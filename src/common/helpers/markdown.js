@@ -10,8 +10,8 @@ highlighter.requireGrammarsSync({
   ),
 });
 
-const getScope = ext => {
-  switch ( ext ) {
+const getScope = id => {
+  switch ( id ) {
     case 'html':
       return 'text.html.basic';
     case 'js':
@@ -19,29 +19,26 @@ const getScope = ext => {
     case 'txt':
       return 'text.plain';
     default:
-      return `source.${ ext }`;
+      return `source.${ id }`;
   }
 };
 
-const md = new Markdown({
-  highlight: ( str, ext ) => {
-    if ( ext ) {
-      try {
-        return highlighter.highlightSync({
-          fileContents: str,
-          scopeName: getScope( ext ),
-        });
-      } catch ( error ) {
-        // eslint-disable-line no-empty
-      }
-
-      return '';
+const highlight = ( code, id ) => {
+  if ( id ) {
+    try {
+      return highlighter.highlightSync({
+        fileContents: code,
+        scopeName: getScope( id ),
+      });
+    } catch ( error ) {
+      // eslint-disable-line no-empty
     }
+  }
 
-    return str;
-  },
-});
+  return code;
+};
 
+const md = new Markdown({ highlight });
 const parseMarkdown = str => md.render( str );
 
 export { parseMarkdown };
