@@ -77,7 +77,7 @@ class Header extends Component {
           <p className={ activityLocation }>
             Currently { ' ' }
             <strong className={ activity }>
-              animating SVGs
+              researching mountain cabins
             </strong>
             { ' ' } in { ' ' }
             <strong className={ location }>
