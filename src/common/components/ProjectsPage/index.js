@@ -25,6 +25,26 @@ const projects = [
     url: 'https://github.com/colinmeinke/universal-redux-router',
   },
   {
+    description: 'Animated SVG charts for React.',
+    name: 'React SVG chart',
+    url: 'https://github.com/colinmeinke/react-svg-chart',
+  },
+  {
+    description: 'Animate between SVG shapes.',
+    name: 'SVG tween',
+    url: 'https://github.com/colinmeinke/svg-tween',
+  },
+  {
+    description: 'A little tweening library.',
+    name: 'Tweening',
+    url: 'https://github.com/colinmeinke/tweening',
+  },
+  {
+    description: 'Get point data from SVG shapes. Convert point data to an SVG path.',
+    name: 'SVG shapes',
+    url: 'https://github.com/colinmeinke/svg-shapes',
+  },
+  {
     description: 'A responsive theme for Ghost.',
     name: 'Kampot',
     url: 'https://github.com/colinmeinke/kampot',
