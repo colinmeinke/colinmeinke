@@ -13,7 +13,7 @@ describe( 'component', () => {
       const renderer = createRenderer();
 
       renderer.render(
-        <Layout>
+        <Layout url="/hello-world">
           <p>Hello world</p>
         </Layout>
       );
