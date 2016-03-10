@@ -48,6 +48,15 @@
       "slug": "markdown-syntax-highlighting",
       "tags": [ "coding" ],
       "title": "Markdown syntax highlighting"
+    },
+    {
+      "datePublished": "Thu Mar 10 2016 16:10:00 GMT-0600",
+      "description": "Some thoughts on routing with React and Redux.",
+      "locationPublished": "Querétaro, México",
+      "published": true,
+      "slug": "rethinking-routes",
+      "tags": [ "coding" ],
+      "title": "Rethinking routes"
     }
   ],
   "postsPerPage": 3
