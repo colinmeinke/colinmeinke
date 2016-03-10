@@ -1,6 +1,7 @@
 @import "../../styles/config.css";
 
 .link {
+  composes: container from "../../styles/compositions/content.css";
   composes: regular from "../../styles/compositions/link.css";
   display: block;
   line-height: var( --font-line-height );
