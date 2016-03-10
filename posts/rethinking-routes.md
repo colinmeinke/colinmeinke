@@ -43,8 +43,8 @@ controllers?
 We are kind of forced to do this in our top-level page
 components.
 
-I'm not sure I like this. I would prefer simple, logicless
-components. State as input. UI as output. Pure and simple.
+I'm not sure I like this. I would prefer logicless components.
+State as input. UI as output. Pure and simple.
 
 ```js
 const ui = component( state );
@@ -102,3 +102,10 @@ export default route;
 I'm working on these ideas over at
 [Universal Redux Router](https://github.com/colinmeinke/universal-redux-router).
 This post is a preview of what the next version may look like.
+
+I'd love to hear your thoughts!
+
+Talk to me on twitter
+[@colinmeinke](https://twitter.com/colinmeinke).
+
+Hasta luego.
