@@ -9,16 +9,16 @@ describe( 'action creator', () => {
     describe( 'updateMorePosts()', () => {
       it( 'should create an action to update morePosts', () => {
         const page = 1;
-        const posts = [{}, {}, {}, {}];
+        const postList = [{}, {}, {}, {}];
 
-        const morePosts = posts.length > ( page * postsPerPage );
+        const morePosts = postList.length > ( page * postsPerPage );
 
         const expectedAction = {
           morePosts,
           type: UPDATE_MORE_POSTS,
         };
 
-        expect( updateMorePosts({ page, posts })).toEqual( expectedAction );
+        expect( updateMorePosts({ page, postList })).toEqual( expectedAction );
       });
     });
   });
