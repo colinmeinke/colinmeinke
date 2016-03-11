@@ -1,7 +1,7 @@
 A route is a URL pattern that is mapped to a handler.
 
 Traditionally in
-[MCV](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 this handler is the **controller**. The controller holds all
 of the logic that ties together models and views to output a
 web page.
