@@ -77,7 +77,7 @@ class Header extends Component {
           <p className={ activityLocation }>
             Currently { ' ' }
             <strong className={ activity }>
-              learning too much about bezier curves
+              drawing
             </strong>
             { ' ' } in { ' ' }
             <strong className={ location }>
