@@ -6,9 +6,8 @@ into design decisions based on the tools at hand – divs and
 background gradients.
 
 I appreciate the benefits of working this way. I really do.
-Content- and mobile-first are inherent. I even appreciate some
-of the benefits that come with all modern websites looking and
-behaving the same.
+Content- and mobile-first are inherent which is a good thing.
+But it kills my creativity.
 
 ## Craft
 
@@ -29,8 +28,8 @@ owner.
 
 ## Creativity
 
-Along the way I seem to have lost the creativity I had when I
-started. The creativity that comes with the naivety of youth.
+Along the way I seem to have lost the creativity I started
+with. The creativity that comes with the naivety of youth.
 Of not knowing any better. Of an art school student making the
 most inappropriate of work without a care in the world. Of an
 18-year-old footballer who doesn't think twice about
@@ -39,8 +38,8 @@ outrageous goal.
 
 The Japanese know about simplicity, and celebrate craft.
 However, they are also an introverted nation. One that feels
-like a parallel universe moving to its own beat – giving rise
-to its incredible creative output.
+like a parallel universe moving to its own beat. Perhaps
+this is the key factor in its incredible creative output.
 
 This is a reminder to be more creative. To start a project
 with a pen and paper and to forget about the constraints and
