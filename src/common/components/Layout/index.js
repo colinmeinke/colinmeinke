@@ -74,8 +74,6 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = propTypes;
-
 Layout.defaultProps = defaultProps;
 Layout.propTypes = propTypes;
 
