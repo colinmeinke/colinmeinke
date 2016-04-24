@@ -26,7 +26,7 @@ class Layout extends Component {
     const description = this.props.description || 'Making websites in far away places';
     const rootUrl = getRootUrl();
     const siteName = 'Colin Meinke';
-    const title = `${ this.props.title }${ this.props.title ? ' – ' : null }${ siteName }`;
+    const title = `${ this.props.title ? `${ this.props.title } – ` : '' }${ siteName }`;
     const url = rootUrl + this.props.url;
 
     const meta = {
