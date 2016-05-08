@@ -35,14 +35,28 @@ const projects = [
     url: 'https://github.com/colinmeinke/svg-tween',
   },
   {
+    description: `A specification for storing shape data in Javascript. Includes
+                  functions for adding, removing, reordering and converting
+                  points.`,
+    name: 'Points',
+    url: 'https://github.com/colinmeinke/points',
+  },
+  {
+    description: `A specification for storing SVG shape data in Javascript.
+                  Includes functions for converting to and from a point object
+                  shape array.`,
+    name: 'SVG points',
+    url: 'https://github.com/colinmeinke/svg-points',
+  },
+  {
     description: 'A little tweening library.',
     name: 'Tweening',
     url: 'https://github.com/colinmeinke/tweening',
   },
   {
-    description: 'Get point data from SVG shapes. Convert point data to an SVG path.',
-    name: 'SVG shapes',
-    url: 'https://github.com/colinmeinke/svg-shapes',
+    description: 'Color middleware for tweening.',
+    name: 'Tweening Color Middleware',
+    url: 'https://github.com/colinmeinke/tweening-color-middleware',
   },
   {
     description: 'A responsive theme for Ghost.',
