@@ -81,7 +81,7 @@ class Header extends Component {
             </strong>
             { ' ' } in { ' ' }
             <strong className={ location }>
-              Milan, Italy
+              Bologna, Italy
             </strong>.
           </p>
         </div>
