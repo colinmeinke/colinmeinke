@@ -1,11 +1,9 @@
-import { formatPosts, getRootUrl } from '../helpers';
+import { formatPosts } from '../helpers';
 import { postList } from '../config/posts';
 
 const UPDATE_POST = 'UPDATE_POST';
 
-const getPost = ({ postSlug = '' }) => new Promise(( resolve, reject ) => {
-  const rootUrl = getRootUrl();
-
+const getPost = ({ postSlug = '', rootUrl }) => new Promise(( resolve, reject ) => {
   fetch( `${ rootUrl }/api/post/${ postSlug }` )
     .then( response => {
       if ( response.status !== 200 ) {

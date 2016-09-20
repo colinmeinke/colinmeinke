@@ -5,6 +5,7 @@ import postList from './postList';
 import postListLoading from './postListLoading';
 import postLoading from './postLoading';
 import postSlug from './postSlug';
+import rootUrl from './rootUrl';
 import tags from './tags';
 
 export {
@@ -15,5 +16,6 @@ export {
   postListLoading,
   postLoading,
   postSlug,
+  rootUrl,
   tags,
 };

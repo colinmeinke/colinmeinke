@@ -65,8 +65,14 @@ const api = ({ url, ...req }, res, next ) => {
   }
 };
 
-const render = ({ url }, res ) => {
-  configureStore({ isServer: true, url }).then( store => {
+const render = ( req, res ) => {
+  const location = {
+    host: req.get( 'host' ),
+    protocol: req.protocol,
+    url: req.url,
+  };
+
+  configureStore({ isServer: true, location }).then( store => {
     res.send( `<!DOCTYPE html>${
       renderToStaticMarkup(
         <Page
@@ -83,4 +89,4 @@ const render = ({ url }, res ) => {
 app.use( api );
 app.use( render );
 
-app.listen( process.env.PORT || config.development.location.port );
+app.listen( process.env.PORT || 3000 );

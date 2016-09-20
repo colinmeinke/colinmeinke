@@ -1,10 +1,5 @@
 {
   "development": {
-    "location": {
-      "hostName": "localhost",
-      "port": "3000",
-      "protocol": "http:"
-    },
     "scripts": [
       {
         "file": "./node_modules/react/dist/react.js",
@@ -48,11 +43,6 @@
     "src": "src",
     "static": "static"
   },
-  "envs": [
-    "development",
-    "production",
-    "staging"
-  ],
   "navItems": [
     {
       "name": "Blog",
@@ -68,10 +58,6 @@
     }
   ],
   "production": {
-    "location": {
-      "hostName": "www.colinmeinke.com",
-      "protocol": "http:"
-    },
     "scripts": [
       {
         "file": "./node_modules/react/dist/react.min.js",
@@ -95,12 +81,6 @@
     "styles": [
       "./dist/styles.min.css"
     ]
-  },
-  "staging": {
-    "location": {
-      "hostName": "colinmeinke.herokuapp.com",
-      "protocol": "https:"
-    }
   },
   "subDirectoryNodeModules": [
     "react-dom-stream/server"

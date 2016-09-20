@@ -1,8 +1,6 @@
 import DocumentMeta from 'react-document-meta';
 import React, { Component, PropTypes } from 'react';
 
-import { getRootUrl } from '../../helpers/url';
-
 import CallToAction from '../CallToAction';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -24,10 +22,9 @@ const propTypes = {
 class Layout extends Component {
   render () {
     const description = this.props.description || 'Making websites in far away places';
-    const rootUrl = getRootUrl();
     const siteName = 'Colin Meinke';
     const title = `${ this.props.title ? `${ this.props.title } – ` : '' }${ siteName }`;
-    const url = rootUrl + this.props.url;
+    const url = this.props.rootUrl + this.props.url;
 
     const meta = {
       title,

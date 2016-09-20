@@ -11,6 +11,7 @@ import { UPDATE_PAGE, updatePage } from './page';
 import { UPDATE_POST, getPost } from './post';
 import { UPDATE_POST_LIST, getPostList } from './postList';
 import { UPDATE_POST_SLUG, updatePostSlug } from './postSlug';
+import { UPDATE_ROOT_URL, updateRootUrl } from './rootUrl';
 import { UPDATE_TAGS, updateTags } from './tags';
 
 export {
@@ -23,6 +24,7 @@ export {
   UPDATE_POST,
   UPDATE_POST_LIST,
   UPDATE_POST_SLUG,
+  UPDATE_ROOT_URL,
   UPDATE_TAGS,
   getPost,
   getPostList,
@@ -33,5 +35,6 @@ export {
   updateMorePosts,
   updatePage,
   updatePostSlug,
+  updateRootUrl,
   updateTags,
 };

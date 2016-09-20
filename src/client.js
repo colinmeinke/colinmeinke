@@ -6,10 +6,15 @@ import { loadFonts } from './common/helpers/fonts';
 
 import Root from './common/components/Root';
 
-const { hash, pathname, search } = window.location;
-const url = pathname + search + hash;
+const { hash, host, pathname, protocol, search } = window.location;
 
-configureStore({ url }).then( store => {
+const location = {
+  host,
+  protocol: protocol.replace( ':', '' ),
+  url: pathname + search + hash,
+};
+
+configureStore({ location }).then( store => {
   render(
     <Root store={ store } />,
     document.querySelector( '.app' )
