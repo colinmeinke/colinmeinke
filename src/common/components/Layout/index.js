@@ -14,6 +14,7 @@ const propTypes = {
   description: PropTypes.string,
   children: PropTypes.object.isRequired,
   meta: PropTypes.object,
+  rootUrl: PropTypes.string,
   showCallToAction: PropTypes.bool,
   title: PropTypes.string,
   url: PropTypes.string.isRequired,
