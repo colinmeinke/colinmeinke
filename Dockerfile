@@ -1,10 +1,11 @@
-FROM mhart/alpine-node:6.2.0
+FROM mhart/alpine-node
 LABEL name "colinmeinke"
+RUN apk add --no-cache make gcc g++ python git
 RUN mkdir /app
 WORKDIR /app
-COPY . /app
-RUN apk add --no-cache make gcc g++ python git
+COPY package.json /app
 RUN npm install
+COPY . /app
 RUN npm run build
 EXPOSE 3000
 CMD [ "npm", "start" ]
