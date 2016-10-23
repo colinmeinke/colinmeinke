@@ -61,7 +61,7 @@ class Layout extends Component {
             <CallToAction
               linkText="Discuss working with me remotely"
               linkTo="/work-with-me"
-              title="I'm taking on new projects in 2016."
+              title="I'm taking on new projects in 2017."
             /> :
             null
           }

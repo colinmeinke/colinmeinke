@@ -114,7 +114,7 @@ class WorkWithMePage extends Component {
             linkIsExternal
             linkText="hello@colinmeinke.com"
             linkTo="mailto:hello@colinmeinke.com"
-            title="I'm taking on new projects in 2016."
+            title="I'm taking on new projects in 2017."
           >
             <p>
               If you need somebody to take your project from
