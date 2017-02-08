@@ -1,0 +1,10 @@
+{
+  "aliases": [
+    "colinmeinke.now.sh",
+    "colinmeinke.com"
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "name": "colinmeinke"
+}
