@@ -86,7 +86,7 @@
     "build:pro": "npm run clean && npm run build:pro:client && npm run build:pro:server && npm run createStatic:pro",
     "build:pro:client": "webpack --config webpack/pro/client.babel.js",
     "build:pro:server": "webpack --config webpack/pro/server.babel.js",
-    "clean": "rimraf dist static/css static/js",
+    "clean": "rm -rf dist static/css static/js",
     "commit": "git-cz",
     "createStatic:dev": "npm run createStaticJs:dev && npm run createStaticCss:dev",
     "createStatic:pro": "npm run createStaticJs:pro && npm run createStaticCss:pro",
