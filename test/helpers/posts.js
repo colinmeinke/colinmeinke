@@ -1,13 +1,15 @@
-import expect from 'expect';
+/* globals describe it */
 
-import { formatDate, formatPosts } from '../../src/common/helpers';
+import expect from 'expect'
 
-describe( 'helper', () => {
-  describe( 'posts', () => {
-    describe( 'formatPosts()', () => {
-      it( 'should correctly format posts', () => {
-        const date = 'Tue Feb 16 2016 09:18:00 GMT-0600';
-        const formattedDate = formatDate( date );
+import { formatDate, formatPosts } from '../../src/common/helpers'
+
+describe('helper', () => {
+  describe('posts', () => {
+    describe('formatPosts()', () => {
+      it('should correctly format posts', () => {
+        const date = 'Tue Feb 16 2016 09:18:00 GMT-0600'
+        const formattedDate = formatDate(date)
 
         const postList = [{
           datePublished: 'Tue Feb 16 2016 09:18:00 GMT-0600',
@@ -15,16 +17,16 @@ describe( 'helper', () => {
           locationPublished: 'Hanoi, Vietnam',
           slug: 'hello-world',
           tags: [ 'coding' ],
-          title: 'Hello world',
-        }];
+          title: 'Hello world'
+        }]
 
         const expectedPost = {
           ...postList[ 0 ],
-          datePublished: formattedDate,
-        };
+          datePublished: formattedDate
+        }
 
-        expect( formatPosts( postList )).toEqual([ expectedPost ]);
-      });
-    });
-  });
-});
+        expect(formatPosts(postList)).toEqual([ expectedPost ])
+      })
+    })
+  })
+})

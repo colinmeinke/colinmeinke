@@ -1,30 +1,32 @@
-import DocumentMeta from 'react-document-meta';
-import expect from 'expect';
-import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+/* globals describe it before */
 
-import Layout from '../../src/common/components/Layout/index';
+import DocumentMeta from 'react-document-meta'
+import expect from 'expect'
+import React from 'react'
+import { createRenderer } from 'react-addons-test-utils'
 
-describe( 'component', () => {
-  describe( '<Layout />', () => {
-    let layout;
+import Layout from '../../src/common/components/Layout/index'
+
+describe('component', () => {
+  describe('<Layout />', () => {
+    let layout
 
     before(() => {
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
-        <Layout url="/hello-world">
+        <Layout url='/hello-world'>
           <p>Hello world</p>
         </Layout>
-      );
+      )
 
-      layout = renderer.getRenderOutput();
-    });
+      layout = renderer.getRenderOutput()
+    })
 
-    it( 'should render correct markup', () => {
-      expect( layout.props.children.type ).toBe( DocumentMeta );
-      expect( layout.props.children.props.children[ 0 ].type.displayName )
-        .toBe( 'Connect(Header)' );
-    });
-  });
-});
+    it('should render correct markup', () => {
+      expect(layout.props.children.type).toBe(DocumentMeta)
+      expect(layout.props.children.props.children[ 0 ].type.displayName)
+        .toBe('Connect(Header)')
+    })
+  })
+})

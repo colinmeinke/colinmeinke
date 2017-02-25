@@ -1,26 +1,28 @@
-import expect from 'expect';
-import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+/* globals describe it before */
 
-import WorkWithMe from '../../src/common/components/WorkWithMePage/index';
+import expect from 'expect'
+import React from 'react'
+import { createRenderer } from 'react-addons-test-utils'
 
-describe( 'component', () => {
-  describe( '<WorkWithMe />', () => {
-    let workWithMe;
+import WorkWithMe from '../../src/common/components/WorkWithMePage/index'
+
+describe('component', () => {
+  describe('<WorkWithMe />', () => {
+    let workWithMe
 
     before(() => {
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
         <WorkWithMe />
-      );
+      )
 
-      workWithMe = renderer.getRenderOutput();
-    });
+      workWithMe = renderer.getRenderOutput()
+    })
 
-    it( 'should render correct markup', () => {
-      expect( workWithMe.props.children.type ).toBe( 'main' );
-      expect( workWithMe.props.children.props.children[ 0 ].type ).toBe( 'h1' );
-    });
-  });
-});
+    it('should render correct markup', () => {
+      expect(workWithMe.props.children.type).toBe('main')
+      expect(workWithMe.props.children.props.children[ 0 ].type).toBe('h1')
+    })
+  })
+})

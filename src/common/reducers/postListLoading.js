@@ -1,14 +1,14 @@
-import { POST_LIST_LOADED, POST_LIST_LOADING } from '../actions';
+import { POST_LIST_LOADED, POST_LIST_LOADING } from '../actions'
 
-const postListLoading = ( state = true, action ) => {
-  switch ( action.type ) {
+const postListLoading = (state = true, action) => {
+  switch (action.type) {
     case POST_LIST_LOADED:
-      return false;
+      return false
     case POST_LIST_LOADING:
-      return true;
+      return true
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default postListLoading;
+export default postListLoading

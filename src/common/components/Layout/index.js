@@ -1,14 +1,14 @@
-import DocumentMeta from 'react-document-meta';
-import React, { Component, PropTypes } from 'react';
+import DocumentMeta from 'react-document-meta'
+import React, { Component, PropTypes } from 'react'
 
-import CallToAction from '../CallToAction';
-import Footer from '../Footer';
-import Header from '../Header';
+import CallToAction from '../CallToAction'
+import Footer from '../Footer'
+import Header from '../Header'
 
 const defaultProps = {
   meta: {},
-  showCallToAction: true,
-};
+  showCallToAction: true
+}
 
 const propTypes = {
   description: PropTypes.string,
@@ -17,15 +17,15 @@ const propTypes = {
   rootUrl: PropTypes.string,
   showCallToAction: PropTypes.bool,
   title: PropTypes.string,
-  url: PropTypes.string.isRequired,
-};
+  url: PropTypes.string.isRequired
+}
 
 class Layout extends Component {
   render () {
-    const description = this.props.description || 'Making websites in far away places';
-    const siteName = 'Colin Meinke';
-    const title = `${ this.props.title ? `${ this.props.title } – ` : '' }${ siteName }`;
-    const url = this.props.rootUrl + this.props.url;
+    const description = this.props.description || 'Making websites in far away places'
+    const siteName = 'Colin Meinke'
+    const title = `${this.props.title ? `${this.props.title} – ` : ''}${siteName}`
+    const url = this.props.rootUrl + this.props.url
 
     const meta = {
       title,
@@ -35,7 +35,7 @@ class Layout extends Component {
         name: {
           description,
           referrer: 'origin',
-          viewport: 'width=device-width, initial-scale=1',
+          viewport: 'width=device-width, initial-scale=1'
         },
         property: {
           'og:description': description,
@@ -47,32 +47,32 @@ class Layout extends Component {
           'twitter:description': description,
           'twitter:title': title,
           'twitter:url': url,
-          ...this.props.meta,
-        },
-      },
-    };
+          ...this.props.meta
+        }
+      }
+    }
 
     return (
       <div>
-        <DocumentMeta { ...meta }>
+        <DocumentMeta {...meta}>
           <Header />
           { this.props.children }
-          { this.props.showCallToAction ?
-            <CallToAction
-              linkText="Discuss working with me remotely"
-              linkTo="/work-with-me"
+          { this.props.showCallToAction
+            ? <CallToAction
+              linkText='Discuss working with me remotely'
+              linkTo='/work-with-me'
               title="I'm taking on new projects in 2017."
-            /> :
-            null
+            />
+            : null
           }
           <Footer />
         </DocumentMeta>
       </div>
-    );
+    )
   }
 }
 
-Layout.defaultProps = defaultProps;
-Layout.propTypes = propTypes;
+Layout.defaultProps = defaultProps
+Layout.propTypes = propTypes
 
-export default Layout;
+export default Layout

@@ -1,12 +1,12 @@
-import { UPDATE_PAGE } from '../actions';
+import { UPDATE_PAGE } from '../actions'
 
-const page = ( state = 1, action ) => {
-  switch ( action.type ) {
+const page = (state = 1, action) => {
+  switch (action.type) {
     case UPDATE_PAGE:
-      return action.page;
+      return action.page
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default page;
+export default page

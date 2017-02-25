@@ -1,8 +1,8 @@
-const formatDate = dateString => new Date( dateString )
-  .toLocaleString( undefined, {
+const formatDate = dateString => new Date(dateString)
+  .toLocaleString(undefined, {
     day: 'numeric',
     month: 'long',
-    year: 'numeric',
-  });
+    year: 'numeric'
+  })
 
-export { formatDate };
+export { formatDate }

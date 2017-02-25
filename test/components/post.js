@@ -1,12 +1,14 @@
-import expect from 'expect';
-import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+/* globals describe it before */
 
-import Post from '../../src/common/components/Post/index';
+import expect from 'expect'
+import React from 'react'
+import { createRenderer } from 'react-addons-test-utils'
 
-describe( 'component', () => {
-  describe( '<Post />', () => {
-    let post;
+import Post from '../../src/common/components/Post/index'
+
+describe('component', () => {
+  describe('<Post />', () => {
+    let post
 
     const props = {
       datePublished: '13 February 2017',
@@ -14,21 +16,21 @@ describe( 'component', () => {
       locationPublished: 'Hanoi, Vietnam',
       slug: 'hello-world',
       tags: [ 'coding' ],
-      title: 'Hello world',
-    };
+      title: 'Hello world'
+    }
 
     before(() => {
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
-        <Post { ...props } />
-      );
+        <Post {...props} />
+      )
 
-      post = renderer.getRenderOutput();
-    });
+      post = renderer.getRenderOutput()
+    })
 
-    it( 'should render correct markup', () => {
-      expect( post.props.children[ 0 ].type ).toBe( 'h1' );
-    });
-  });
-});
+    it('should render correct markup', () => {
+      expect(post.props.children[ 0 ].type).toBe('h1')
+    })
+  })
+})

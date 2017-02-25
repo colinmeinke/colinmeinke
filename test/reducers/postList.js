@@ -1,28 +1,30 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/postList';
-import { UPDATE_POST_LIST } from '../../src/common/actions/postList';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'postList()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, [])).toEqual([]);
-    });
+import reducer from '../../src/common/reducers/postList'
+import { UPDATE_POST_LIST } from '../../src/common/actions/postList'
 
-    it( 'should handle UPDATE_POST_LIST action type', () => {
+describe('reducer', () => {
+  describe('postList()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, [])).toEqual([])
+    })
+
+    it('should handle UPDATE_POST_LIST action type', () => {
       const postList = [{
         datePublished: '10 February, 2016',
         description: '',
         locationPublished: 'Hanoi, Vietnam',
         slug: 'hello-world',
         tags: [ 'coding' ],
-        title: 'Hello world',
-      }];
+        title: 'Hello world'
+      }]
 
-      expect( reducer( '', {
+      expect(reducer('', {
         postList,
-        type: UPDATE_POST_LIST,
-      })).toEqual( postList );
-    });
-  });
-});
+        type: UPDATE_POST_LIST
+      })).toEqual(postList)
+    })
+  })
+})

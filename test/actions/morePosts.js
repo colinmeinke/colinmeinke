@@ -1,25 +1,27 @@
-import expect from 'expect';
+/* globals describe it */
 
-import { postsPerPage } from '../../src/common/config/posts';
+import expect from 'expect'
 
-import { UPDATE_MORE_POSTS, updateMorePosts } from '../../src/common/actions/morePosts';
+import { postsPerPage } from '../../src/common/config/posts'
 
-describe( 'action creator', () => {
-  describe( 'morePosts', () => {
-    describe( 'updateMorePosts()', () => {
-      it( 'should create an action to update morePosts', () => {
-        const page = 1;
-        const postList = [{}, {}, {}, {}];
+import { UPDATE_MORE_POSTS, updateMorePosts } from '../../src/common/actions/morePosts'
 
-        const morePosts = postList.length > ( page * postsPerPage );
+describe('action creator', () => {
+  describe('morePosts', () => {
+    describe('updateMorePosts()', () => {
+      it('should create an action to update morePosts', () => {
+        const page = 1
+        const postList = [{}, {}, {}, {}]
+
+        const morePosts = postList.length > (page * postsPerPage)
 
         const expectedAction = {
           morePosts,
-          type: UPDATE_MORE_POSTS,
-        };
+          type: UPDATE_MORE_POSTS
+        }
 
-        expect( updateMorePosts({ page, postList })).toEqual( expectedAction );
-      });
-    });
-  });
-});
+        expect(updateMorePosts({ page, postList })).toEqual(expectedAction)
+      })
+    })
+  })
+})

@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Layout from '../Layout';
+import Layout from '../Layout'
 
-import { container, title, section } from './styles.css';
+import { container, title, section } from './styles.css'
 
 class AboutPage extends Component {
   render () {
     return (
       <Layout
-        description="About page"
-        title="About"
+        description='About page'
+        title='About'
       >
         <main
-          className={ container }
-          role="main"
+          className={container}
+          role='main'
         >
-          <h1 className={ title }>About</h1>
+          <h1 className={title}>About</h1>
 
-          <section className={ section }>
+          <section className={section}>
             <p>
               Two years ago I left my job in London as a Senior
               Front-end Developer at irokotv (Africa's Netflix).
@@ -31,7 +31,7 @@ class AboutPage extends Component {
             </p>
           </section>
 
-          <section className={ section }>
+          <section className={section}>
             <p>
               I have over 10 years of experience building
               full-stack websites, both working full-time
@@ -93,8 +93,8 @@ class AboutPage extends Component {
           </section>
         </main>
       </Layout>
-    );
+    )
   }
 }
 
-export default AboutPage;
+export default AboutPage

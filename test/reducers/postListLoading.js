@@ -1,22 +1,24 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/postListLoading';
-import { POST_LIST_LOADED, POST_LIST_LOADING } from '../../src/common/actions/postListLoading';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'postListLoading()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, {})).toEqual( true );
-    });
+import reducer from '../../src/common/reducers/postListLoading'
+import { POST_LIST_LOADED, POST_LIST_LOADING } from '../../src/common/actions/postListLoading'
 
-    it( 'should handle POST_LIST_LOADED action type', () => {
-      expect( reducer( '', { type: POST_LIST_LOADED }))
-        .toEqual( false );
-    });
+describe('reducer', () => {
+  describe('postListLoading()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, {})).toEqual(true)
+    })
 
-    it( 'should handle POST_LIST_LOADING action type', () => {
-      expect( reducer( '', { type: POST_LIST_LOADING }))
-        .toEqual( true );
-    });
-  });
-});
+    it('should handle POST_LIST_LOADED action type', () => {
+      expect(reducer('', { type: POST_LIST_LOADED }))
+        .toEqual(false)
+    })
+
+    it('should handle POST_LIST_LOADING action type', () => {
+      expect(reducer('', { type: POST_LIST_LOADING }))
+        .toEqual(true)
+    })
+  })
+})

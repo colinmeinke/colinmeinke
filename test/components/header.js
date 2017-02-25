@@ -1,59 +1,61 @@
-import expect from 'expect';
-import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+/* globals describe it before */
 
-import Header from '../../src/common/components/Header/index';
-import HeaderContainer from '../../src/common/components/Header';
+import expect from 'expect'
+import React from 'react'
+import { createRenderer } from 'react-addons-test-utils'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-describe( 'component', () => {
-  describe( '<Header />', () => {
-    let header;
+import Header from '../../src/common/components/Header/index'
+import HeaderContainer from '../../src/common/components/Header'
+
+describe('component', () => {
+  describe('<Header />', () => {
+    let header
 
     before(() => {
       const props = {
-        url: '/',
-      };
+        url: '/'
+      }
 
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
-        <Header { ...props } />
-      );
+        <Header {...props} />
+      )
 
-      header = renderer.getRenderOutput();
-    });
+      header = renderer.getRenderOutput()
+    })
 
-    it( 'should render correct markup', () => {
-      expect( header.type ).toBe( 'header' );
-      expect( header.props.children.type ).toBe( 'div' );
-    });
-  });
+    it('should render correct markup', () => {
+      expect(header.type).toBe('header')
+      expect(header.props.children.type).toBe('div')
+    })
+  })
 
-  describe( '<HeaderContainer />', () => {
-    let header;
+  describe('<HeaderContainer />', () => {
+    let header
 
     const props = {
-      url: '/projects',
-    };
+      url: '/projects'
+    }
 
     before(() => {
-      const store = createStore(() => props );
+      const store = createStore(() => props)
 
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
-        <Provider store={ store }>
-          <HeaderContainer { ...props } />
+        <Provider store={store}>
+          <HeaderContainer {...props} />
         </Provider>
-      );
+      )
 
-      header = renderer.getRenderOutput();
-    });
+      header = renderer.getRenderOutput()
+    })
 
-    it( 'should connect to redux store', () => {
-      expect( header.type.displayName ).toEqual( 'Connect(Header)' );
-    });
-  });
-});
+    it('should connect to redux store', () => {
+      expect(header.type.displayName).toEqual('Connect(Header)')
+    })
+  })
+})

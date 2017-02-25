@@ -1,15 +1,17 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/post';
-import { UPDATE_POST } from '../../src/common/actions/post';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'post()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, {})).toEqual({});
-    });
+import reducer from '../../src/common/reducers/post'
+import { UPDATE_POST } from '../../src/common/actions/post'
 
-    it( 'should handle UPDATE_POST action type', () => {
+describe('reducer', () => {
+  describe('post()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, {})).toEqual({})
+    })
+
+    it('should handle UPDATE_POST action type', () => {
       const post = {
         content: 'Hello world...',
         datePublished: '10 February, 2016',
@@ -17,13 +19,13 @@ describe( 'reducer', () => {
         locationPublished: 'Hanoi, Vietnam',
         slug: 'hello-world',
         tags: [ 'coding' ],
-        title: 'Hello world',
-      };
+        title: 'Hello world'
+      }
 
-      expect( reducer( '', {
+      expect(reducer('', {
         post,
-        type: UPDATE_POST,
-      })).toEqual( post );
-    });
-  });
-});
+        type: UPDATE_POST
+      })).toEqual(post)
+    })
+  })
+})

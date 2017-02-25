@@ -1,4 +1,6 @@
-import React from 'react';
+/* globals __DEVELOPMENT__ */
+
+import React from 'react'
 
 import {
   getPost,
@@ -10,15 +12,15 @@ import {
   updateMorePosts,
   updatePage,
   updatePostSlug,
-  updateTags,
-} from '../actions';
+  updateTags
+} from '../actions'
 
-import About from '../components/AboutPage';
-import Home from '../components/HomePage';
-import NotFound from '../components/NotFoundPage';
-import Post from '../components/PostPage';
-import Projects from '../components/ProjectsPage';
-import WorkWithMe from '../components/WorkWithMePage';
+import About from '../components/AboutPage'
+import Home from '../components/HomePage'
+import NotFound from '../components/NotFoundPage'
+import Post from '../components/PostPage'
+import Projects from '../components/ProjectsPage'
+import WorkWithMe from '../components/WorkWithMePage'
 
 const createRoutes = () => ([
   [ '/', {
@@ -28,8 +30,8 @@ const createRoutes = () => ([
       postListLoading,
       getPostList,
       postListLoaded,
-      updateMorePosts,
-    ],
+      updateMorePosts
+    ]
   }, <Home /> ],
 
   [ 'post/:postSlug', {
@@ -37,21 +39,21 @@ const createRoutes = () => ([
     after: [
       postLoading,
       getPost,
-      postLoaded,
-    ],
+      postLoaded
+    ]
   }, <Post /> ],
 
   [ '/about', <About /> ],
   [ '/projects', <Projects /> ],
   [ '/work-with-me', <WorkWithMe /> ],
-  [ '*', <NotFound /> ],
-]);
+  [ '*', <NotFound /> ]
+])
 
-let routes = createRoutes();
+let routes = createRoutes()
 
-if ( __DEVELOPMENT__ && module.hot ) {
-  module.hot.accept();
-  routes = createRoutes();
+if (__DEVELOPMENT__ && module.hot) {
+  module.hot.accept()
+  routes = createRoutes()
 }
 
-export default routes;
+export default routes

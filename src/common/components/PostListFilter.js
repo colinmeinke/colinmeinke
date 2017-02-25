@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
-import PostListFilter from './PostListFilter/index';
+import PostListFilter from './PostListFilter/index'
 
-const mapStateToProps = ({ tags }) => ({ tags });
+const mapStateToProps = ({ tags }) => ({ tags })
 
-export default connect( mapStateToProps )( PostListFilter );
+export default connect(mapStateToProps)(PostListFilter)

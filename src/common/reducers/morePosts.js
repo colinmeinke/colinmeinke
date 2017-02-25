@@ -1,12 +1,12 @@
-import { UPDATE_MORE_POSTS } from '../actions';
+import { UPDATE_MORE_POSTS } from '../actions'
 
-const morePosts = ( state = false, action ) => {
-  switch ( action.type ) {
+const morePosts = (state = false, action) => {
+  switch (action.type) {
     case UPDATE_MORE_POSTS:
-      return action.morePosts;
+      return action.morePosts
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default morePosts;
+export default morePosts

@@ -1,7 +1,7 @@
-import webpack from 'webpack';
-import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin';
+import webpack from 'webpack'
+import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin'
 
-import defaultConfig from './default';
+import defaultConfig from './default'
 
 export default {
   ...defaultConfig,
@@ -13,20 +13,20 @@ export default {
           'style',
           'css?modules&importLoaders=1!postcss'
         ),
-        test: /\.css$/,
-      }],
-    ],
+        test: /\.css$/
+      }]
+    ]
   },
   plugins: [
-    new ExtractTextWebpackPlugin( 'styles.min.css' ),
+    new ExtractTextWebpackPlugin('styles.min.css'),
     new webpack.DefinePlugin({
-      __DEVELOPMENT__: false,
+      __DEVELOPMENT__: false
     }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       output: {
-        comments: false,
-      },
-    }),
-  ],
-};
+        comments: false
+      }
+    })
+  ]
+}

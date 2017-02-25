@@ -1,32 +1,34 @@
-import expect from 'expect';
-import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+/* globals describe it before */
 
-import CallToAction from '../../src/common/components/CallToAction/index';
+import expect from 'expect'
+import React from 'react'
+import { createRenderer } from 'react-addons-test-utils'
 
-describe( 'component', () => {
-  describe( '<CallToAction />', () => {
-    let callToAction;
+import CallToAction from '../../src/common/components/CallToAction/index'
+
+describe('component', () => {
+  describe('<CallToAction />', () => {
+    let callToAction
 
     before(() => {
       const props = {
         linkText: 'Do it',
         linkTo: '/',
-        title: 'Hello world',
-      };
+        title: 'Hello world'
+      }
 
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
-        <CallToAction { ...props } />
-      );
+        <CallToAction {...props} />
+      )
 
-      callToAction = renderer.getRenderOutput();
-    });
+      callToAction = renderer.getRenderOutput()
+    })
 
-    it( 'should render correct markup', () => {
-      expect( callToAction.type ).toBe( 'section' );
-      expect( callToAction.props.children.type ).toBe( 'div' );
-    });
-  });
-});
+    it('should render correct markup', () => {
+      expect(callToAction.type).toBe('section')
+      expect(callToAction.props.children.type).toBe('div')
+    })
+  })
+})

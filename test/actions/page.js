@@ -1,20 +1,22 @@
-import expect from 'expect';
+/* globals describe it */
 
-import { UPDATE_PAGE, updatePage } from '../../src/common/actions/page';
+import expect from 'expect'
 
-describe( 'action creator', () => {
-  describe( 'page', () => {
-    describe( 'updatePage()', () => {
-      it( 'should create an action to update page', () => {
-        const page = 5;
+import { UPDATE_PAGE, updatePage } from '../../src/common/actions/page'
+
+describe('action creator', () => {
+  describe('page', () => {
+    describe('updatePage()', () => {
+      it('should create an action to update page', () => {
+        const page = 5
 
         const expectedAction = {
           page,
-          type: UPDATE_PAGE,
-        };
+          type: UPDATE_PAGE
+        }
 
-        expect( updatePage( page )).toEqual( expectedAction );
-      });
-    });
-  });
-});
+        expect(updatePage(page)).toEqual(expectedAction)
+      })
+    })
+  })
+})

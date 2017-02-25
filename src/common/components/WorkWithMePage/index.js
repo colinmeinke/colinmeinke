@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'universal-redux-router';
+import React, { Component } from 'react'
+import { Link } from 'universal-redux-router'
 
-import CallToAction from '../CallToAction';
-import Layout from '../Layout';
+import CallToAction from '../CallToAction'
+import Layout from '../Layout'
 
 import {
   callToAction,
@@ -13,8 +13,8 @@ import {
   section,
   subTitle,
   testimonial,
-  title,
-} from './styles.css';
+  title
+} from './styles.css'
 
 const testimonials = [
   {
@@ -24,7 +24,7 @@ const testimonials = [
             before working a further 18 months remotely.
             Throughout he has always been reliable, easy to
             communicate with and produced top work.`,
-    role: 'Founder and COO',
+    role: 'Founder and COO'
   },
   {
     company: 'irokotv',
@@ -36,7 +36,7 @@ const testimonials = [
             ways of realising and sometimes even enhancing
             the designs while maintaining app and front-end
             performance.`,
-    role: 'Director of Product Design and UX',
+    role: 'Director of Product Design and UX'
   },
   {
     company: 'Gignite',
@@ -44,7 +44,7 @@ const testimonials = [
     quote: `Working with Colin is great. He’s full of ideas for
             modern, client side heavy development. Can’t wait
             to work with him again.`,
-    role: 'Lead Developer',
+    role: 'Lead Developer'
   },
   {
     company: 'Democratic Voice of Burma',
@@ -56,7 +56,7 @@ const testimonials = [
             in Burma. The website received widespread acclaim and
             was commended by various news outlets, including
             Reuters.`,
-    role: 'Journalist',
+    role: 'Journalist'
   },
   {
     company: 'Visiting Arts',
@@ -66,25 +66,25 @@ const testimonials = [
             conception to delivery and helped shape a
             technological paradigm shift for the whole
             organisation.`,
-    role: 'Communications Manager',
-  },
-];
+    role: 'Communications Manager'
+  }
+]
 
 class WorkWithMePage extends Component {
   render () {
     return (
       <Layout
-        description="Work with me page"
-        showCallToAction={ false }
-        title="Work with me"
+        description='Work with me page'
+        showCallToAction={false}
+        title='Work with me'
       >
         <main
-          className={ container }
-          role="main"
+          className={container}
+          role='main'
         >
-          <h1 className={ title }>Work with me</h1>
+          <h1 className={title}>Work with me</h1>
 
-          <section className={ section }>
+          <section className={section}>
             <p>
               I have over 10 years of experience building
               full-stack websites, both working full-time within
@@ -93,15 +93,15 @@ class WorkWithMePage extends Component {
 
             <p>
               <Link
-                className={ link }
-                to="/about"
+                className={link}
+                to='/about'
               >
                 Read more about me
               </Link>
               { ' ' } or { ' ' }
               <a
-                className={ link }
-                href="https://uk.linkedin.com/in/colinmeinke"
+                className={link}
+                href='https://uk.linkedin.com/in/colinmeinke'
               >
                 take a look at my work experience
               </a>
@@ -110,10 +110,10 @@ class WorkWithMePage extends Component {
           </section>
 
           <CallToAction
-            className={ callToAction }
+            className={callToAction}
             linkIsExternal
-            linkText="hello@colinmeinke.com"
-            linkTo="mailto:hello@colinmeinke.com"
+            linkText='hello@colinmeinke.com'
+            linkTo='mailto:hello@colinmeinke.com'
             title="I'm taking on new projects in 2017."
           >
             <p>
@@ -130,8 +130,8 @@ class WorkWithMePage extends Component {
             </p>
           </CallToAction>
 
-          <section className={ section }>
-            <h2 className={ subTitle }>
+          <section className={section}>
+            <h2 className={subTitle}>
               Testimonials
             </h2>
 
@@ -139,16 +139,16 @@ class WorkWithMePage extends Component {
               Here are some nice things people have to say about me:
             </p>
 
-            { testimonials.map(( t, i ) => (
+            { testimonials.map((t, i) => (
               <blockquote
-                className={ testimonial }
-                key={ i }
+                className={testimonial}
+                key={i}
               >
-                <p className={ quote }>
+                <p className={quote}>
                   { t.quote }
                 </p>
                 <footer>
-                  <cite className={ cite }>
+                  <cite className={cite}>
                     <strong>{ t.name }</strong> – { ' ' }
                     { t.role } at { t.company }
                   </cite>
@@ -158,8 +158,8 @@ class WorkWithMePage extends Component {
           </section>
         </main>
       </Layout>
-    );
+    )
   }
 }
 
-export default WorkWithMePage;
+export default WorkWithMePage

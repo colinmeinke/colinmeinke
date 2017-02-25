@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
-import Layout from './Layout/index';
+import Layout from './Layout/index'
 
-const mapStateToProps = ({ rootUrl, url }) => ({ rootUrl, url });
+const mapStateToProps = ({ rootUrl, url }) => ({ rootUrl, url })
 
-export default connect( mapStateToProps )( Layout );
+export default connect(mapStateToProps)(Layout)

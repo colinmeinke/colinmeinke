@@ -1,21 +1,23 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/morePosts';
-import { UPDATE_MORE_POSTS } from '../../src/common/actions/morePosts';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'morePosts()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, {})).toEqual( false );
-    });
+import reducer from '../../src/common/reducers/morePosts'
+import { UPDATE_MORE_POSTS } from '../../src/common/actions/morePosts'
 
-    it( 'should handle UPDATE_MORE_POSTS action type', () => {
-      const morePosts = true;
+describe('reducer', () => {
+  describe('morePosts()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, {})).toEqual(false)
+    })
 
-      expect( reducer( '', {
+    it('should handle UPDATE_MORE_POSTS action type', () => {
+      const morePosts = true
+
+      expect(reducer('', {
         morePosts,
-        type: UPDATE_MORE_POSTS,
-      })).toEqual( morePosts );
-    });
-  });
-});
+        type: UPDATE_MORE_POSTS
+      })).toEqual(morePosts)
+    })
+  })
+})

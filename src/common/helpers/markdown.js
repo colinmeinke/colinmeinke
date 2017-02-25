@@ -1,44 +1,44 @@
-import Highlights from 'highlights';
-import Markdown from 'markdown-it';
-import path from 'path';
+import Highlights from 'highlights'
+import Markdown from 'markdown-it'
+import path from 'path'
 
-const highlighter = new Highlights();
+const highlighter = new Highlights()
 
 highlighter.requireGrammarsSync({
   modulePath: path.resolve(
     __dirname, '../../..', 'node_modules', 'language-babel', 'package.json'
-  ),
-});
+  )
+})
 
 const getScope = id => {
-  switch ( id ) {
+  switch (id) {
     case 'html':
-      return 'text.html.basic';
+      return 'text.html.basic'
     case 'js':
-      return 'source.js.jsx';
+      return 'source.js.jsx'
     case 'txt':
-      return 'text.plain';
+      return 'text.plain'
     default:
-      return `source.${ id }`;
+      return `source.${id}`
   }
-};
+}
 
-const highlight = ( code, id ) => {
-  if ( id ) {
+const highlight = (code, id) => {
+  if (id) {
     try {
       return highlighter.highlightSync({
         fileContents: code,
-        scopeName: getScope( id ),
-      });
-    } catch ( error ) {
+        scopeName: getScope(id)
+      })
+    } catch (error) {
       // eslint-disable-line no-empty
     }
   }
 
-  return code;
-};
+  return code
+}
 
-const md = new Markdown({ highlight });
-const parseMarkdown = str => md.render( str );
+const md = new Markdown({ highlight })
+const parseMarkdown = str => md.render(str)
 
-export { parseMarkdown };
+export { parseMarkdown }

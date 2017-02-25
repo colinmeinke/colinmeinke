@@ -1,33 +1,35 @@
-import expect from 'expect';
-import React from 'react';
-import { createRenderer } from 'react-addons-test-utils';
+/* globals describe it before */
 
-import Nav from '../../src/common/components/Nav/index';
+import expect from 'expect'
+import React from 'react'
+import { createRenderer } from 'react-addons-test-utils'
 
-describe( 'component', () => {
-  describe( '<Nav />', () => {
-    let nav;
+import Nav from '../../src/common/components/Nav/index'
+
+describe('component', () => {
+  describe('<Nav />', () => {
+    let nav
 
     before(() => {
       const props = {
         items: [
           { name: 'hello', url: '/hello' },
-          { name: 'world', url: '/world' },
-        ],
-      };
+          { name: 'world', url: '/world' }
+        ]
+      }
 
-      const renderer = createRenderer();
+      const renderer = createRenderer()
 
       renderer.render(
-        <Nav { ...props } />
-      );
+        <Nav {...props} />
+      )
 
-      nav = renderer.getRenderOutput();
-    });
+      nav = renderer.getRenderOutput()
+    })
 
-    it( 'should render correct markup', () => {
-      expect( nav.type ).toBe( 'nav' );
-      expect( nav.props.children[ 0 ].type.displayName ).toBe( 'Connect(Link)' );
-    });
-  });
-});
+    it('should render correct markup', () => {
+      expect(nav.type).toBe('nav')
+      expect(nav.props.children[ 0 ].type.displayName).toBe('Connect(Link)')
+    })
+  })
+})

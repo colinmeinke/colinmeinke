@@ -1,25 +1,27 @@
-import expect from 'expect';
+/* globals describe it */
 
-import { tagMatch } from '../../src/common/helpers';
+import expect from 'expect'
 
-describe( 'helper', () => {
-  describe( 'tags', () => {
-    describe( 'tagMatch()', () => {
-      it( 'should return false by default', () => {
-        expect( tagMatch()).toBe( false );
-      });
+import { tagMatch } from '../../src/common/helpers'
 
-      it( 'should return false when no items match', () => {
-        expect( tagMatch([ 'hello' ], [ 'world' ])).toBe( false );
-      });
+describe('helper', () => {
+  describe('tags', () => {
+    describe('tagMatch()', () => {
+      it('should return false by default', () => {
+        expect(tagMatch()).toBe(false)
+      })
 
-      it( 'should return true when one item matches', () => {
-        expect( tagMatch([ 'hello', 'world' ], [ 'hola', 'world' ])).toBe( true );
-      });
+      it('should return false when no items match', () => {
+        expect(tagMatch([ 'hello' ], [ 'world' ])).toBe(false)
+      })
 
-      it( 'should return true when mutliple items match', () => {
-        expect( tagMatch([ 'hello', 'world' ], [ 'hello', 'world' ])).toBe( true );
-      });
-    });
-  });
-});
+      it('should return true when one item matches', () => {
+        expect(tagMatch([ 'hello', 'world' ], [ 'hola', 'world' ])).toBe(true)
+      })
+
+      it('should return true when mutliple items match', () => {
+        expect(tagMatch([ 'hello', 'world' ], [ 'hello', 'world' ])).toBe(true)
+      })
+    })
+  })
+})

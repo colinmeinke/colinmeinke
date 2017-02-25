@@ -1,35 +1,37 @@
-import { formatPosts } from '../helpers';
-import { postList } from '../config/posts';
+/* globals fetch */
 
-const UPDATE_POST = 'UPDATE_POST';
+import { formatPosts } from '../helpers'
+import { postList } from '../config/posts'
 
-const getPost = ({ postSlug = '', rootUrl }) => new Promise(( resolve, reject ) => {
-  fetch( `${ rootUrl }/api/post/${ postSlug }` )
-    .then( response => {
-      if ( response.status !== 200 ) {
-        throw new Error( 'Post could not be found' );
+const UPDATE_POST = 'UPDATE_POST'
+
+const getPost = ({ postSlug = '', rootUrl }) => new Promise((resolve, reject) => {
+  fetch(`${rootUrl}/api/post/${postSlug}`)
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error('Post could not be found')
       }
 
-      return response.text();
+      return response.text()
     })
-    .then( content => {
+    .then(content => {
       const matchingPosts = formatPosts(
-        postList.filter( post => post.published && postSlug === post.slug )
-      );
+        postList.filter(post => post.published && postSlug === post.slug)
+      )
 
-      if ( matchingPosts.length !== 1 ) {
-        throw new Error( 'Post could not be found' );
+      if (matchingPosts.length !== 1) {
+        throw new Error('Post could not be found')
       }
 
       resolve({
         post: {
           ...matchingPosts[ 0 ],
-          content,
+          content
         },
-        type: UPDATE_POST,
-      });
+        type: UPDATE_POST
+      })
     })
-    .catch( reject );
-});
+    .catch(reject)
+})
 
-export { UPDATE_POST, getPost };
+export { UPDATE_POST, getPost }

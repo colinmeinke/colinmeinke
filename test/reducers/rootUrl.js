@@ -1,21 +1,23 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/rootUrl';
-import { UPDATE_ROOT_URL } from '../../src/common/actions/rootUrl';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'rootUrl()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, {})).toEqual( '' );
-    });
+import reducer from '../../src/common/reducers/rootUrl'
+import { UPDATE_ROOT_URL } from '../../src/common/actions/rootUrl'
 
-    it( 'should handle UPDATE_ROOT_URL action type', () => {
-      const url = 'https://www.colinmeinke.com';
+describe('reducer', () => {
+  describe('rootUrl()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, {})).toEqual('')
+    })
 
-      expect( reducer( '', {
+    it('should handle UPDATE_ROOT_URL action type', () => {
+      const url = 'https://www.colinmeinke.com'
+
+      expect(reducer('', {
         type: UPDATE_ROOT_URL,
-        url,
-      })).toEqual( url );
-    });
-  });
-});
+        url
+      })).toEqual(url)
+    })
+  })
+})

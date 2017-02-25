@@ -1,21 +1,23 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/tags';
-import { UPDATE_TAGS } from '../../src/common/actions/tags';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'tags()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, {})).toEqual([]);
-    });
+import reducer from '../../src/common/reducers/tags'
+import { UPDATE_TAGS } from '../../src/common/actions/tags'
 
-    it( 'should handle UPDATE_TAGS action type', () => {
-      const tags = [ 'hello', 'world' ];
+describe('reducer', () => {
+  describe('tags()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, {})).toEqual([])
+    })
 
-      expect( reducer( '', {
+    it('should handle UPDATE_TAGS action type', () => {
+      const tags = [ 'hello', 'world' ]
+
+      expect(reducer('', {
         tags,
-        type: UPDATE_TAGS,
-      })).toEqual( tags );
-    });
-  });
-});
+        type: UPDATE_TAGS
+      })).toEqual(tags)
+    })
+  })
+})

@@ -1,21 +1,23 @@
-import expect from 'expect';
+/* globals describe it */
 
-import reducer from '../../src/common/reducers/page';
-import { UPDATE_PAGE } from '../../src/common/actions/page';
+import expect from 'expect'
 
-describe( 'reducer', () => {
-  describe( 'page()', () => {
-    it( 'should return the initial state by default', () => {
-      expect( reducer( undefined, {})).toEqual( 1 );
-    });
+import reducer from '../../src/common/reducers/page'
+import { UPDATE_PAGE } from '../../src/common/actions/page'
 
-    it( 'should handle UPDATE_PAGE action type', () => {
-      const page = 5;
+describe('reducer', () => {
+  describe('page()', () => {
+    it('should return the initial state by default', () => {
+      expect(reducer(undefined, {})).toEqual(1)
+    })
 
-      expect( reducer( '', {
+    it('should handle UPDATE_PAGE action type', () => {
+      const page = 5
+
+      expect(reducer('', {
         page,
-        type: UPDATE_PAGE,
-      })).toEqual( page );
-    });
-  });
-});
+        type: UPDATE_PAGE
+      })).toEqual(page)
+    })
+  })
+})
