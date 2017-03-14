@@ -1,11 +1,11 @@
 const tagMatch = (tags = [], postTags = []) => {
   for (const tag of tags) {
     if (postTags.indexOf(tag) !== -1) {
-      return true
+      return true;
     }
   }
 
-  return false
-}
+  return false;
+};
 
-export { tagMatch }
+export { tagMatch };

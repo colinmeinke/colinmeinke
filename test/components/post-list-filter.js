@@ -1,56 +1,57 @@
 /* globals describe it before */
 
-import expect from 'expect'
-import React from 'react'
-import { createRenderer } from 'react-addons-test-utils'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import expect from 'expect';
+import React from 'react';
+import { createRenderer } from 'react-addons-test-utils';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-import PostListFilter from '../../src/common/components/PostListFilter/index'
-import PostListFilterContainer from '../../src/common/components/PostListFilter'
+import PostListFilter from '../../src/common/components/PostListFilter/index';
+import PostListFilterContainer
+  from '../../src/common/components/PostListFilter';
 
 describe('component', () => {
   const props = {
-    tags: [ 'hello', 'world' ]
-  }
+    tags: ['hello', 'world']
+  };
 
   describe('<PostListFilter />', () => {
-    let postListFilter
+    let postListFilter;
 
     before(() => {
-      const renderer = createRenderer()
+      const renderer = createRenderer();
 
-      renderer.render(
-        <PostListFilter {...props} />
-      )
+      renderer.render(<PostListFilter {...props} />);
 
-      postListFilter = renderer.getRenderOutput()
-    })
+      postListFilter = renderer.getRenderOutput();
+    });
 
     it('should render correct markup', () => {
-      expect(postListFilter.type).toBe('section')
-    })
-  })
+      expect(postListFilter.type).toBe('section');
+    });
+  });
 
   describe('<PostListFilterContainer />', () => {
-    let postListFilter
+    let postListFilter;
 
     before(() => {
-      const store = createStore(() => props)
+      const store = createStore(() => props);
 
-      const renderer = createRenderer()
+      const renderer = createRenderer();
 
       renderer.render(
         <Provider store={store}>
           <PostListFilterContainer />
         </Provider>
-      )
+      );
 
-      postListFilter = renderer.getRenderOutput()
-    })
+      postListFilter = renderer.getRenderOutput();
+    });
 
     it('should connect to redux store', () => {
-      expect(postListFilter.type.displayName).toEqual('Connect(PostListFilter)')
-    })
-  })
-})
+      expect(postListFilter.type.displayName).toEqual(
+        'Connect(PostListFilter)'
+      );
+    });
+  });
+});

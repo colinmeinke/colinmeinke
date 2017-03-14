@@ -1,7 +1,12 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import PostPage from './PostPage/index'
+import PostPage from './PostPage/index';
 
-const mapStateToProps = ({ page, post, postLoading, tags }) => ({ page, post, postLoading, tags })
+const mapStateToProps = ({ page, post, postLoading, tags }) => ({
+  page,
+  post,
+  postLoading,
+  tags
+});
 
-export default connect(mapStateToProps)(PostPage)
+export default connect(mapStateToProps)(PostPage);

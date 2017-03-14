@@ -1,28 +1,26 @@
 /* globals describe it before */
 
-import expect from 'expect'
-import React from 'react'
-import { createRenderer } from 'react-addons-test-utils'
+import expect from 'expect';
+import React from 'react';
+import { createRenderer } from 'react-addons-test-utils';
 
-import PostDiscovery from '../../src/common/components/PostDiscovery'
-import Home from '../../src/common/components/HomePage/index'
+import PostDiscovery from '../../src/common/components/PostDiscovery';
+import Home from '../../src/common/components/HomePage/index';
 
 describe('component', () => {
   describe('<Home />', () => {
-    let home
+    let home;
 
     before(() => {
-      const renderer = createRenderer()
+      const renderer = createRenderer();
 
-      renderer.render(
-        <Home />
-      )
+      renderer.render(<Home />);
 
-      home = renderer.getRenderOutput()
-    })
+      home = renderer.getRenderOutput();
+    });
 
     it('should render correct markup', () => {
-      expect(home.props.children.type).toBe(PostDiscovery)
-    })
-  })
-})
+      expect(home.props.children.type).toBe(PostDiscovery);
+    });
+  });
+});

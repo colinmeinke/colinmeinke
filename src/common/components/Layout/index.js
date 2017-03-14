@@ -1,14 +1,14 @@
-import DocumentMeta from 'react-document-meta'
-import React, { Component, PropTypes } from 'react'
+import DocumentMeta from 'react-document-meta';
+import React, { Component, PropTypes } from 'react';
 
-import CallToAction from '../CallToAction'
-import Footer from '../Footer'
-import Header from '../Header'
+import CallToAction from '../CallToAction';
+import Footer from '../Footer';
+import Header from '../Header';
 
 const defaultProps = {
   meta: {},
   showCallToAction: true
-}
+};
 
 const propTypes = {
   description: PropTypes.string,
@@ -18,14 +18,15 @@ const propTypes = {
   showCallToAction: PropTypes.bool,
   title: PropTypes.string,
   url: PropTypes.string.isRequired
-}
+};
 
 class Layout extends Component {
-  render () {
-    const description = this.props.description || 'Making websites in far away places'
-    const siteName = 'Colin Meinke'
-    const title = `${this.props.title ? `${this.props.title} – ` : ''}${siteName}`
-    const url = this.props.rootUrl + this.props.url
+  render() {
+    const description = this.props.description ||
+      'Making websites in far away places';
+    const siteName = 'Colin Meinke';
+    const title = `${this.props.title ? `${this.props.title} – ` : ''}${siteName}`;
+    const url = this.props.rootUrl + this.props.url;
 
     const meta = {
       title,
@@ -50,29 +51,28 @@ class Layout extends Component {
           ...this.props.meta
         }
       }
-    }
+    };
 
     return (
       <div>
         <DocumentMeta {...meta}>
           <Header />
-          { this.props.children }
-          { this.props.showCallToAction
+          {this.props.children}
+          {this.props.showCallToAction
             ? <CallToAction
-              linkText='Discuss working with me remotely'
-              linkTo='/work-with-me'
-              title="I'm taking on new projects in 2017."
-            />
-            : null
-          }
+                linkText="Discuss working with me remotely"
+                linkTo="/work-with-me"
+                title="I'm taking on new projects in 2017."
+              />
+            : null}
           <Footer />
         </DocumentMeta>
       </div>
-    )
+    );
   }
 }
 
-Layout.defaultProps = defaultProps
-Layout.propTypes = propTypes
+Layout.defaultProps = defaultProps;
+Layout.propTypes = propTypes;
 
-export default Layout
+export default Layout;

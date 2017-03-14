@@ -1,12 +1,12 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'universal-redux-router'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'universal-redux-router';
 
 const defaultProps = {
   activeClassName: '',
   itemClassName: '',
   navClassName: '',
   shouldScrollToTop: true
-}
+};
 
 const propTypes = {
   activeClassName: PropTypes.string,
@@ -15,36 +15,33 @@ const propTypes = {
   items: PropTypes.array,
   navClassName: PropTypes.string,
   shouldScrollToTop: PropTypes.bool
-}
+};
 
 class Nav extends Component {
-  render () {
+  render() {
     return (
-      <nav
-        className={this.props.navClassName}
-        role='navigation'
-      >
-        { this.props.items.map((item, i) => (
+      <nav className={this.props.navClassName} role="navigation">
+        {this.props.items.map((item, i) => (
           <Link
             className={[
               this.props.itemClassName,
-              (this.props.activeString === item.activeString
+              this.props.activeString === item.activeString
                 ? this.props.activeClassName
-                : null)
+                : null
             ].join(' ')}
             key={i}
             shouldScrollToTop={this.props.shouldScrollToTop}
             to={item.to}
           >
-            { item.name }
+            {item.name}
           </Link>
         ))}
       </nav>
-    )
+    );
   }
 }
 
-Nav.defaultProps = defaultProps
-Nav.propTypes = propTypes
+Nav.defaultProps = defaultProps;
+Nav.propTypes = propTypes;
 
-export default Nav
+export default Nav;

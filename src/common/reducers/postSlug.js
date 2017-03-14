@@ -1,12 +1,12 @@
-import { UPDATE_POST_SLUG } from '../actions'
+import { UPDATE_POST_SLUG } from '../actions';
 
 const postSlug = (state = '', action) => {
   switch (action.type) {
     case UPDATE_POST_SLUG:
-      return action.postSlug
+      return action.postSlug;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default postSlug
+export default postSlug;

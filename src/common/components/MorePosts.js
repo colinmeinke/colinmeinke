@@ -1,7 +1,7 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import MorePosts from './MorePosts/index'
+import MorePosts from './MorePosts/index';
 
-const mapStateToProps = ({ page, tags }) => ({ page, tags })
+const mapStateToProps = ({ page, tags }) => ({ page, tags });
 
-export default connect(mapStateToProps)(MorePosts)
+export default connect(mapStateToProps)(MorePosts);

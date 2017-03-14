@@ -3,16 +3,21 @@ import {
   POST_LIST_LOADING,
   postListLoaded,
   postListLoading
-} from './postListLoading'
+} from './postListLoading';
 
-import { POST_LOADED, POST_LOADING, postLoaded, postLoading } from './postLoading'
-import { UPDATE_MORE_POSTS, updateMorePosts } from './morePosts'
-import { UPDATE_PAGE, updatePage } from './page'
-import { UPDATE_POST, getPost } from './post'
-import { UPDATE_POST_LIST, getPostList } from './postList'
-import { UPDATE_POST_SLUG, updatePostSlug } from './postSlug'
-import { UPDATE_ROOT_URL, updateRootUrl } from './rootUrl'
-import { UPDATE_TAGS, updateTags } from './tags'
+import {
+  POST_LOADED,
+  POST_LOADING,
+  postLoaded,
+  postLoading
+} from './postLoading';
+import { UPDATE_MORE_POSTS, updateMorePosts } from './morePosts';
+import { UPDATE_PAGE, updatePage } from './page';
+import { UPDATE_POST, getPost } from './post';
+import { UPDATE_POST_LIST, getPostList } from './postList';
+import { UPDATE_POST_SLUG, updatePostSlug } from './postSlug';
+import { UPDATE_ROOT_URL, updateRootUrl } from './rootUrl';
+import { UPDATE_TAGS, updateTags } from './tags';
 
 export {
   POST_LIST_LOADED,
@@ -37,4 +42,4 @@ export {
   updatePostSlug,
   updateRootUrl,
   updateTags
-}
+};

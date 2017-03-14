@@ -1,12 +1,12 @@
-import { UPDATE_POST } from '../actions'
+import { UPDATE_POST } from '../actions';
 
 const post = (state = {}, action) => {
   switch (action.type) {
     case UPDATE_POST:
-      return action.post
+      return action.post;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default post
+export default post;

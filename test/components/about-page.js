@@ -1,28 +1,26 @@
 /* globals describe it before */
 
-import expect from 'expect'
-import React from 'react'
-import { createRenderer } from 'react-addons-test-utils'
+import expect from 'expect';
+import React from 'react';
+import { createRenderer } from 'react-addons-test-utils';
 
-import About from '../../src/common/components/AboutPage/index'
+import About from '../../src/common/components/AboutPage/index';
 
 describe('component', () => {
   describe('<About />', () => {
-    let about
+    let about;
 
     before(() => {
-      const renderer = createRenderer()
+      const renderer = createRenderer();
 
-      renderer.render(
-        <About />
-      )
+      renderer.render(<About />);
 
-      about = renderer.getRenderOutput()
-    })
+      about = renderer.getRenderOutput();
+    });
 
     it('should render correct markup', () => {
-      expect(about.props.children.type).toBe('main')
-      expect(about.props.children.props.children[ 0 ].type).toBe('h1')
-    })
-  })
-})
+      expect(about.props.children.type).toBe('main');
+      expect(about.props.children.props.children[0].type).toBe('h1');
+    });
+  });
+});

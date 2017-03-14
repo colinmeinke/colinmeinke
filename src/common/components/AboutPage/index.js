@@ -1,20 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Layout from '../Layout'
+import Layout from '../Layout';
 
-import { container, title, section } from './styles.css'
+import { container, title, section } from './styles.css';
 
 class AboutPage extends Component {
-  render () {
+  render() {
     return (
-      <Layout
-        description='About page'
-        title='About'
-      >
-        <main
-          className={container}
-          role='main'
-        >
+      <Layout description="About page" title="About">
+        <main className={container} role="main">
           <h1 className={title}>About</h1>
 
           <section className={section}>
@@ -93,8 +87,8 @@ class AboutPage extends Component {
           </section>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default AboutPage
+export default AboutPage;

@@ -1,34 +1,29 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
-import Post from '../Post'
+import Post from '../Post';
 
-import { container, title } from './styles.css'
+import { container, title } from './styles.css';
 
 const propTypes = {
   posts: PropTypes.array.isRequired
-}
+};
 
 class PostList extends Component {
-  render () {
+  render() {
     return (
-      <main
-        className={container}
-        role='main'
-      >
-        {
-          this.props.posts.length
+      <main className={container} role="main">
+        {this.props.posts.length
           ? this.props.posts.map((post, i) => (
-            <Post isPreview key={i} {...post} />
-          ))
+              <Post isPreview key={i} {...post} />
+            ))
           : <h1 className={title}>
-            No posts here yet : /
-          </h1>
-        }
+              No posts here yet : /
+            </h1>}
       </main>
-    )
+    );
   }
 }
 
-PostList.propTypes = propTypes
+PostList.propTypes = propTypes;
 
-export default PostList
+export default PostList;

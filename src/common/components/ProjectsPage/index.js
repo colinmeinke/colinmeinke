@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Layout from '../Layout'
+import Layout from '../Layout';
 
 import {
   container,
@@ -8,7 +8,7 @@ import {
   projectList,
   section,
   title
-} from './styles.css'
+} from './styles.css';
 
 const projects = [
   {
@@ -88,37 +88,29 @@ const projects = [
     name: 'Spaced',
     url: 'https://github.com/colinmeinke/eslint-config-spaced'
   }
-
-]
+];
 
 class ProjectsPage extends Component {
-  render () {
+  render() {
     return (
-      <Layout
-        description='Projects page'
-        title='Projects'
-      >
-        <main
-          className={container}
-          role='main'
-        >
+      <Layout description="Projects page" title="Projects">
+        <main className={container} role="main">
           <h1 className={title}>Projects</h1>
 
           <ul className={projectList}>
-            { projects.map((project, i) => (
-              <li
-                className={section}
-                key={i}
-              >
-                <h2>{ project.name }</h2>
+            {projects.map((project, i) => (
+              <li className={section} key={i}>
+                <h2>{project.name}</h2>
 
                 <p className={description}>
-                  { project.description }
+                  {project.description}
                 </p>
 
                 <p>
                   <a href={project.url}>
-                    { project.url.includes('github') ? 'View on github' : 'View website' }
+                    {project.url.includes('github')
+                      ? 'View on github'
+                      : 'View website'}
                   </a>
                 </p>
               </li>
@@ -126,8 +118,8 @@ class ProjectsPage extends Component {
           </ul>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default ProjectsPage
+export default ProjectsPage;

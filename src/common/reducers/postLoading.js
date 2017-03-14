@@ -1,14 +1,14 @@
-import { POST_LOADED, POST_LOADING } from '../actions'
+import { POST_LOADED, POST_LOADING } from '../actions';
 
 const postLoading = (state = true, action) => {
   switch (action.type) {
     case POST_LOADED:
-      return false
+      return false;
     case POST_LOADING:
-      return true
+      return true;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default postLoading
+export default postLoading;

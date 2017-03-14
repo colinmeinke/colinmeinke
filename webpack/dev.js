@@ -1,6 +1,6 @@
-import webpack from 'webpack'
+import webpack from 'webpack';
 
-import defaultConfig from './default'
+import defaultConfig from './default';
 
 export default {
   ...defaultConfig,
@@ -10,4 +10,4 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('development')
     })
   ]
-}
+};

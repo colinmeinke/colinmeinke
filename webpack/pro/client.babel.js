@@ -1,21 +1,18 @@
-import config from '../../src/common/config'
+import config from '../../src/common/config';
 
-import clientConfig from '../client'
-import proConfig from '../pro'
+import clientConfig from '../client';
+import proConfig from '../pro';
 
 const baseConfig = {
   ...clientConfig,
   ...proConfig,
-  plugins: [
-    ...clientConfig.plugins,
-    ...proConfig.plugins
-  ]
-}
+  plugins: [...clientConfig.plugins, ...proConfig.plugins]
+};
 
 const externals = config.production.scripts
   .filter(script => script.import)
-  .map(script => ({ [ script.import ]: script.identifier }))
-  .reduce((prev, curr) => ({ ...prev, ...curr }))
+  .map(script => ({ [script.import]: script.identifier }))
+  .reduce((prev, curr) => ({ ...prev, ...curr }));
 
 export default {
   ...baseConfig,
@@ -24,4 +21,4 @@ export default {
     ...baseConfig.output,
     filename: 'client.min.js'
   }
-}
+};

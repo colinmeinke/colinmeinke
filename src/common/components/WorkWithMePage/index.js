@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from 'universal-redux-router'
+import React, { Component } from 'react';
+import { Link } from 'universal-redux-router';
 
-import CallToAction from '../CallToAction'
-import Layout from '../Layout'
+import CallToAction from '../CallToAction';
+import Layout from '../Layout';
 
 import {
   callToAction,
@@ -14,7 +14,7 @@ import {
   subTitle,
   testimonial,
   title
-} from './styles.css'
+} from './styles.css';
 
 const testimonials = [
   {
@@ -68,20 +68,17 @@ const testimonials = [
             organisation.`,
     role: 'Communications Manager'
   }
-]
+];
 
 class WorkWithMePage extends Component {
-  render () {
+  render() {
     return (
       <Layout
-        description='Work with me page'
+        description="Work with me page"
         showCallToAction={false}
-        title='Work with me'
+        title="Work with me"
       >
-        <main
-          className={container}
-          role='main'
-        >
+        <main className={container} role="main">
           <h1 className={title}>Work with me</h1>
 
           <section className={section}>
@@ -92,17 +89,11 @@ class WorkWithMePage extends Component {
             </p>
 
             <p>
-              <Link
-                className={link}
-                to='/about'
-              >
+              <Link className={link} to="/about">
                 Read more about me
               </Link>
-              { ' ' } or { ' ' }
-              <a
-                className={link}
-                href='https://uk.linkedin.com/in/colinmeinke'
-              >
+              {' '} or {' '}
+              <a className={link} href="https://uk.linkedin.com/in/colinmeinke">
                 take a look at my work experience
               </a>
               .
@@ -112,8 +103,8 @@ class WorkWithMePage extends Component {
           <CallToAction
             className={callToAction}
             linkIsExternal
-            linkText='hello@colinmeinke.com'
-            linkTo='mailto:hello@colinmeinke.com'
+            linkText="hello@colinmeinke.com"
+            linkTo="mailto:hello@colinmeinke.com"
             title="I'm taking on new projects in 2017."
           >
             <p>
@@ -139,18 +130,15 @@ class WorkWithMePage extends Component {
               Here are some nice things people have to say about me:
             </p>
 
-            { testimonials.map((t, i) => (
-              <blockquote
-                className={testimonial}
-                key={i}
-              >
+            {testimonials.map((t, i) => (
+              <blockquote className={testimonial} key={i}>
                 <p className={quote}>
-                  { t.quote }
+                  {t.quote}
                 </p>
                 <footer>
                   <cite className={cite}>
-                    <strong>{ t.name }</strong> – { ' ' }
-                    { t.role } at { t.company }
+                    <strong>{t.name}</strong> – {' '}
+                    {t.role} at {t.company}
                   </cite>
                 </footer>
               </blockquote>
@@ -158,8 +146,8 @@ class WorkWithMePage extends Component {
           </section>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
-export default WorkWithMePage
+export default WorkWithMePage;

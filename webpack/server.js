@@ -1,13 +1,14 @@
-import fs from 'fs'
-import webpack from 'webpack'
+import fs from 'fs';
+import webpack from 'webpack';
 
-import config from '../src/common/config'
+import config from '../src/common/config';
 
-const externals = fs.readdirSync('node_modules')
+const externals = fs
+  .readdirSync('node_modules')
   .filter(file => !file.includes('.bin'))
   .concat(config.subDirectoryNodeModules)
-  .map(name => ({ [ name ]: `commonjs ${name}` }))
-  .reduce((prev, curr) => ({ ...prev, ...curr }))
+  .map(name => ({ [name]: `commonjs ${name}` }))
+  .reduce((prev, curr) => ({ ...prev, ...curr }));
 
 export default {
   entry: './src/server',
@@ -21,4 +22,4 @@ export default {
     })
   ],
   target: 'node'
-}
+};

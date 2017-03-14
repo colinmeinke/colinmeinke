@@ -1,12 +1,12 @@
-import { UPDATE_POST_LIST } from '../actions'
+import { UPDATE_POST_LIST } from '../actions';
 
 const postList = (state = [], action) => {
   switch (action.type) {
     case UPDATE_POST_LIST:
-      return action.postList
+      return action.postList;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default postList
+export default postList;

@@ -1,25 +1,25 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
-import { filters } from '../../config/posts'
+import { filters } from '../../config/posts';
 
-import Nav from '../Nav'
+import Nav from '../Nav';
 
-import { active, item, nav } from './styles.css'
+import { active, item, nav } from './styles.css';
 
-const createActiveString = arr => [ ...arr ].sort().join('+')
+const createActiveString = arr => [...arr].sort().join('+');
 
 const items = filters.map(({ name, tags }) => ({
   activeString: createActiveString(tags),
   name,
-  to: [ '/', { tags } ]
-}))
+  to: ['/', { tags }]
+}));
 
 const propTypes = {
   tags: PropTypes.array
-}
+};
 
 class PostListFilter extends Component {
-  render () {
+  render() {
     return (
       <section>
         <Nav
@@ -31,10 +31,10 @@ class PostListFilter extends Component {
           shouldScrollToTop={false}
         />
       </section>
-    )
+    );
   }
 }
 
-PostListFilter.propTypes = propTypes
+PostListFilter.propTypes = propTypes;
 
-export default PostListFilter
+export default PostListFilter;

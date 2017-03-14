@@ -1,7 +1,11 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import PostDiscovery from './PostDiscovery/index'
+import PostDiscovery from './PostDiscovery/index';
 
-const mapStateToProps = ({ morePosts, page, postList }) => ({ morePosts, page, postList })
+const mapStateToProps = ({ morePosts, page, postList }) => ({
+  morePosts,
+  page,
+  postList
+});
 
-export default connect(mapStateToProps)(PostDiscovery)
+export default connect(mapStateToProps)(PostDiscovery);

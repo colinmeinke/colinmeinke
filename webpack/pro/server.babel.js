@@ -1,14 +1,11 @@
-import proConfig from '../pro'
-import serverConfig from '../server'
+import proConfig from '../pro';
+import serverConfig from '../server';
 
 const baseConfig = {
   ...serverConfig,
   ...proConfig,
-  plugins: [
-    ...serverConfig.plugins,
-    ...proConfig.plugins
-  ]
-}
+  plugins: [...serverConfig.plugins, ...proConfig.plugins]
+};
 
 export default {
   ...baseConfig,
@@ -16,4 +13,4 @@ export default {
     ...baseConfig.output,
     filename: 'server.min.js'
   }
-}
+};
