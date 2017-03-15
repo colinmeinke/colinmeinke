@@ -26,7 +26,7 @@ Other technologies include
 [hot module reloading](https://webpack.github.io/docs/hot-module-replacement.html),
 [Babel](https://babeljs.io),
 [ES2015+](http://www.ecma-international.org/ecma-262/6.0),
-[ESLint](http://eslint.org) and
+[Prettier](https://github.com/prettier/prettier) and
 [Commitizen](http://commitizen.github.io/cz-cli).
 
 Please feel free to use this as you wish, but be
