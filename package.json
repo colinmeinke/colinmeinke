@@ -75,7 +75,6 @@
       "git add"
     ]
   },
-  "main": "dist/server.min.js",
   "name": "colinmeinke",
   "repository": {
     "type": "git",
