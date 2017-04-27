@@ -71,11 +71,11 @@ class Header extends Component {
           <p className={activityLocation}>
             Currently {' '}
             <strong className={activity}>
-              drinking tea
+              exploring
             </strong>
             {' '} in {' '}
             <strong className={location}>
-              St Margaret's Hope, United Kingdom󠁧󠁴󠁿 🇬🇧
+              Orkney, United Kingdom󠁧󠁴󠁿 🇬🇧
             </strong>
           </p>
         </div>
