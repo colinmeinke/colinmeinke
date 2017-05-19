@@ -71,7 +71,7 @@ class Header extends Component {
           <p className={activityLocation}>
             Currently {' '}
             <strong className={activity}>
-              making SVG move
+              searching for puffins
             </strong>
             {' '} in {' '}
             <strong className={location}>
