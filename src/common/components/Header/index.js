@@ -75,7 +75,7 @@ class Header extends Component {
             </strong>
             {' '} in {' '}
             <strong className={location}>
-              Mompiche, Ecuador 🇪🇨
+              Puerto López, Ecuador 🇪🇨
             </strong>
           </p>
         </div>
