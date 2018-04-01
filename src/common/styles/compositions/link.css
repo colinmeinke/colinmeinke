@@ -1,4 +1,0 @@
-.regular {
-  composes: regular from "../base/compositions/link.css";
-  composes: regular from "../yotatiro-theme/compositions/link.css";
-}

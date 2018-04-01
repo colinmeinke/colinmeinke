@@ -1,8 +1,0 @@
-.regular {
-  composes: regular from "../base/compositions/button.css";
-  composes: regular from "../yotatiro-theme/compositions/button.css";
-}
-
-.large {
-  composes: large from "../yotatiro-theme/compositions/button.css";
-}

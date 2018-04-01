@@ -1,8 +1,0 @@
-.item {
-  composes: item from "../base/compositions/nav.css";
-  composes: item from "../yotatiro-theme/compositions/nav.css";
-}
-
-.active {
-  composes: active from "../base/compositions/nav.css";
-}

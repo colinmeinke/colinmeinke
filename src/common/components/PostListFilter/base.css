@@ -1,8 +1,0 @@
-.item {
-  composes: regular from "../../styles/compositions/link.css";
-  composes: item from "../../styles/compositions/nav.css";
-}
-
-.active {
-  composes: active from "../../styles/compositions/nav.css";
-}
